@@ -22,7 +22,7 @@ import org.testng.annotations.Test;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-public class Excel2Json {
+public class Excel2Jsonhp {
 
 	private static final String FILE_PATH = "src/test/resources/Api_RequestParam_Sheet.xlsx" ;
 
@@ -34,7 +34,7 @@ public class Excel2Json {
 	}
 
 	@DataProvider
-	public static Iterator<Object[]> getRequestJSON(Method method) throws IOException {
+	public static Iterator<Object[]> getRequestJSON(Method method) throws JsonProcessingException {
 
 		FileInputStream sourceFile = null;
 		Workbook workbook = null;
@@ -90,7 +90,6 @@ public class Excel2Json {
 
 		default:
 			System.out.println("Test method doesn't have any related sheet");
-			workbook.close();
 			return null;
 		}
 
@@ -126,8 +125,7 @@ public class Excel2Json {
 				returnJSONList.add(new Object[]{jParamObj});
 			}	
 		}
-		workbook.close();
-		
+
 		return returnJSONList.iterator();
 	}
 

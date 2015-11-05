@@ -5,7 +5,7 @@
     <classes>
       <class name="dataProvider.Excel2Json">
         <methods>
-          <include name="testLoginAPI" invocation-numbers="0 1 2 3 4 5 6"/>
+          <include name="testGetRightsAPI" invocation-numbers="0 1 2 3 4 5"/>
         </methods>
       </class> <!-- dataProvider.Excel2Json -->
     </classes>

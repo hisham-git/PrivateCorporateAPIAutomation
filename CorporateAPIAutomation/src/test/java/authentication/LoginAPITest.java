@@ -9,7 +9,7 @@ import com.jayway.restassured.response.Response;
 
 import dataProvider.Excel2Json;
 
-public class LoginAPITest extends BaseAuthenticationServiceApi {
+public class LoginAPITest extends BaseAPIService {
 
 	@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
 	public void testLoginAPI(JSONObject requestJSON) throws JSONException {

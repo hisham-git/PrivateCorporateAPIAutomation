@@ -1,16 +1,12 @@
 package authentication;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.jayway.restassured.response.Response;
 
-import dataProvider.Excel2Json;
-
-public class LogoutAPITest extends BaseAuthenticationServiceApi {
+public class LogoutAPITest extends BaseAPIService {
 
 	@Test
 	public void testLoginAPI() throws JSONException {

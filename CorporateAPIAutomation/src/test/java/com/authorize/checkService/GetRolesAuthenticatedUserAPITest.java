@@ -4,11 +4,9 @@ import org.json.JSONException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import authentication.BaseAuthenticationServiceApi;
-
 import com.jayway.restassured.response.Response;
 
-public class GetRolesAuthenticatedUserAPITest extends BaseAuthenticationServiceApi {
+public class GetRolesAuthenticatedUserAPITest extends BaseCheckServiceApi {
 	
 	@Test
 	public void testGetRolesAuthenticatedUserAPI()

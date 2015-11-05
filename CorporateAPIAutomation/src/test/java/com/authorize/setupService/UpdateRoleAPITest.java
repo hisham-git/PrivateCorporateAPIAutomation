@@ -5,13 +5,11 @@ import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import authentication.BaseAuthenticationServiceApi;
-
 import com.jayway.restassured.response.Response;
 
 import dataProvider.Excel2Json;
 
-public class UpdateRoleAPITest extends BaseAuthenticationServiceApi {
+public class UpdateRoleAPITest extends BaseSetupServiceApi {
 
 	@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
 	public void testUpdateRoleAPI(JSONObject requestJSON) throws JSONException {

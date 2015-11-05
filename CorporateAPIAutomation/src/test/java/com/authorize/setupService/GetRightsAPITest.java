@@ -1,26 +1,15 @@
 package com.authorize.setupService;
 
-import static com.jayway.restassured.RestAssured.given;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import authentication.BaseAuthenticationServiceApi;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.jayway.restassured.response.Response;
-import com.jayway.restassured.specification.RequestSpecification;
 
 import dataProvider.Excel2Json;
 
-public class GetRightsAPITest extends BaseAuthenticationServiceApi {
+public class GetRightsAPITest extends BaseSetupServiceApi {
 	
 	
 	@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)

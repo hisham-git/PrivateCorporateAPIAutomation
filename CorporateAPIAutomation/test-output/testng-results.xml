@@ -1,89 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2368" started-at="2015-11-05T07:26:50Z" finished-at="2015-11-05T07:26:52Z">
+  <suite name="Default suite" duration-ms="1171" started-at="2015-11-05T13:49:07Z" finished-at="2015-11-05T13:49:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2368" started-at="2015-11-05T07:26:50Z" finished-at="2015-11-05T07:26:52Z">
+    <test name="Default test" duration-ms="1171" started-at="2015-11-05T13:49:07Z" finished-at="2015-11-05T13:49:08Z">
       <class name="dataProvider.Excel2Json">
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6fe90d95]" name="testLoginAPI" duration-ms="70" started-at="2015-11-05T13:26:52Z" data-provider="getRequestJSON" finished-at="2015-11-05T13:26:52Z">
+        <test-method status="PASS" signature="testGetRightsAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6a790e37]" name="testGetRightsAPI" duration-ms="13" started-at="2015-11-05T19:49:08Z" data-provider="getRequestJSON" finished-at="2015-11-05T19:49:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{"Params":{"Verify Password":"pass1","Password":"pass1","UserName":"jcarter01.dsi@gmail.com"}}]]>
+                <![CDATA[{"Params":{"RoleIDs":"[1,2,3,4,5]"}}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6fe90d95]" name="testLoginAPI" duration-ms="0" started-at="2015-11-05T13:26:52Z" data-provider="getRequestJSON" finished-at="2015-11-05T13:26:52Z">
+        </test-method> <!-- testGetRightsAPI -->
+        <test-method status="PASS" signature="testGetRightsAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6a790e37]" name="testGetRightsAPI" duration-ms="1" started-at="2015-11-05T19:49:08Z" data-provider="getRequestJSON" finished-at="2015-11-05T19:49:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{"Params":{"Verify Password":"pass2","Password":"pass2","UserName":"jcarter02.dsi"}}]]>
+                <![CDATA[{"Params":{"RoleIDs":"[1,2,3]"}}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6fe90d95]" name="testLoginAPI" duration-ms="0" started-at="2015-11-05T13:26:52Z" data-provider="getRequestJSON" finished-at="2015-11-05T13:26:52Z">
+        </test-method> <!-- testGetRightsAPI -->
+        <test-method status="PASS" signature="testGetRightsAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6a790e37]" name="testGetRightsAPI" duration-ms="0" started-at="2015-11-05T19:49:08Z" data-provider="getRequestJSON" finished-at="2015-11-05T19:49:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{"Params":{"Verify Password":"pass3","Password":"pass3","UserName":"jcarter03.dsi"}}]]>
+                <![CDATA[{"Params":{"RoleIDs":"[3,4,5]"}}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6fe90d95]" name="testLoginAPI" duration-ms="0" started-at="2015-11-05T13:26:52Z" data-provider="getRequestJSON" finished-at="2015-11-05T13:26:52Z">
+        </test-method> <!-- testGetRightsAPI -->
+        <test-method status="PASS" signature="testGetRightsAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6a790e37]" name="testGetRightsAPI" duration-ms="0" started-at="2015-11-05T19:49:08Z" data-provider="getRequestJSON" finished-at="2015-11-05T19:49:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{"Params":{"Verify Password":"pass4","Password":"pass4","UserName":"jcarter04.dsi"}}]]>
+                <![CDATA[{"Params":{"RoleIDs":"[]"}}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6fe90d95]" name="testLoginAPI" duration-ms="0" started-at="2015-11-05T13:26:52Z" data-provider="getRequestJSON" finished-at="2015-11-05T13:26:52Z">
+        </test-method> <!-- testGetRightsAPI -->
+        <test-method status="PASS" signature="testGetRightsAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6a790e37]" name="testGetRightsAPI" duration-ms="0" started-at="2015-11-05T19:49:08Z" data-provider="getRequestJSON" finished-at="2015-11-05T19:49:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{"Params":{"Verify Password":"pass5","Password":"pass5","UserName":"jcarter05.dsi"}}]]>
+                <![CDATA[{"Params":{"RoleIDs":"[true,false,false,null]"}}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6fe90d95]" name="testLoginAPI" duration-ms="1" started-at="2015-11-05T13:26:52Z" data-provider="getRequestJSON" finished-at="2015-11-05T13:26:52Z">
+        </test-method> <!-- testGetRightsAPI -->
+        <test-method status="PASS" signature="testGetRightsAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6a790e37]" name="testGetRightsAPI" duration-ms="1" started-at="2015-11-05T19:49:08Z" data-provider="getRequestJSON" finished-at="2015-11-05T19:49:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{"Params":{"Verify Password":"pass6","Password":"pass6","UserName":"jcarter06.dsi"}}]]>
+                <![CDATA[{"Params":{"RoleIDs":true}}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6fe90d95]" name="testLoginAPI" duration-ms="1" started-at="2015-11-05T13:26:52Z" data-provider="getRequestJSON" finished-at="2015-11-05T13:26:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"Params":{"Verify Password":1234,"Password":1234,"UserName":"jcarter07.dsi"}}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLoginAPI -->
+        </test-method> <!-- testGetRightsAPI -->
       </class> <!-- dataProvider.Excel2Json -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

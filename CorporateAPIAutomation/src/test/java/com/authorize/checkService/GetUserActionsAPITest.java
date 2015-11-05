@@ -4,14 +4,9 @@ import org.json.JSONException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import authentication.BaseAuthenticationServiceApi;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.jayway.restassured.response.Response;
 
-import dataProvider.Excel2Json;
-
-public class GetUserActionsAPITest extends BaseAuthenticationServiceApi {
+public class GetUserActionsAPITest extends BaseCheckServiceApi {
 	
 	@Test
 	public void testGetUserActionsAPI()

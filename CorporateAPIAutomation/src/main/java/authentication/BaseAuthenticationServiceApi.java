@@ -4,11 +4,11 @@ import static com.jayway.restassured.RestAssured.basic;
 import static com.jayway.restassured.RestAssured.given;
 import static com.jayway.restassured.RestAssured.when;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.response.Response;
@@ -24,7 +24,7 @@ public class BaseAuthenticationServiceApi {
 		RestAssured.authentication = basic("joeAdmin","123");
 	}
 
-	public Response getAPIResponse( JSONObject requestJSON, String requestMethod, String api ) throws JsonProcessingException {
+	public Response getAPIResponse( JSONObject requestJSON, String requestMethod, String api ) throws JSONException{
 
 		Response responseAPI = null;
 

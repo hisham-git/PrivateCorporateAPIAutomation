@@ -12,8 +12,8 @@ import dataProvider.Excel2Json;
 
 public class LogoutAPITest extends BaseAuthenticationServiceApi {
 
-	@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
-	public void testLoginAPI(JSONObject requestJSON) throws JSONException, InterruptedException, JsonProcessingException {
+	@Test
+	public void testLoginAPI() throws JSONException {
 
 		Response responseAPI = getAPIResponse(null, "logout", "POST");
 

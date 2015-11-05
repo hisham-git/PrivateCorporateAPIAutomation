@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1105" started-at="2015-11-04T21:15:43Z" finished-at="2015-11-04T21:15:44Z">
+  <suite name="Default suite" duration-ms="2368" started-at="2015-11-05T07:26:50Z" finished-at="2015-11-05T07:26:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1105" started-at="2015-11-04T21:15:43Z" finished-at="2015-11-04T21:15:44Z">
+    <test name="Default test" duration-ms="2368" started-at="2015-11-05T07:26:50Z" finished-at="2015-11-05T07:26:52Z">
       <class name="dataProvider.Excel2Json">
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@c58432]" name="testLoginAPI" duration-ms="19" started-at="2015-11-05T03:15:44Z" data-provider="getRequestJSON" finished-at="2015-11-05T03:15:44Z">
+        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6fe90d95]" name="testLoginAPI" duration-ms="70" started-at="2015-11-05T13:26:52Z" data-provider="getRequestJSON" finished-at="2015-11-05T13:26:52Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@c58432]" name="testLoginAPI" duration-ms="1" started-at="2015-11-05T03:15:44Z" data-provider="getRequestJSON" finished-at="2015-11-05T03:15:44Z">
+        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6fe90d95]" name="testLoginAPI" duration-ms="0" started-at="2015-11-05T13:26:52Z" data-provider="getRequestJSON" finished-at="2015-11-05T13:26:52Z">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@c58432]" name="testLoginAPI" duration-ms="1" started-at="2015-11-05T03:15:44Z" data-provider="getRequestJSON" finished-at="2015-11-05T03:15:44Z">
+        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6fe90d95]" name="testLoginAPI" duration-ms="0" started-at="2015-11-05T13:26:52Z" data-provider="getRequestJSON" finished-at="2015-11-05T13:26:52Z">
           <params>
             <param index="0">
               <value>
@@ -40,7 +40,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@c58432]" name="testLoginAPI" duration-ms="1" started-at="2015-11-05T03:15:44Z" data-provider="getRequestJSON" finished-at="2015-11-05T03:15:44Z">
+        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6fe90d95]" name="testLoginAPI" duration-ms="0" started-at="2015-11-05T13:26:52Z" data-provider="getRequestJSON" finished-at="2015-11-05T13:26:52Z">
           <params>
             <param index="0">
               <value>
@@ -51,7 +51,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@c58432]" name="testLoginAPI" duration-ms="1" started-at="2015-11-05T03:15:44Z" data-provider="getRequestJSON" finished-at="2015-11-05T03:15:44Z">
+        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6fe90d95]" name="testLoginAPI" duration-ms="0" started-at="2015-11-05T13:26:52Z" data-provider="getRequestJSON" finished-at="2015-11-05T13:26:52Z">
           <params>
             <param index="0">
               <value>
@@ -62,7 +62,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@c58432]" name="testLoginAPI" duration-ms="8" started-at="2015-11-05T03:15:44Z" data-provider="getRequestJSON" finished-at="2015-11-05T03:15:44Z">
+        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6fe90d95]" name="testLoginAPI" duration-ms="1" started-at="2015-11-05T13:26:52Z" data-provider="getRequestJSON" finished-at="2015-11-05T13:26:52Z">
           <params>
             <param index="0">
               <value>
@@ -73,7 +73,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@c58432]" name="testLoginAPI" duration-ms="1" started-at="2015-11-05T03:15:44Z" data-provider="getRequestJSON" finished-at="2015-11-05T03:15:44Z">
+        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@6fe90d95]" name="testLoginAPI" duration-ms="1" started-at="2015-11-05T13:26:52Z" data-provider="getRequestJSON" finished-at="2015-11-05T13:26:52Z">
           <params>
             <param index="0">
               <value>

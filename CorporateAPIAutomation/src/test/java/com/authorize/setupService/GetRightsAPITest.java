@@ -7,40 +7,43 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import authentication.BaseAuthenticationServiceApi;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
 
-public class TestGetRightsApi extends BaseSetupServiceApi {
-	
-	
-	@Test(dataProvider = "dp")
-	public void testGetRights(Map<String, Boolean> header, Map<String, int[]> params)
-			throws JSONException, InterruptedException, JsonProcessingException {
-	
-		RequestSpecification requestSpec = specBuilder(header, params);
+import dataProvider.Excel2Json;
 
-		Response responseAPI = 
-				given()
-					.spec(requestSpec)
-				.when()
-					.get("/getRights")
-				.then()
-					.extract().response();
+public class GetRightsAPITest extends BaseAuthenticationServiceApi {
+	
+	
+	@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
+	public void testGetRightsAPI(JSONObject requestJSON) throws JSONException {
+
+		Response responseAPI = getAPIResponse(requestJSON, "getRights", "POST");
 
 		if (responseAPI.getStatusCode() == 200) {
+			
+			// Success Response should contain request Params
+			Assert.assertEquals(responseAPI.jsonPath().getList("Params.RoleIDs"),
+					requestJSON.getJSONObject("Params").getJSONArray("RoleIDs"), "RoleIDs not found on Response Params");
 	
-			Assert.assertNotNull(responseAPI.jsonPath().getList("Params.RoleIDs"));
+			// Success Response Data Assertions
 			Assert.assertNotNull(responseAPI.jsonPath().getList("Data.Actions"));
 			Assert.assertNotNull(responseAPI.jsonPath().getList("Data.Capabilities"));
 		
 		} else {
-
+			
+			// Failure Response Data should be null 
 			Assert.assertNull(responseAPI.jsonPath().getString("Data"), "Response Data is not null");
+			
+			// Failure Response should have reason code
 			Assert.assertNotNull(responseAPI.jsonPath().getString("Reasons.ReasonCode"));
 		}
 
@@ -49,21 +52,5 @@ public class TestGetRightsApi extends BaseSetupServiceApi {
 		System.out.println();
 
 	}
-	
-	@DataProvider
-	public Object[][] dp() {
-		
-		Map<String, String> header = new HashMap<String, Boolean>();
-		Map<String, int[]> params = new HashMap<String, int[]>();
-		
-		
-		return new Object[][] {
-				new Object[] { header.put(null, null), params.put("RoleIDs", {1,2,3} ) },
-				
-				new Object[] { header.put("User", false), params.put("RoleID", 10) }};
-				
-	}
-
-
 
 }

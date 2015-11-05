@@ -36,7 +36,7 @@ public class Excel2Json {
 	@DataProvider
 	public static Iterator<Object[]> getRequestJSON(Method method) throws JsonProcessingException {
 
-		FileInputStream inp;
+		FileInputStream soureceFile = null;
 		Workbook workbook = null;
 		Sheet sheet = null;
 		
@@ -45,8 +45,8 @@ public class Excel2Json {
 		List<String> paramKeys = new ArrayList<String>();
 		
 		try {
-			inp = new FileInputStream( new File(FILE_PATH) );
-			workbook = WorkbookFactory.create( inp );
+			soureceFile = new FileInputStream( new File(FILE_PATH) );
+			workbook = WorkbookFactory.create( soureceFile );
 			} catch (EncryptedDocumentException | InvalidFormatException e) {
 				e.printStackTrace();
 			} catch (FileNotFoundException e) {
@@ -90,10 +90,8 @@ public class Excel2Json {
 
 		default:
 			System.out.println("Test method doesn't have any related sheet");
-			break;
+			return null;
 		}
-
-		
 
 		for ( Iterator<Row> rowsIT = sheet.rowIterator(); rowsIT.hasNext(); )
 		{

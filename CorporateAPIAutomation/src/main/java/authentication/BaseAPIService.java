@@ -6,8 +6,6 @@ import static com.jayway.restassured.RestAssured.when;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.jayway.restassured.RestAssured;
@@ -26,7 +24,7 @@ public abstract class BaseAPIService {
 	
 	public Response getAPIResponse( JSONObject requestJSON, String requestMethod, String api ) throws JSONException{
 
-		Response responseAPI = null;
+		Response responseJSON = null;
 
 		if ( !(null == requestJSON) ) {
 			// Building request using requestSpecBuilder
@@ -42,7 +40,7 @@ public abstract class BaseAPIService {
 
 			if ( requestMethod.equalsIgnoreCase("GET") ) {
 
-				responseAPI = 
+				responseJSON = 
 						given()
 							.spec(requestSpec)
 						.when()
@@ -52,7 +50,7 @@ public abstract class BaseAPIService {
 
 			} else if ( requestMethod.equalsIgnoreCase("POST") ) {
 
-				responseAPI = 
+				responseJSON = 
 						given()
 							.spec(requestSpec)
 						.when()
@@ -70,7 +68,7 @@ public abstract class BaseAPIService {
 
 			if ( requestMethod.equalsIgnoreCase("GET") ) {
 
-				responseAPI = 
+				responseJSON = 
 						when()
 						.get("/"+ api)
 						.then()
@@ -78,7 +76,7 @@ public abstract class BaseAPIService {
 
 			} else if ( requestMethod.equalsIgnoreCase("POST") ) {
 
-				responseAPI = 
+				responseJSON = 
 						when()
 						.post("/"+ api)
 						.then()
@@ -90,7 +88,7 @@ public abstract class BaseAPIService {
 				return null;
 			}
 		}
-		return responseAPI;
+		return responseJSON;
 
 	}
 

@@ -20,17 +20,15 @@ import org.json.JSONObject;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-
 public class Excel2Json {
 
 	private static final String FILE_PATH = "src/test/resources/Api_RequestParam_Sheet.xlsx" ;
 
 	@Test(dataProvider = "getRequestJSON")
-	public void testGetRightsAPI (JSONObject json){
+	public void testLoginAPI (JSONObject json){
 	//	System.out.println(json.toString(5));
-		System.out.println(json.getJSONObject("Params").get("RoleIDs"));
-	//	System.out.println(json.toString());
+	//	System.out.println(json.getJSONObject("Params").get("RoleIDs"));
+		System.out.println(json.toString());
 	}
 
 	@DataProvider
@@ -89,7 +87,7 @@ public class Excel2Json {
 			break;
 
 		default:
-			System.out.println("Test method doesn't have any related sheet");
+			System.out.println("Test API doesn't have any related Excel sheet");
 			workbook.close();
 			return null;
 		}

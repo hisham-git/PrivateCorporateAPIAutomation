@@ -14,47 +14,47 @@ public class InsertRoleAPITest extends BaseSetupServiceApi {
 	@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
 	public void testInsertRoleAPI(JSONObject requestJSON) throws JSONException {
 
-		Response responseAPI = getAPIResponse(requestJSON, "insertRole", "POST");
+		Response responseJSON = getAPIResponse(requestJSON, "insertRole", "POST");
 
-		if (responseAPI.getStatusCode() == 200) {
+		if (responseJSON.getStatusCode() == 200) {
 
 			// Success Response should contain request Params
-			Assert.assertEquals(responseAPI.jsonPath().getString("Params.Name"),
+			Assert.assertEquals(responseJSON.jsonPath().getString("Params.Name"),
 					requestJSON.getJSONObject("Params").getString("Name"), "Name not found on Response Params");
-			Assert.assertEquals(responseAPI.jsonPath().getString("Params.Description"),
+			Assert.assertEquals(responseJSON.jsonPath().getString("Params.Description"),
 					requestJSON.getJSONObject("Params").getString("Description"), "Description not found on Response Params");
-			Assert.assertEquals(responseAPI.jsonPath().getList("Params.LogicalRoles"),
+			Assert.assertEquals(responseJSON.jsonPath().getList("Params.LogicalRoles"),
 					requestJSON.getJSONObject("Params").getJSONArray("LogicalRoles"), "LogicalRoles not found on Response Params");
 
 			// Success Response Data Assertions
-			Assert.assertNotNull(responseAPI.jsonPath().getString("Data.ID"));
-			Assert.assertNotNull(responseAPI.jsonPath().getString("Data.oca"));
-			Assert.assertEquals(responseAPI.jsonPath().getString("Data.Name"),
+			Assert.assertNotNull(responseJSON.jsonPath().getString("Data.ID"));
+			Assert.assertNotNull(responseJSON.jsonPath().getString("Data.oca"));
+			Assert.assertEquals(responseJSON.jsonPath().getString("Data.Name"),
 					requestJSON.getJSONObject("Params").getString("Name"), "Name not found on Response Params");
-			Assert.assertEquals(responseAPI.jsonPath().getString("Data.Description"),
+			Assert.assertEquals(responseJSON.jsonPath().getString("Data.Description"),
 					requestJSON.getJSONObject("Params").getString("Description"), "Description not found on Response Params");
-			Assert.assertEquals(responseAPI.jsonPath().getList("Data.LogicalRoles"),
+			Assert.assertEquals(responseJSON.jsonPath().getList("Data.LogicalRoles"),
 					requestJSON.getJSONObject("Params").getJSONArray("LogicalRoles"), "LogicalRoles not found on Response Params");
 
 		} else {
 
 			// Failure Response should contain request Params
-			Assert.assertEquals(responseAPI.jsonPath().getString("Params.Name"),
+			Assert.assertEquals(responseJSON.jsonPath().getString("Params.Name"),
 					requestJSON.getJSONObject("Params").getString("Name"), "Name not found on Response Params");
-			Assert.assertEquals(responseAPI.jsonPath().getString("Params.Description"),
+			Assert.assertEquals(responseJSON.jsonPath().getString("Params.Description"),
 					requestJSON.getJSONObject("Params").getString("Description"), "Description not found on Response Params");
-			Assert.assertEquals(responseAPI.jsonPath().getList("Params.LogicalRoles"),
+			Assert.assertEquals(responseJSON.jsonPath().getList("Params.LogicalRoles"),
 					requestJSON.getJSONObject("Params").getJSONArray("LogicalRoles"), "LogicalRoles not found on Response Params");			
 
 			// Failure Response Data should be null 
-			Assert.assertNull(responseAPI.jsonPath().getString("Data"), "Response Data is not null");
+			Assert.assertNull(responseJSON.jsonPath().getString("Data"), "Response Data is not null");
 			
 			// Failure Response should have reason code
-			Assert.assertNotNull(responseAPI.jsonPath().getString("Reasons.ReasonCode"));
+			Assert.assertNotNull(responseJSON.jsonPath().getString("Reasons.ReasonCode"));
 		}
 
 		System.out.println("**********Response from [insertRole]**********");
-		System.out.println(responseAPI.getBody().asString());
+		System.out.println(responseJSON.getBody().asString());
 		System.out.println();
 
 	}

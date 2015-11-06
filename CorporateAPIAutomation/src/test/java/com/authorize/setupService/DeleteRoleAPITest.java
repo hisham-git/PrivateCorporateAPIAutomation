@@ -14,24 +14,24 @@ public class DeleteRoleAPITest extends BaseSetupServiceApi {
 	@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
 	public void testDeleteRole(JSONObject requestJSON) throws JSONException {
 	
-		Response responseAPI = getAPIResponse(requestJSON, "login", "POST");
+		Response responseJSON = getAPIResponse(requestJSON, "login", "POST");
 
-		if (responseAPI.getStatusCode() == 200) {
+		if (responseJSON.getStatusCode() == 200) {
 			
-			Assert.assertEquals(responseAPI.jsonPath().getString("Params.RoleID"),
+			Assert.assertEquals(responseJSON.jsonPath().getString("Params.RoleID"),
 					requestJSON.getJSONObject("Params").getString("RoleID"), "RoleID not found on Response Params");
-			Assert.assertNull(responseAPI.jsonPath().getString("Data"), "Response Data is not null");
+			Assert.assertNull(responseJSON.jsonPath().getString("Data"), "Response Data is not null");
 		
 		} else {
 			
-			Assert.assertEquals(responseAPI.jsonPath().getString("Params.RoleID"),
+			Assert.assertEquals(responseJSON.jsonPath().getString("Params.RoleID"),
 					requestJSON.getJSONObject("Params").getString("RoleID"), "RoleID not found on Response Params");
-			Assert.assertNull(responseAPI.jsonPath().getString("Data"), "Response Data is not null");
-			Assert.assertNotNull(responseAPI.jsonPath().getString("Reasons.ReasonCode"));
+			Assert.assertNull(responseJSON.jsonPath().getString("Data"), "Response Data is not null");
+			Assert.assertNotNull(responseJSON.jsonPath().getString("Reasons.ReasonCode"));
 		}
 
 		System.out.println("**********Response from [deleteRole]**********");
-		System.out.println(responseAPI.getBody().asString());
+		System.out.println(responseJSON.getBody().asString());
 		System.out.println();
 
 	}

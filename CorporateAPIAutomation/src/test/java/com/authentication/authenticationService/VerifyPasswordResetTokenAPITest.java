@@ -16,24 +16,24 @@ public class VerifyPasswordResetTokenAPITest extends BaseAuthenticationServiceAp
 	public void testVerifyPasswordResetTokenAPI(JSONObject requestJSON)
 			throws JSONException, InterruptedException, JsonProcessingException {
 
-		Response responseAPI = getAPIResponse(requestJSON, "verifyPasswordResetToken", "POST");
+		Response responseJSON = getAPIResponse(requestJSON, "verifyPasswordResetToken", "POST");
 
-		if (responseAPI.getStatusCode() == 200) {
+		if (responseJSON.getStatusCode() == 200) {
 
-			Assert.assertEquals(responseAPI.jsonPath().getString("Params.ResetToken"),
+			Assert.assertEquals(responseJSON.jsonPath().getString("Params.ResetToken"),
 					requestJSON.getJSONObject("Params").getString("ResetToken"), "ResetToken not found on Response Params");
-			Assert.assertNull(responseAPI.jsonPath().getString("Data"), "Response Data is not null");
+			Assert.assertNull(responseJSON.jsonPath().getString("Data"), "Response Data is not null");
 			
 		} else {
 			
-			Assert.assertEquals(responseAPI.jsonPath().getString("Params.ResetToken"),
+			Assert.assertEquals(responseJSON.jsonPath().getString("Params.ResetToken"),
 					requestJSON.getJSONObject("Params").getString("ResetToken"), "UserName not found on Response Params");
-			Assert.assertNull(responseAPI.jsonPath().getString("Data"), "Response Data is not null");
-			Assert.assertNotNull(responseAPI.jsonPath().getString("Reasons.ReasonCode"));
+			Assert.assertNull(responseJSON.jsonPath().getString("Data"), "Response Data is not null");
+			Assert.assertNotNull(responseJSON.jsonPath().getString("Reasons.ReasonCode"));
 		}
 
 		System.out.println("**********Response from [verifyPasswordResetToken]**********");
-		System.out.println(responseAPI.getBody().asString());
+		System.out.println(responseJSON.getBody().asString());
 		System.out.println();
 
 	}

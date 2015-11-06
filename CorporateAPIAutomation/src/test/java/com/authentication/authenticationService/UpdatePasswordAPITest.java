@@ -16,32 +16,32 @@ public class UpdatePasswordAPITest extends BaseAuthenticationServiceApi {
 	public void testUpdatePasswordApi(JSONObject requestJSON)
 			throws JSONException, InterruptedException, JsonProcessingException {
 
-		Response responseAPI = getAPIResponse(requestJSON, "updatePassword", "POST");
+		Response responseJSON = getAPIResponse(requestJSON, "updatePassword", "POST");
 
-		if ( responseAPI.getStatusCode() == 200 ) {
-			Assert.assertEquals(responseAPI.jsonPath().getString("Params.Password"),
+		if ( responseJSON.getStatusCode() == 200 ) {
+			Assert.assertEquals(responseJSON.jsonPath().getString("Params.Password"),
 					requestJSON.getJSONObject("Params").getString("Password"), "Password not found on Response Params");
-			Assert.assertEquals(responseAPI.jsonPath().getString("Params.ConfirmPassword"),
+			Assert.assertEquals(responseJSON.jsonPath().getString("Params.ConfirmPassword"),
 					requestJSON.getJSONObject("Params").getString("ConfirmPassword"), "ConfirmPassword not found on Response Params");
 			
-			if (responseAPI.getCookie("JSESSIONID") != null) {	
-				Assert.assertEquals(responseAPI.jsonPath().getString("Params.ExistingPassword"),
+			if (responseJSON.getCookie("JSESSIONID") != null) {	
+				Assert.assertEquals(responseJSON.jsonPath().getString("Params.ExistingPassword"),
 						requestJSON.getJSONObject("Params").getString("ExistingPassword"), "ExistingPassword not found on Response Data");
 			} else {
-				Assert.assertEquals(responseAPI.jsonPath().getString("Params.PasswordResetToken"),
+				Assert.assertEquals(responseJSON.jsonPath().getString("Params.PasswordResetToken"),
 						requestJSON.getJSONObject("Params").getString("PasswordResetToken"), "PasswordResetToken not found on Response Params");
 			}
 			
-			Assert.assertNull(responseAPI.jsonPath().getString("Data"), "Response Data is not null");
+			Assert.assertNull(responseJSON.jsonPath().getString("Data"), "Response Data is not null");
 
 		} else {
-			Assert.assertNull(responseAPI.jsonPath().getString("Data"), "Response Data is not null");
-			Assert.assertNotNull(responseAPI.jsonPath().getString("Params"));
-			Assert.assertNotNull(responseAPI.jsonPath().getString("Reasons.ReasonCode"));
+			Assert.assertNull(responseJSON.jsonPath().getString("Data"), "Response Data is not null");
+			Assert.assertNotNull(responseJSON.jsonPath().getString("Params"));
+			Assert.assertNotNull(responseJSON.jsonPath().getString("Reasons.ReasonCode"));
 		}
 
 		System.out.println("**********Response from [updatePassword]**********");
-		System.out.println(responseAPI.getBody().asString());
+		System.out.println(responseJSON.getBody().asString());
 		System.out.println();
 
 	}

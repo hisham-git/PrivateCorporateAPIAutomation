@@ -1,21 +1,17 @@
 package authentication;
 
-import static com.jayway.restassured.RestAssured.basic;
-import static com.jayway.restassured.RestAssured.given;
-import static com.jayway.restassured.RestAssured.when;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.testng.annotations.BeforeSuite;
-
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import static com.jayway.restassured.RestAssured.*;
 
 public abstract class BaseAPIService {
 		
-	@BeforeSuite
+	//@BeforeSuite
 	public void baseSetUp() {
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://10.0.0.107:8443";

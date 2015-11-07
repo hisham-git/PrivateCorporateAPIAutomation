@@ -1,5 +1,7 @@
 package authentication;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
@@ -9,12 +11,16 @@ import com.jayway.restassured.response.Response;
 
 import dataProvider.Excel2Json;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 public class LoginAPITest extends BaseAPIService {
 
 	@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
-	public void testLoginAPI(JSONObject requestJSON) throws JSONException {
+	public void testLoginAPI(JSONObject requestJSON) throws JSONException, IOException {
 
-		Response responseJSON = getAPIResponse(requestJSON, "login", "POST");
+		/*Response responseJSON = getAPIResponse(requestJSON, "login", "POST");
 
 		if (responseJSON.getStatusCode() == 200) {
 
@@ -33,8 +39,26 @@ public class LoginAPITest extends BaseAPIService {
 
 		System.out.println("**********Response from [Login]**********");
 		System.out.println(responseJSON.getBody().asString());
-		System.out.println();
-
+		System.out.println();*/
+		//System.out.println(requestJSON);
+		ObjectMapper mapper = new ObjectMapper();
+		Map<String, Map<String,String >> map;
+		map = mapper.readValue(String.valueOf(requestJSON), new TypeReference<Map<String, Map<String ,String >>>(){});
+		System.out.println(map.get("Params").get("UserName"));
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

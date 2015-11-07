@@ -3,7 +3,19 @@
   <groupId>com.corporate.api</groupId>
   <artifactId>CorporateAPIAutomation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>Corporate Rest API Automation project</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <name>Corporate Rest API Automation project</name>
   <description>Corporate Rest API Automation project using Rest-Assured framework</description>
   
   <dependencies>
@@ -38,6 +50,17 @@
 			<artifactId>json</artifactId>
 			<version>20140107</version>
 		</dependency>
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-databind</artifactId>
+          <version>2.3.1</version>
+          <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-core</artifactId>
+          <version>2.6.3</version>
+      </dependency>
     </dependencies>
     
 </project>

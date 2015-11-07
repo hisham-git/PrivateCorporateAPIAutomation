@@ -41,9 +41,12 @@ public class Excel2Json {
 		List<Object[]> returnJSONList = new ArrayList<Object[]>();
 	//	List<String> HeaderKeys = new ArrayList<String>();
 		List<String> paramKeys = new ArrayList<String>();
+		Excel2Json excel2Json = new Excel2Json();
+		ClassLoader classLoader = excel2Json.getClass().getClassLoader();
+		File file = new File(classLoader.getResource("Api_RequestParam_Sheet.xlsx").getFile());
 		
 		try {
-			sourceFile = new FileInputStream( new File(FILE_PATH) );
+			sourceFile = new FileInputStream( file );
 			workbook = WorkbookFactory.create( sourceFile );
 			} catch (EncryptedDocumentException | InvalidFormatException e) {
 				e.printStackTrace();

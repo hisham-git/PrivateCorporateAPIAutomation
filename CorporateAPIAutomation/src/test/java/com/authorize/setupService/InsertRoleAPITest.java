@@ -1,5 +1,6 @@
 package com.authorize.setupService;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
@@ -12,9 +13,9 @@ import dataProvider.Excel2Json;
 public class InsertRoleAPITest extends BaseSetupServiceApi {
 
 	@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
-	public void testInsertRoleAPI(JSONObject requestJSON) throws JSONException {
+	public void testInsertRoleAPI(JSONObject requestJSON) throws JSONException, JsonProcessingException {
 
-		Response responseJSON = getAPIResponse(requestJSON, "insertRole", "POST");
+		Response responseJSON = getAPIResponse(requestJSON, "POST", "insertRole");
 
 		if (responseJSON.getStatusCode() == 200) {
 

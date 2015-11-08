@@ -1,5 +1,6 @@
 package com.authorize.setupService;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
@@ -12,9 +13,9 @@ import dataProvider.Excel2Json;
 public class DeleteRoleAPITest extends BaseSetupServiceApi {
 	
 	@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
-	public void testDeleteRole(JSONObject requestJSON) throws JSONException {
+	public void testDeleteRole(JSONObject requestJSON) throws JSONException, JsonProcessingException {
 	
-		Response responseJSON = getAPIResponse(requestJSON, "login", "POST");
+		Response responseJSON = getAPIResponse(requestJSON, "POST", "deleteRole");
 
 		if (responseJSON.getStatusCode() == 200) {
 			

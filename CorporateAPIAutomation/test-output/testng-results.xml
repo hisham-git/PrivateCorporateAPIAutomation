@@ -1,123 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="10" passed="10">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1014" started-at="2015-11-06T06:14:14Z" finished-at="2015-11-06T06:14:15Z">
+  <suite name="Default suite" duration-ms="926" started-at="2015-11-08T20:46:45Z" finished-at="2015-11-08T20:46:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1014" started-at="2015-11-06T06:14:14Z" finished-at="2015-11-06T06:14:15Z">
-      <class name="dataProvider.Excel2Json">
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@48cc8237]" name="testLoginAPI" duration-ms="10" started-at="2015-11-06T12:14:15Z" data-provider="getRequestJSON" finished-at="2015-11-06T12:14:15Z">
+    <test name="Default test" duration-ms="926" started-at="2015-11-08T20:46:45Z" finished-at="2015-11-08T20:46:46Z">
+      <class name="dataProvider.Excel2ConfigKey">
+        <test-method status="PASS" signature="testDeleteRoleAPI(java.util.Map)[pri:0, instance:dataProvider.Excel2ConfigKey@3932f2b2]" name="testDeleteRoleAPI" duration-ms="8" started-at="2015-11-09T02:46:46Z" data-provider="getAPIConfig" finished-at="2015-11-09T02:46:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{"Params":{"Verify Password":"pass1","Password":"pass1","UserName":"jcarter01.dsi@gmail.com"}}]]>
+                <![CDATA[{Param={
+  "Header": {},
+  "Params":{
+      "RoleID": 2
+  }
+}, SchemaPath=resources/jsonSchema/deleteRole_pass.json, URL=http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@48cc8237]" name="testLoginAPI" duration-ms="1" started-at="2015-11-06T12:14:15Z" data-provider="getRequestJSON" finished-at="2015-11-06T12:14:15Z">
+        </test-method> <!-- testDeleteRoleAPI -->
+        <test-method status="PASS" signature="testDeleteRoleAPI(java.util.Map)[pri:0, instance:dataProvider.Excel2ConfigKey@3932f2b2]" name="testDeleteRoleAPI" duration-ms="1" started-at="2015-11-09T02:46:46Z" data-provider="getAPIConfig" finished-at="2015-11-09T02:46:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{"Params":{"Verify Password":"pass2","Password":"pass2","UserName":"jcarter02.dsi"}}]]>
+                <![CDATA[{Param={
+  "Header": {},
+  "Params":{
+      "RoleID": 16
+  }
+}, SchemaPath=resources/jsonSchema/deleteRole_fail.json, URL=http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@48cc8237]" name="testLoginAPI" duration-ms="1" started-at="2015-11-06T12:14:15Z" data-provider="getRequestJSON" finished-at="2015-11-06T12:14:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"Params":{"Verify Password":"pass3","Password":"pass3","UserName":"jcarter03.dsi"}}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@48cc8237]" name="testLoginAPI" duration-ms="1" started-at="2015-11-06T12:14:15Z" data-provider="getRequestJSON" finished-at="2015-11-06T12:14:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"Params":{"Verify Password":"pass4","Password":"pass4","UserName":"jcarter04.dsi"}}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@48cc8237]" name="testLoginAPI" duration-ms="0" started-at="2015-11-06T12:14:15Z" data-provider="getRequestJSON" finished-at="2015-11-06T12:14:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"Params":{"Verify Password":"pass5","Password":"pass5","UserName":"jcarter05.dsi"}}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@48cc8237]" name="testLoginAPI" duration-ms="1" started-at="2015-11-06T12:14:15Z" data-provider="getRequestJSON" finished-at="2015-11-06T12:14:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"Params":{"Verify Password":"pass6","Password":"pass6","UserName":"jcarter06.dsi"}}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@48cc8237]" name="testLoginAPI" duration-ms="0" started-at="2015-11-06T12:14:15Z" data-provider="getRequestJSON" finished-at="2015-11-06T12:14:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"Params":{"Verify Password":1234,"Password":1234,"UserName":"jcarter07.dsi"}}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@48cc8237]" name="testLoginAPI" duration-ms="1" started-at="2015-11-06T12:14:15Z" data-provider="getRequestJSON" finished-at="2015-11-06T12:14:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"Params":{"Verify Password":"","Password":"","UserName":"jcarter08.dsi"}}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@48cc8237]" name="testLoginAPI" duration-ms="0" started-at="2015-11-06T12:14:15Z" data-provider="getRequestJSON" finished-at="2015-11-06T12:14:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"Params":{"Verify Password":false,"Password":true,"UserName":"jcarter09.dsi"}}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-        <test-method status="PASS" signature="testLoginAPI(org.json.JSONObject)[pri:0, instance:dataProvider.Excel2Json@48cc8237]" name="testLoginAPI" duration-ms="1" started-at="2015-11-06T12:14:15Z" data-provider="getRequestJSON" finished-at="2015-11-06T12:14:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{"Params":{"UserName":""}}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLoginAPI -->
-      </class> <!-- dataProvider.Excel2Json -->
+        </test-method> <!-- testDeleteRoleAPI -->
+      </class> <!-- dataProvider.Excel2ConfigKey -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

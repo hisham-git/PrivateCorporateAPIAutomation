@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Module",
+      "type": "string",
+      "default": "authorize"
+    },
+    "Service": {
+      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Service",
+      "type": "string",
+      "default": "setup"
+    },
+    "Action": {
+      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Action",
+      "type": "string",
+      "default": "deleteRole"
+    },
+    "Header": {
+      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Header",
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "Params": {
+      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Params",
+      "type": "object",
+      "properties": {
+        "RoleID": {
+          "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Params/RoleID",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Reasons": {
+      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Reasons",
+      "type": "array",
+      "items": {
+        "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Reasons/0",
+        "type": "object",
+        "properties": {
+          "ReasonCode": {
+            "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Reasons/0/ReasonCode",
+            "type": "string",
+            "default": "core00008"
+          },
+          "Description": {
+            "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Reasons/0/Description",
+            "type": "string",
+            "default": "required"
+          },
+          "Level": {
+            "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Reasons/0/Level",
+            "type": "string",
+            "default": "SEVERE"
+          },
+          "Type": {
+            "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Reasons/0/Type",
+            "type": "string",
+            "default": "BIZ_RULE"
+          },
+          "Class": {
+            "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Reasons/0/Class",
+            "type": "string",
+            "default": "com.campus.authorize.service.SetupService"
+          },
+          "Method": {
+            "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Reasons/0/Method",
+            "type": "string",
+            "default": "deleteRole"
+          },
+          "Context": {
+            "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Reasons/0/Context",
+            "type": "object",
+            "properties": {
+              "ID": {
+                "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Reasons/0/Context/ID",
+                "type": "object",
+                "properties": {
+                  "RoleID": {
+                    "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Reasons/0/Context/ID/RoleID",
+                    "type": "integer"
+                  }
+                },
+                "additionalProperties": false,
+				"required": [
+					"RoleID"
+				]
+              }
+            },
+            "additionalProperties": false
+			
+          }
+        },
+        "additionalProperties": false,
+		"required": [
+			"ReasonCode",
+			"Description",
+			"Level",
+			"Type",
+			"Class",
+			"Method",
+			"Context"
+		]
+      }
+    },
+    "Data": {
+      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/deleteRole/Data",
+      "type": "null"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Reasons",
+    "Data"
+  ]
+}

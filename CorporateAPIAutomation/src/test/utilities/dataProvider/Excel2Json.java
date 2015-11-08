@@ -20,23 +20,26 @@ import org.json.JSONObject;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
+public class Excel2Json {
 
-public class Excel2Jsonhp {
-
+	//private final static String FILE_NAME = "Api_RequestParam_Sheet.xlsx";
 	private static final String FILE_PATH = "src/test/resources/Api_RequestParam_Sheet.xlsx" ;
+	
 
+	static ClassLoader classLoader = Excel2Json.class.getClassLoader();
+	static File file = new File(classLoader.getResource("Api_RequestParam_Sheet.xlsx").getFile());
+	
 	@Test(dataProvider = "getRequestJSON")
-	public void testGetRightsAPI (JSONObject json){
-	//	System.out.println(json.toString(5));
-		System.out.println(json.getJSONObject("Params").get("RoleIDs"));
-	//	System.out.println(json.toString());
+	public void testLoginAPI (JSONObject json){
+		System.out.println(json.getJSONObject("Params").get("Password"));
+		System.out.println(json.toString());
 	}
 
 	@DataProvider
-	public static Iterator<Object[]> getRequestJSON(Method method) throws JsonProcessingException {
+	public static Iterator<Object[]> getRequestJSON(Method method) throws IOException {
 
 		FileInputStream sourceFile = null;
+	//	File sourceFile = null;
 		Workbook workbook = null;
 		Sheet sheet = null;
 		
@@ -45,8 +48,16 @@ public class Excel2Jsonhp {
 		List<String> paramKeys = new ArrayList<String>();
 		
 		try {
-			sourceFile = new FileInputStream( new File(FILE_PATH) );
+			
+		//	ClassLoader classLoader = getClass().getClassLoader();
+			
+		//	sourceFile = new File(classLoader.getResource(FILE_NAME).getFile());
+			
+			
+			sourceFile = new FileInputStream(file);
 			workbook = WorkbookFactory.create( sourceFile );
+			
+			workbook = WorkbookFactory.create(sourceFile);
 			} catch (EncryptedDocumentException | InvalidFormatException e) {
 				e.printStackTrace();
 			} catch (FileNotFoundException e) {
@@ -89,7 +100,8 @@ public class Excel2Jsonhp {
 			break;
 
 		default:
-			System.out.println("Test method doesn't have any related sheet");
+			System.out.println("Test API doesn't have any related Excel sheet");
+			workbook.close();
 			return null;
 		}
 
@@ -125,7 +137,8 @@ public class Excel2Jsonhp {
 				returnJSONList.add(new Object[]{jParamObj});
 			}	
 		}
-
+		workbook.close();
+		
 		return returnJSONList.iterator();
 	}
 

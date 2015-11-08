@@ -11,7 +11,7 @@ public class BaseAuthenticationServiceApi extends BaseAPIService {
 
 	@BeforeClass
 	public void setUp() {
-		RestAssured.basePath = "/authentication/authentication/";
+		RestAssured.basePath = "/web-corporate/authentication/authentication/";
 	}
 
 	@AfterClass

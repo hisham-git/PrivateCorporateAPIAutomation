@@ -13,10 +13,10 @@ import dataProvider.Excel2Json;
 public class UpdatePasswordAPITest extends BaseAuthenticationServiceApi {
 
 	@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
-	public void testUpdatePasswordApi(JSONObject requestJSON)
+	public void testUpdatePasswordAPI(JSONObject requestJSON)
 			throws JSONException, InterruptedException, JsonProcessingException {
 
-		Response responseJSON = getAPIResponse(requestJSON, "updatePassword", "POST");
+		Response responseJSON = getAPIResponse(requestJSON, "POST", "updatePassword");
 
 		if ( responseJSON.getStatusCode() == 200 ) {
 			Assert.assertEquals(responseJSON.jsonPath().getString("Params.Password"),

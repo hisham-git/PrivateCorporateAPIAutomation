@@ -1,5 +1,6 @@
 package com.authorize.checkService;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.json.JSONException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,9 +11,9 @@ public class GetUserActionsAPITest extends BaseCheckServiceApi {
 	
 	@Test
 	public void testGetUserActionsAPI()
-			throws JSONException {
+			throws JSONException, JsonProcessingException {
 
-		Response responseJSON = getAPIResponse(null, "getUserActions", "GET");
+		Response responseJSON = getAPIResponse(null, "POST", "getUserActions");
 
 		if (responseJSON.getStatusCode() == 200) {
 

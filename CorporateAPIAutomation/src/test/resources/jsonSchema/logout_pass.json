@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://localhost:8080/web-corporate/authentication/logout",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "http://localhost:8080/web-corporate/authentication/logout/Module",
+      "type": "string",
+      "default": "authentication"
+    },
+    "Service": {
+      "id": "http://localhost:8080/web-corporate/authentication/logout/Service",
+      "type": "string",
+      "default": "authentication"
+    },
+    "Action": {
+      "id": "http://localhost:8080/web-corporate/authentication/logout/Action",
+      "type": "string",
+      "default": "logout"
+    },
+    "Header": {
+      "id": "http://localhost:8080/web-corporate/authentication/logout/Header",
+      "type": "null",
+      "default": null
+    },
+    "Params": {
+      "id": "http://localhost:8080/web-corporate/authentication/logout/Params",
+      "type": "null",
+      "default": null
+    },
+    "Data": {
+      "id": "http://localhost:8080/web-corporate/authentication/logout/Data",
+      "type": "null",
+      "default": null
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

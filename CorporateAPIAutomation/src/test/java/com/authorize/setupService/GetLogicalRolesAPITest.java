@@ -1,5 +1,6 @@
 package com.authorize.setupService;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.json.JSONException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -10,9 +11,9 @@ public class GetLogicalRolesAPITest extends BaseSetupServiceApi{
 	
 	@Test
 	public void testGetLogicalRolesAPI ()
-			throws JSONException {
+			throws JSONException, JsonProcessingException {
 		
-		Response responseJSON = getAPIResponse(null, "getLogicalRoles", "GET");
+		Response responseJSON = getAPIResponse(null, "POST", "getLogicalRoles");
 
 		if (responseJSON.getStatusCode() == 200) {
 			

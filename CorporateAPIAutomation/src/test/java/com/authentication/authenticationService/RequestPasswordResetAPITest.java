@@ -16,7 +16,7 @@ public class RequestPasswordResetAPITest extends BaseAuthenticationServiceApi {
 	public void testRequestPasswordResetAPI(JSONObject requestJSON)
 			throws JSONException, InterruptedException, JsonProcessingException {
 
-		Response responseJSON = getAPIResponse(requestJSON, "requestPasswordReset", "POST");
+		Response responseJSON = getAPIResponse(requestJSON, "POST", "requestPasswordReset");
 
 		if (responseJSON.getStatusCode() == 200) {
 

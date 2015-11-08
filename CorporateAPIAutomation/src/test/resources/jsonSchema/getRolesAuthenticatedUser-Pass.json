@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getRolesAuthenticatedUser",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getRolesAuthenticatedUser/Module",
+      "type": "string",
+      "default": "authorize"
+    },
+    "Service": {
+      "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getRolesAuthenticatedUser/Service",
+      "type": "string",
+      "default": "check"
+    },
+    "Action": {
+      "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getRolesAuthenticatedUser/Action",
+      "type": "string",
+      "default": "getRolesAuthenticatedUser"
+    },
+    "Header": {
+      "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getRolesAuthenticatedUser/Header",
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "Params": {
+      "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getRolesAuthenticatedUser/Params",
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "Data": {
+      "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getRolesAuthenticatedUser/Data",
+      "type": "array",
+      "items": {
+        "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getRolesAuthenticatedUser/Data/0",
+        "type": "object",
+        "properties": {
+          "ID": {
+            "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getRolesAuthenticatedUser/Data/0/ID",
+            "type": "integer"
+          },
+          "Name": {
+            "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getRolesAuthenticatedUser/Data/0/Name",
+            "type": "string"
+          },
+          "SystemID": {
+            "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getRolesAuthenticatedUser/Data/0/SystemID",
+            "type": "integer"
+          },
+          "Description": {
+            "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getRolesAuthenticatedUser/Data/0/Description",
+            "type": "string"
+          },
+          "oca": {
+            "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getRolesAuthenticatedUser/Data/0/oca",
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

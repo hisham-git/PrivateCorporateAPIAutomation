@@ -26,15 +26,13 @@ public class Excel2ConfigKey {
 	private static final String FILE_PATH = "src/test/resources/Api_Config.xlsx" ;
 
 	@Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
-	public void testLoginAPI (Map<String, String> config ){
-		//	System.out.println(json.toString(5));
-		//	System.out.println(json.getJSONObject("Params").get("RoleIDs"));
-		System.out.println(config.get("URL") +" | "+ config.get("Param") +" | "+ config.get("Schema"));
-		System.out.println("==============================================================================");
+	public void testDeleteRoleAPI (Map<String, String> config ){
+		System.out.println(config.get("URL") +" |\n "+ config.get("Param") +" |\n "+ config.get("SchemaPath"));
+		System.out.println("=================================" + "testMethod Executed" + "=========================================");
 	}
 
 	@DataProvider
-	public Iterator<Object[]> getAPIConfig(Method method) throws IOException {
+	public static Iterator<Object[]> getAPIConfig(Method callingMethod) throws IOException {
 
 		FileInputStream sourceFile = null;
 		Workbook workbook = null;
@@ -51,9 +49,13 @@ public class Excel2ConfigKey {
 			e.printStackTrace();
 		}
 
-		switch ( method.getName() ) {
+		switch ( callingMethod.getName() ) {
 		case "testLoginAPI":
 			sheet = workbook.getSheet("login");
+			break;
+			
+		case "testLogoutAPI":
+			sheet = workbook.getSheet("logout");
 			break;
 
 		case "testRequestPasswordResetAPI":
@@ -64,8 +66,12 @@ public class Excel2ConfigKey {
 			sheet = workbook.getSheet("verifyPasswordResetToken");
 			break;
 
-		case "testUpdatePasswordAPI":
-			sheet = workbook.getSheet("updatePassword");
+		case "testUpdatePasswordAPIforLoggedInUser":
+			sheet = workbook.getSheet("updatePasswordLogged");
+			break;
+			
+		case "testUpdatePasswordAPIforGuestUser":
+			sheet = workbook.getSheet("updatePasswordGuest");
 			break;
 
 		case "testInsertRoleAPI":
@@ -83,6 +89,30 @@ public class Excel2ConfigKey {
 		case "testGetRightsAPI":
 			sheet = workbook.getSheet("getRights");
 			break;
+			
+		case "testGetRoleUsersAPI":
+			sheet = workbook.getSheet("getRoleUsers");
+			break;
+			
+		case "testGetUsersAPI":
+			sheet = workbook.getSheet("getUsers");
+			break;
+			
+		case "testAddRightsToRoleAPI":
+			sheet = workbook.getSheet("addRightsToRole");
+			break;
+			
+		case "testRemoveRightsFromRoleAPI":
+			sheet = workbook.getSheet("removeRightsFromRole");
+			break;
+			
+		case "testAddUsersToRoleAPI":
+			sheet = workbook.getSheet("addUsersToRole");
+			break;
+			
+		case "testRemoveUsersFromRoleAPI":
+			sheet = workbook.getSheet("removeUsersFromRole");
+			break;
 
 		default:
 			System.out.println("Test API doesn't have any related Excel sheet");
@@ -91,10 +121,7 @@ public class Excel2ConfigKey {
 		}
 
 		List<Object[]> jParamObj = new ArrayList<>();
-		//List<Object[]> returnAPIConfigList = new ArrayList<Object[]>();
-		//	List<String> HeaderKeys = new ArrayList<String>();
 		List<String> configKeys = new ArrayList<String>();
-
 
 		for ( Iterator<Row> rowsIT = sheet.rowIterator(); rowsIT.hasNext(); )
 		{
@@ -112,13 +139,13 @@ public class Excel2ConfigKey {
 			} else {
 				for ( Iterator<Cell> cellsIT = row.cellIterator(); cellsIT.hasNext(); )
 				{
-					Map<String, String> JcellObj = new HashMap<>();
+					Map<String, Object> JcellObj = new HashMap<>();
 
 					for (String getKey : configKeys) {
 						if (cellsIT.hasNext())
 						{
 							Cell cell = cellsIT.next();
-							JcellObj.put( getKey, (String) getCellValue(cell) );
+							JcellObj.put( getKey, getCellValue(cell) );
 						}
 					}
 					jParamObj.add(new Object[] {JcellObj});
@@ -145,14 +172,13 @@ public class Excel2ConfigKey {
 			return cell.getNumericCellValue();
 
 		case Cell.CELL_TYPE_BLANK:
-			return cell.getRichStringCellValue();
-
-		case Cell.CELL_TYPE_FORMULA:
-			return cell.getArrayFormulaRange();
+			return "";
+			
+		default:
+			return "";
+			
 		}
 
-
-		return null;
 	}
 
 }

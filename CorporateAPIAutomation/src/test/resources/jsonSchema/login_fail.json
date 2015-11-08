@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "http://jsonschema.net/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "http://jsonschema.net/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "http://jsonschema.net/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "http://jsonschema.net/Header",
+      "type": "null"
+    },
+    "Params": {
+      "id": "http://jsonschema.net/Params",
+      "type": "object",
+      "properties": {
+        "UserName": {
+          "id": "http://jsonschema.net/Params/UserName",
+          "type": "string"
+        },
+        "Password": {
+          "id": "http://jsonschema.net/Params/Password",
+          "type": "string"
+        }
+      }
+    },
+    "Reasons": {
+      "id": "http://jsonschema.net/Reasons",
+      "type": "array",
+      "items": {
+        "id": "http://jsonschema.net/Reasons/0",
+        "type": "object",
+        "properties": {
+          "ReasonCode": {
+            "id": "http://jsonschema.net/Reasons/0/ReasonCode",
+            "type": "string"
+          },
+          "Description": {
+            "id": "http://jsonschema.net/Reasons/0/Description",
+            "type": "string"
+          },
+          "Level": {
+            "id": "http://jsonschema.net/Reasons/0/Level",
+            "type": "string"
+          },
+          "Type": {
+            "id": "http://jsonschema.net/Reasons/0/Type",
+            "type": "string"
+          },
+          "Class": {
+            "id": "http://jsonschema.net/Reasons/0/Class",
+            "type": "string"
+          },
+          "Method": {
+            "id": "http://jsonschema.net/Reasons/0/Method",
+            "type": "string"
+          },
+          "Context": {
+            "id": "http://jsonschema.net/Reasons/0/Context",
+            "type": "object",
+            "properties": {
+              "Error": {
+                "id": "http://jsonschema.net/Reasons/0/Context/Error",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Data": {
+      "id": "http://jsonschema.net/Data",
+      "type": "null"
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Reasons",
+    "Data"
+  ]
+}

@@ -1,4 +1,4 @@
-package com.authorize.checkService;
+package authentication;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -7,16 +7,13 @@ import authentication.BaseAPIService;
 
 import com.jayway.restassured.RestAssured;
 
-public class BaseCheckServiceApi extends BaseAPIService {
+public class BaseAuthenticationApi extends BaseAPIService {
 
 	@BeforeClass
 	public void setUp() {
-		RestAssured.basePath = "/authorize/authorizeService/";
+		RestAssured.basePath = "/web-corporate/authentication/";
+		
 	}
 
-	@AfterClass
-	public void afterClass() {
-
-	}
 
 }

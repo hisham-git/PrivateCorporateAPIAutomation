@@ -16,7 +16,9 @@ public class VerifyPasswordResetTokenAPITest extends BaseAuthenticationServiceAp
 	public void testVerifyPasswordResetTokenAPI(JSONObject requestJSON)
 			throws JSONException, InterruptedException, JsonProcessingException {
 
-		Response responseJSON = getAPIResponse(requestJSON, "verifyPasswordResetToken", "POST");
+		Response responseJSON = getAPIResponse(requestJSON, "POST", "verifyPasswordResetToken");
+		
+		System.out.println(responseJSON.toString());
 
 		if (responseJSON.getStatusCode() == 200) {
 

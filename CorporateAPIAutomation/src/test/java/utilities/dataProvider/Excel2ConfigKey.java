@@ -1,25 +1,17 @@
 package utilities.dataProvider;
 
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.*;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.poi.EncryptedDocumentException;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import java.util.*;
 
 public class Excel2ConfigKey {
 
@@ -115,6 +107,9 @@ public class Excel2ConfigKey {
 			
 		case "testRemoveUsersFromRoleAPI":
 			sheet = workbook.getSheet("removeUsersFromRole");
+			break;
+		case "testGetUserActionsAPI":
+			sheet = workbook.getSheet("getUserActions");
 			break;
 
 		default:

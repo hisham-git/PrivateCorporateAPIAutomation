@@ -1,65 +1,65 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getUserActions",
+  "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/check/getUserActions",
   "type": "object",
   "properties": {
     "Module": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getUserActions/Module",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/check/getUserActions/Module",
       "type": "string",
       "default": "authorize"
     },
     "Service": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getUserActions/Service",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/check/getUserActions/Service",
       "type": "string",
       "default": "check"
     },
     "Action": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getUserActions/Action",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/check/getUserActions/Action",
       "type": "string",
       "default": "getUserActions"
     },
     "Header": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getUserActions/Header",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/check/getUserActions/Header",
       "type": "object",
       "properties": {},
       "additionalProperties": false
     },
     "Params": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getUserActions/Params",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/check/getUserActions/Params",
       "type": "object",
       "properties": {},
       "additionalProperties": false
     },
     "Data": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getUserActions/Data",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/check/getUserActions/Data",
       "type": "array",
       "items": {
-        "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getUserActions/Data/2",
+        "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/check/getUserActions/Data/2",
         "type": "object",
         "properties": {
           "ID": {
-            "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getUserActions/Data/2/ID",
+            "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/check/getUserActions/Data/2/ID",
             "type": "integer"
           },
           "SystemID": {
-            "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getUserActions/Data/2/SystemID",
+            "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/check/getUserActions/Data/2/SystemID",
             "type": "integer"
           },
           "Name": {
-            "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getUserActions/Data/2/Name",
+            "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/check/getUserActions/Data/2/Name",
             "type": "string"
           },
           "Module": {
-            "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getUserActions/Data/2/Module",
+            "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/check/getUserActions/Data/2/Module",
             "type": "string",
             "default": "authorize"
           },
           "Service": {
-            "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getUserActions/Data/2/Service",
+            "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/check/getUserActions/Data/2/Service",
             "type": "string"
           },
           "oca": {
-            "id": "http://localhost:8080/web-corporate/api/submit/authorize/check/getUserActions/Data/2/oca",
+            "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/check/getUserActions/Data/2/oca",
             "type": "integer"
           }
         },

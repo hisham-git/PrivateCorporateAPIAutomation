@@ -112,7 +112,12 @@ public class Excel2ConfigKey {
 			sheet = workbook.getSheet("getUserActions");
 			break;
 
-		default:
+		case "testGetRolesAuthenticatedUserAPI":
+			sheet = workbook.getSheet("getRolesAuthenticatedUser");
+			break;
+
+
+			default:
 			System.out.println("Test API doesn't have any related Excel sheet");
 			workbook.close();
 			return null;

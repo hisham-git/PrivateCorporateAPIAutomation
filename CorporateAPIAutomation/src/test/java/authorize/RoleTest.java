@@ -1,4 +1,4 @@
-package authentication.authorize;
+package authorize;
 
 import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.response.Response;

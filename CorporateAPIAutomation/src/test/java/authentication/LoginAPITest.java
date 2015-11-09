@@ -1,18 +1,14 @@
 package authentication;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.jayway.restassured.response.Response;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.jayway.restassured.response.Response;
-
-import dataProvider.Excel2Json;
 
 public class LoginAPITest extends BaseAuthenticationApi {
 
-	@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
+	//@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
 	public void testLoginAPI(JSONObject requestJSON) throws JSONException, JsonProcessingException {
 
 		Response responseJSON = getAPIResponse(requestJSON, "POST", "login");

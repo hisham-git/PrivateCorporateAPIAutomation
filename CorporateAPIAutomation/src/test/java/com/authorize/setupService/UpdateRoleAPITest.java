@@ -1,18 +1,14 @@
 package com.authorize.setupService;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.jayway.restassured.response.Response;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import com.jayway.restassured.response.Response;
-
-import dataProvider.Excel2Json;
 
 public class UpdateRoleAPITest extends BaseSetupServiceApi {
 
-	@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
+	//@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
 	public void testUpdateRoleAPI(JSONObject requestJSON) throws JSONException, JsonProcessingException {
 
 		Response responseJSON = getAPIResponse(requestJSON, "POST", "updateRole");

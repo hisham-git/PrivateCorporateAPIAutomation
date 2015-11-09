@@ -4,7 +4,6 @@ import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
 import org.json.JSONException;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.dataProvider.Excel2ConfigKey;
 
@@ -41,7 +40,7 @@ public class LoginAPI2Test {
 				.then()
 					.statusCode(200)
 					//.body(matchesJsonSchemaInClasspath(config.get("SchemaPath")))
-					.body(matchesJsonSchemaInClasspath("C:\\Users\\HISHAM\\git\\com.corporate.api\\CorporateAPIAutomation\\CorporateAPIAutomation\\src\\test\\resources\\jsonSchema\\login_pass.json"))
+					.body(matchesJsonSchemaInClasspath("jsonSchema/login_pass.json"))
 					.body("Params.UserName", equalTo("anik"))
 					.body("Params.Password", equalTo("12345678"))
 					.body("Data.UserName", equalTo("anik"))
@@ -50,12 +49,13 @@ public class LoginAPI2Test {
 					.extract().response();
 
 		
-		System.out.println(responseJSON.getCookies());
+		/*System.out.println(responseJSON.getCookies());
 		System.out.println(responseJSON.getSessionId());
 		System.out.println(responseJSON.getStatusLine());
+		System.out.println(responseJSON.getBody().asString());*/
 
-		System.out.println(responseJSON.getBody().asString());
 
+/*
 		if (responseJSON.getStatusCode() == 200) {
 			if ( responseJSON.jsonPath().getList("Reasons") == null ) {
 				Assert.assertEquals(responseJSON.jsonPath().getString("Params.UserName"),
@@ -78,15 +78,18 @@ public class LoginAPI2Test {
 			//	Assert.assertNotNull(responseJSON.jsonPath().getString("Data.LastName"));
 			//	Assert.assertNotNull(responseJSON.jsonPath().getString("Data.FirstName"));
 
-			/*	} else {
+			*/
+/*	} else {
 
 			Assert.assertEquals(responseJSON.jsonPath().getString("Params.UserName"),
 					"anik", "UserName not found on Response Params");
 			Assert.assertNull(responseJSON.jsonPath().getString("Data"), "Response Data is not null");
 			Assert.assertNotNull(responseJSON.jsonPath().getString("Reasons.ReasonCode"));
-		}*/
+		}*//*
+
 
 		}
+*/
 
 		System.out.println("**********Response from [Login]**********");
 		System.out.println(responseJSON.getBody().asString());

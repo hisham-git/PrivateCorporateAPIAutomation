@@ -1,18 +1,14 @@
 package com.authentication.authenticationService;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.jayway.restassured.response.Response;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.jayway.restassured.response.Response;
-
-import dataProvider.Excel2Json;
 
 public class VerifyPasswordResetTokenAPITest extends BaseAuthenticationServiceApi {
 
-	@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
+	//@Test(dataProvider = "getRequestJSON", dataProviderClass = Excel2Json.class)
 	public void testVerifyPasswordResetTokenAPI(JSONObject requestJSON)
 			throws JSONException, InterruptedException, JsonProcessingException {
 

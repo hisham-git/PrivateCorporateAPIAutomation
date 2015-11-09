@@ -13,8 +13,8 @@ import org.testng.annotations.Test;
 import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
+import utilities.dataProvider.Excel2ConfigKey;
 
-import dataProvider.Excel2ConfigKey;
 
 public class LoginAPI2Test {
 
@@ -36,18 +36,19 @@ public class LoginAPI2Test {
 
 		Response responseJSON =	
 				given()
-				.spec(requestSpec)
+					.spec(requestSpec)
 				.when()
-				.post(config.get("URL"))
-				//	.post("/login")
+					.post(config.get("URL"))
 				.then()
-				.body(matchesJsonSchemaInClasspath(config.get("SchemaPath")))
-				.body("Params.UserName", equalTo("anik"))
-				.body("Params.Password", equalTo("12345678"))
-				.body("Data.UserName", equalTo("anik"))
-				.body("Data.LastName", equalTo("Hoque"))
-				.body("Data.FirstName", equalTo("Mushraful"))
-				.extract().response();
+					.statusCode(200)
+					//.body(matchesJsonSchemaInClasspath(config.get("SchemaPath")))
+					.body(matchesJsonSchemaInClasspath())
+					.body("Params.UserName", equalTo("anik"))
+					.body("Params.Password", equalTo("12345678"))
+					.body("Data.UserName", equalTo("anik"))
+					.body("Data.LastName", equalTo("Hoque"))
+					.body("Data.FirstName", equalTo("Mushraful"))
+					.extract().response();
 
 		
 		System.out.println(responseJSON.getCookies());

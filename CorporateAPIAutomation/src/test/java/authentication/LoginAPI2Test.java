@@ -1,19 +1,18 @@
 package authentication;
 
-import static com.jayway.restassured.RestAssured.given;
-import static com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
-import static org.hamcrest.Matchers.equalTo;
-
-import java.util.Map;
-
-import org.json.JSONException;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
+import org.json.JSONException;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import utilities.dataProvider.Excel2ConfigKey;
+
+import java.util.Map;
+
+import static com.jayway.restassured.RestAssured.given;
+import static com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static org.hamcrest.Matchers.equalTo;
 
 
 public class LoginAPI2Test {
@@ -42,7 +41,7 @@ public class LoginAPI2Test {
 				.then()
 					.statusCode(200)
 					//.body(matchesJsonSchemaInClasspath(config.get("SchemaPath")))
-					.body(matchesJsonSchemaInClasspath())
+					.body(matchesJsonSchemaInClasspath("C:\\Users\\HISHAM\\git\\com.corporate.api\\CorporateAPIAutomation\\CorporateAPIAutomation\\src\\test\\resources\\jsonSchema\\login_pass.json"))
 					.body("Params.UserName", equalTo("anik"))
 					.body("Params.Password", equalTo("12345678"))
 					.body("Data.UserName", equalTo("anik"))

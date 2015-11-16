@@ -15,7 +15,7 @@ public class ExcelFileReaderConfig {
     public static Iterator<Object[]> getAPIConfig(Method callingMethod) throws IOException {
         FileInputStream sourceFile = null;
         Workbook workbook = null;
-        Excel2ConfigKey configKey = new Excel2ConfigKey();
+        ExcelFileReaderConfig configKey = new ExcelFileReaderConfig();
         ClassLoader loader = configKey.getClass().getClassLoader();
         try {
             sourceFile = new FileInputStream( new File(loader.getResource("config/Api_Config.xlsx").getFile()) );

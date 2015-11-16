@@ -1,4 +1,4 @@
-package authentication;
+package api.authorize;
 
 import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.response.Response;
@@ -15,18 +15,15 @@ import static com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonS
 /**
  * Created by sazzad on 11/9/15.
  */
-public class ServletAPITest {
+public class CheckServiceTest {
     @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
-    public void testLoginAPI(Map<String, String> config) throws JSONException {
-
+    public void testGetUserActionsAPI(Map<String, String> config) throws JSONException {
         // Building request using requestSpecBuilder
         RequestSpecBuilder builder = new RequestSpecBuilder();
 
         // Setting API's body
         String requestJSON = config.get("Param");
-
         builder.setBody(requestJSON);
-
         // Setting content type as application/json or application/xml
         builder.setContentType("application/json; charset=UTF-8");
 
@@ -42,21 +39,16 @@ public class ServletAPITest {
                         .body(matchesJsonSchemaInClasspath(config.get("SchemaPath")))
                         .extract().response();
 
+        System.out.println(responseJSON.asString());
     }
-
-
     @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
-    public void testLogoutAPI(Map<String, String> config) throws JSONException {
-
-
+    public void testGetRolesAuthenticatedUserAPI(Map<String, String> config) throws JSONException {
         // Building request using requestSpecBuilder
         RequestSpecBuilder builder = new RequestSpecBuilder();
 
         // Setting API's body
         String requestJSON = config.get("Param");
-
         builder.setBody(requestJSON);
-
         // Setting content type as application/json or application/xml
         builder.setContentType("application/json; charset=UTF-8");
 
@@ -72,5 +64,8 @@ public class ServletAPITest {
                         .body(matchesJsonSchemaInClasspath(config.get("SchemaPath")))
                         .extract().response();
 
+        System.out.println(responseJSON.asString());
     }
+
+
 }

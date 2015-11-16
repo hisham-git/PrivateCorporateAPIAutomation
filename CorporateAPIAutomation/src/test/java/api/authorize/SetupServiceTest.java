@@ -1,4 +1,4 @@
-package authentication;
+package api.authorize;
 
 import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.response.Response;
@@ -15,19 +15,14 @@ import static com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonS
 /**
  * Created by sazzad on 11/9/15.
  */
-public class AuthenticationServiceTest {
+public class SetupServiceTest {
     @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
-    public void testRequestPasswordResetAPI(Map<String, String> config) throws JSONException {
-
-
+    public void testInsertRoleAPI(Map<String, String> config) throws JSONException {
         // Building request using requestSpecBuilder
         RequestSpecBuilder builder = new RequestSpecBuilder();
-
         // Setting API's body
         String requestJSON = config.get("Param");
-
         builder.setBody(requestJSON);
-        String st = "{\"Header\": {},\"Params\": {\"UserName\": \"ntm\"}}";
         // Setting content type as application/json or application/xml
         builder.setContentType("application/json; charset=UTF-8");
 
@@ -44,19 +39,13 @@ public class AuthenticationServiceTest {
                         .extract().response();
 
     }
-
     @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
-    public void testVerifyPasswordResetTokenAPI(Map<String, String> config) throws JSONException {
-
-
+    public void testUpdateRoleAPI(Map<String, String> config) throws JSONException {
         // Building request using requestSpecBuilder
         RequestSpecBuilder builder = new RequestSpecBuilder();
-
         // Setting API's body
         String requestJSON = config.get("Param");
-
         builder.setBody(requestJSON);
-        String st = "{\"Header\": {},\"Params\": {\"UserName\": \"ntm\"}}";
         // Setting content type as application/json or application/xml
         builder.setContentType("application/json; charset=UTF-8");
 
@@ -73,19 +62,59 @@ public class AuthenticationServiceTest {
                         .extract().response();
 
     }
-
     @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
-    public void testUpdatePasswordAPI(Map<String, String> config) throws JSONException {
-
-
+    public void testDeleteRoleAPI(Map<String, String> config) throws JSONException {
         // Building request using requestSpecBuilder
         RequestSpecBuilder builder = new RequestSpecBuilder();
-
         // Setting API's body
         String requestJSON = config.get("Param");
-
         builder.setBody(requestJSON);
-        String st = "{\"Header\": {},\"Params\": {\"UserName\": \"ntm\"}}";
+        // Setting content type as application/json or application/xml
+        builder.setContentType("application/json; charset=UTF-8");
+
+        RequestSpecification requestSpec = builder.build();
+
+        Response responseJSON =
+                given()
+                        .spec(requestSpec)
+                        .when()
+                        .post(config.get("URL"))
+                        .then()
+                        .statusCode(200)
+                        .body(matchesJsonSchemaInClasspath(config.get("SchemaPath")))
+                        .extract().response();
+
+    }
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
+    public void testGetLogicalRolesAPI(Map<String, String> config) throws JSONException {
+        // Building request using requestSpecBuilder
+        RequestSpecBuilder builder = new RequestSpecBuilder();
+        // Setting API's body
+        String requestJSON = config.get("Param");
+        builder.setBody(requestJSON);
+        // Setting content type as application/json or application/xml
+        builder.setContentType("application/json; charset=UTF-8");
+
+        RequestSpecification requestSpec = builder.build();
+
+        Response responseJSON =
+                given()
+                        .spec(requestSpec)
+                        .when()
+                        .post(config.get("URL"))
+                        .then()
+                        .statusCode(200)
+                        .body(matchesJsonSchemaInClasspath(config.get("SchemaPath")))
+                        .extract().response();
+
+    }
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
+    public void testGetRightsAPI(Map<String, String> config) throws JSONException {
+        // Building request using requestSpecBuilder
+        RequestSpecBuilder builder = new RequestSpecBuilder();
+        // Setting API's body
+        String requestJSON = config.get("Param");
+        builder.setBody(requestJSON);
         // Setting content type as application/json or application/xml
         builder.setContentType("application/json; charset=UTF-8");
 

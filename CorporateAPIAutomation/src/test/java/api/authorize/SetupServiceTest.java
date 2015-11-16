@@ -5,7 +5,7 @@ import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
 import org.json.JSONException;
 import org.testng.annotations.Test;
-import utilities.dataProvider.Excel2ConfigKey;
+import utilities.dataProvider.ExcelFileReaderConfig;
 
 import java.util.Map;
 
@@ -16,7 +16,7 @@ import static com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonS
  * Created by sazzad on 11/9/15.
  */
 public class SetupServiceTest {
-    @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void testInsertRoleAPI(Map<String, String> config) throws JSONException {
         // Building request using requestSpecBuilder
         RequestSpecBuilder builder = new RequestSpecBuilder();
@@ -39,7 +39,7 @@ public class SetupServiceTest {
                         .extract().response();
 
     }
-    @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void testUpdateRoleAPI(Map<String, String> config) throws JSONException {
         // Building request using requestSpecBuilder
         RequestSpecBuilder builder = new RequestSpecBuilder();
@@ -62,7 +62,7 @@ public class SetupServiceTest {
                         .extract().response();
 
     }
-    @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void testDeleteRoleAPI(Map<String, String> config) throws JSONException {
         // Building request using requestSpecBuilder
         RequestSpecBuilder builder = new RequestSpecBuilder();
@@ -85,7 +85,7 @@ public class SetupServiceTest {
                         .extract().response();
 
     }
-    @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void testGetLogicalRolesAPI(Map<String, String> config) throws JSONException {
         // Building request using requestSpecBuilder
         RequestSpecBuilder builder = new RequestSpecBuilder();
@@ -108,7 +108,7 @@ public class SetupServiceTest {
                         .extract().response();
 
     }
-    @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void testGetRightsAPI(Map<String, String> config) throws JSONException {
         // Building request using requestSpecBuilder
         RequestSpecBuilder builder = new RequestSpecBuilder();

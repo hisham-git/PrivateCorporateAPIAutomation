@@ -5,7 +5,7 @@ import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
 import org.json.JSONException;
 import org.testng.annotations.Test;
-import utilities.dataProvider.Excel2ConfigKey;
+import utilities.dataProvider.ExcelFileReaderConfig;
 
 import java.util.Map;
 
@@ -16,7 +16,7 @@ import static com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonS
  * Created by sazzad on 11/9/15.
  */
 public class AuthenticationServiceTest {
-    @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void testRequestPasswordResetAPI(Map<String, String> config) throws JSONException {
 
 
@@ -45,7 +45,7 @@ public class AuthenticationServiceTest {
 
     }
 
-    @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void testVerifyPasswordResetTokenAPI(Map<String, String> config) throws JSONException {
 
 
@@ -74,7 +74,7 @@ public class AuthenticationServiceTest {
 
     }
 
-    @Test(dataProvider = "getAPIConfig", dataProviderClass = Excel2ConfigKey.class)
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void testUpdatePasswordAPI(Map<String, String> config) throws JSONException {
 
 

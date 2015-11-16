@@ -7,9 +7,6 @@ import utilities.dataProvider.ExcelFileReaderConfig;
 
 import java.util.Map;
 
-/**
- * Created by sazzad on 11/16/15.
- */
 public class ContactServiceTest {
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)

@@ -7,9 +7,6 @@ import utilities.dataProvider.ExcelFileReaderConfig;
 
 import java.util.Map;
 
-/**
- * Created by sazzad on 11/16/15.
- */
 public class ReferenceServiceTest {
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void getAccountTypes(Map<String, String> config) throws JSONException {

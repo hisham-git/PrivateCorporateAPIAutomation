@@ -12,10 +12,8 @@ import java.util.Map;
 import static com.jayway.restassured.RestAssured.given;
 import static com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-/**
- * Created by sazzad on 11/9/15.
- */
 public class CheckServiceTest {
+
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void testGetUserActionsAPI(Map<String, String> config) throws JSONException {
         // Building request using requestSpecBuilder
@@ -41,6 +39,7 @@ public class CheckServiceTest {
 
         System.out.println(responseJSON.asString());
     }
+
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void testGetRolesAuthenticatedUserAPI(Map<String, String> config) throws JSONException {
         // Building request using requestSpecBuilder
@@ -66,6 +65,5 @@ public class CheckServiceTest {
 
         System.out.println(responseJSON.asString());
     }
-
 
 }

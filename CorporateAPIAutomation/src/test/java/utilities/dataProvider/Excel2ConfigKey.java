@@ -111,16 +111,17 @@ public class Excel2ConfigKey {
 		case "testGetUserActionsAPI":
 			sheet = workbook.getSheet("getUserActions");
 			break;
-
 		case "testGetRolesAuthenticatedUserAPI":
 			sheet = workbook.getSheet("getRolesAuthenticatedUser");
 			break;
-
-
-			default:
-			System.out.println("Test API doesn't have any related Excel sheet");
+        case "testGetAccountsAPI":
+			sheet = workbook.getSheet("getGetAccounts");
+			break;
+		default:
+			System.out.println("Test API does not have any related Excel sheet");
 			workbook.close();
-			return null;
+
+            return null;
 		}
 
 		List<Object[]> jParamObj = new ArrayList<>();

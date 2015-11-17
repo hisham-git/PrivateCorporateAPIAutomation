@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "Name": {
+          "id": "/Params/Name",
+          "type": "string"
+        },
+        "Description": {
+          "id": "/Params/Description",
+          "type": "string"
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "object",
+      "properties": {
+        "ID": {
+          "id": "/Data/ID",
+          "type": "integer"
+        },
+        "Name": {
+          "id": "/Data/Name",
+          "type": "string"
+        },
+        "SystemID": {
+          "id": "/Data/SystemID",
+          "type": "integer"
+        },
+        "Description": {
+          "id": "/Data/Description",
+          "type": "string"
+        },
+        "oca": {
+          "id": "/Data/oca",
+          "type": "integer"
+        },
+        "LogicalRoleIDs": {
+          "id": "/Data/LogicalRoleIDs",
+          "type": "null"
+        }
+      }
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

@@ -8,15 +8,21 @@ import utilities.dataProvider.ExcelFileReaderConfig;
 import java.util.Map;
 
 
-public class ServletAPITest {
+public class Default {
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
-    public void testLoginAPI(Map<String, String> config) throws JSONException {
+    public void login(Map<String, String> config) throws JSONException {
         APICaller.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"));
     }
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
-    public void testLogoutAPI(Map<String, String> config) throws JSONException {
+    public void logout(Map<String, String> config) throws JSONException {
         APICaller.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"));
     }
+
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
+    public void getAuthenticatedUser(Map<String, String> config) throws JSONException {
+        APICaller.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"));
+    }
+
 }

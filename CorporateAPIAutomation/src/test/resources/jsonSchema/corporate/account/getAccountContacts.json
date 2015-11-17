@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {
+        "Sort": {
+          "id": "/Header/Sort",
+          "type": "array",
+          "items": {
+            "id": "/Header/Sort/0",
+            "type": "object",
+            "properties": {
+              "By": {
+                "id": "/Header/Sort/0/By",
+                "type": "string"
+              },
+              "Dir": {
+                "id": "/Header/Sort/0/Dir",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "StartPosition": {
+          "id": "/Header/StartPosition",
+          "type": "integer"
+        },
+        "PageSize": {
+          "id": "/Header/PageSize",
+          "type": "integer"
+        }
+      }
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {}
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "null"
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

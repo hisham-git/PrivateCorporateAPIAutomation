@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "Accounts": {
+          "id": "/Params/Accounts",
+          "type": "array",
+          "items": {
+            "id": "/Params/Accounts/0",
+            "type": "object",
+            "properties": {
+              "Name": {
+                "id": "/Params/Accounts/0/Name",
+                "type": "string"
+              },
+              "AccountTypeID": {
+                "id": "/Params/Accounts/0/AccountTypeID",
+                "type": "integer"
+              },
+              "AccountID": {
+                "id": "/Params/Accounts/0/AccountID",
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "array",
+      "items": {
+        "id": "/Data/0",
+        "type": "object",
+        "properties": {
+          "Name": {
+            "id": "/Data/0/Name",
+            "type": "string"
+          },
+          "AccountTypeID": {
+            "id": "/Data/0/AccountTypeID",
+            "type": "integer"
+          },
+          "AccountID": {
+            "id": "/Data/0/AccountID",
+            "type": "integer"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

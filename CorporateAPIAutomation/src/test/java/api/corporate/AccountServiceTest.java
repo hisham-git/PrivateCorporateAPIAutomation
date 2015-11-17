@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import utilities.APICaller;
 import utilities.dataProvider.ExcelFileReaderConfig;
 
+import java.util.Date;
 import java.util.Map;
 
 public class AccountServiceTest {
@@ -16,7 +17,8 @@ public class AccountServiceTest {
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void insertAccounts(Map<String, String> config) throws JSONException {
-        APICaller.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"));
+        String insertParam = "{\"Header\":{},\"Params\":{\"Accounts\":[{\"Name\":\"test"+(new Date().getTime())+"\",\"AccountTypeID\":1}]}}";
+        APICaller.callApi(config.get("URL"), insertParam, config.get("SchemaPath"));
     }
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)

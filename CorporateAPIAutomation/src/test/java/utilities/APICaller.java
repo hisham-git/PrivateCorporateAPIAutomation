@@ -1,6 +1,7 @@
 package utilities;
 
 import com.jayway.restassured.builder.RequestSpecBuilder;
+import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
 
 import static com.jayway.restassured.RestAssured.given;

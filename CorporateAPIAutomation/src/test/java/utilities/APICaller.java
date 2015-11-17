@@ -17,7 +17,7 @@ public class APICaller {
         given()
             .spec(requestSpec)
         .when()
-            .post(url)
+            .post(AppConstant.BASE_URL+url)
         .then()
             .statusCode(200)
             .body(matchesJsonSchemaInClasspath(jsonSchemaValidatorPath))

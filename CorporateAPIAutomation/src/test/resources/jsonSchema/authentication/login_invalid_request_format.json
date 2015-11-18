@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "null"
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {}
+    },
+    "Reasons": {
+      "id": "/Reasons",
+      "type": "array",
+      "items": {
+        "id": "/Reasons/0",
+        "type": "object",
+        "properties": {
+          "ReasonCode": {
+            "id": "/Reasons/0/ReasonCode",
+            "type": "string"
+          },
+          "Description": {
+            "id": "/Reasons/0/Description",
+            "type": "string"
+          },
+          "Level": {
+            "id": "/Reasons/0/Level",
+            "type": "string"
+          },
+          "Type": {
+            "id": "/Reasons/0/Type",
+            "type": "string"
+          },
+          "Class": {
+            "id": "/Reasons/0/Class",
+            "type": "string"
+          },
+          "Method": {
+            "id": "/Reasons/0/Method",
+            "type": "string"
+          },
+          "Context": {
+            "id": "/Reasons/0/Context",
+            "type": "object",
+            "properties": {
+              "ERROR_MSG": {
+                "id": "/Reasons/0/Context/ERROR_MSG",
+                "type": "string"
+              },
+              "Param": {
+                "id": "/Reasons/0/Context/Param",
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "null"
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Reasons",
+    "Data"
+  ]
+}

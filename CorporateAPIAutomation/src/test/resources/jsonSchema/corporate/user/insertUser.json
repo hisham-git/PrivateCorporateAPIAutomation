@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "Password": {
+          "id": "/Params/Password",
+          "type": "string"
+        },
+        "EmailAddress": {
+          "id": "/Params/EmailAddress",
+          "type": "string"
+        },
+        "FirstName": {
+          "id": "/Params/FirstName",
+          "type": "string"
+        },
+        "UserName": {
+          "id": "/Params/UserName",
+          "type": "string"
+        },
+        "LastName": {
+          "id": "/Params/LastName",
+          "type": "string"
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "object",
+      "properties": {
+        "EmailAddress": {
+          "id": "/Data/EmailAddress",
+          "type": "string"
+        },
+        "FirstName": {
+          "id": "/Data/FirstName",
+          "type": "string"
+        },
+        "UserName": {
+          "id": "/Data/UserName",
+          "type": "string"
+        },
+        "LastName": {
+          "id": "/Data/LastName",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

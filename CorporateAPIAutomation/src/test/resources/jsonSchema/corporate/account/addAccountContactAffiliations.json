@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "ContactIDs": {
+          "id": "/Params/ContactIDs",
+          "type": "array",
+          "items": [
+            {
+              "id": "/Params/ContactIDs/0",
+              "type": "integer"
+            },
+            {
+              "id": "/Params/ContactIDs/1",
+              "type": "integer"
+            }
+          ]
+        },
+        "AffiliationTypeIDs": {
+          "id": "/Params/AffiliationTypeIDs",
+          "type": "array",
+          "items": [
+            {
+              "id": "/Params/AffiliationTypeIDs/0",
+              "type": "integer"
+            },
+            {
+              "id": "/Params/AffiliationTypeIDs/1",
+              "type": "integer"
+            }
+          ]
+        },
+        "AccountIDs": {
+          "id": "/Params/AccountIDs",
+          "type": "array",
+          "items": [
+            {
+              "id": "/Params/AccountIDs/0",
+              "type": "integer"
+            },
+            {
+              "id": "/Params/AccountIDs/1",
+              "type": "integer"
+            }
+          ]
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "null"
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

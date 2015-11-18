@@ -1,4 +1,4 @@
-package authentication;
+package backup;
 
 import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.response.Response;

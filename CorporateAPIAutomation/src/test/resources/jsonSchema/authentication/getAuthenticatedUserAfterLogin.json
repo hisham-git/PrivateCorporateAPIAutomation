@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "null"
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "null"
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "object",
+      "properties": {
+        "UserName": {
+          "id": "/Data/UserName",
+          "type": "string"
+        },
+        "LastName": {
+          "id": "/Data/LastName",
+          "type": "string"
+        },
+        "FirstName": {
+          "id": "/Data/FirstName",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

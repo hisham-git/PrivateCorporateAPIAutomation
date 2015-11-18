@@ -41,7 +41,7 @@
     </dependencies>
 
     <build>
-        <!--this is for setting the compiler and language level to java 8-->
+        <!--this is for setting the compiler and language level to java 7-->
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

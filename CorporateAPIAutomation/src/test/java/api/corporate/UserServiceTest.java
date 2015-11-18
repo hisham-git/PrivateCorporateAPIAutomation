@@ -16,6 +16,12 @@ public class UserServiceTest {
         String body="{\"Header\":{},\"Params\":{\"UserName\":\"sazzad"+(new Date().getTime())+"@gmail.com\"," +
                 "\"Password\":\"12345678\",\"FirstName\":\"abc\",\"LastName\":\"bcd\"" +
                 ",\"EmailAddress\":\"sazzad"+(new Date().getTime())+"@gmail.com\"}}";
+        String body2="{\"Header\":{},\"Params\":{\"UserName\":\"sazzad"+(new Date().getTime())+"@gmail.com\"," +
+                "\"Password\":\"12345678\",\"FirstName\":\"abc\",\"Lastame\":\"bcd\"" +
+                ",\"EmailAddress\":\"sazzad"+(new Date().getTime())+"@gmail.com\"}}";
+        String body3="{\"Header\":{},\"Params\":{\"UserName\":\"sazzad"+(new Date().getTime())+"@gmail.com\"," +
+                "\"Password\":\"12345678\",\"FirstName\":\"abc\",\"LastName\":\"bcd\"" +
+                ",\"EmailAddress\":\"sazzad"+(new Date().getTime())+"@gmail.com\",\"oca\":2}}";
         APICaller.callApi(config.get("URL"), body, config.get("SchemaPath"));
     }
 

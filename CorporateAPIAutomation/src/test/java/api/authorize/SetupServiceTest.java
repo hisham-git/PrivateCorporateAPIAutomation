@@ -34,35 +34,15 @@ public class SetupServiceTest {
         APICaller.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"));
     }
 
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
+    public void addRightsToRole(Map<String, String> config) throws JSONException {
+        APICaller.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"));
+    }
+
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
+    public void removeRightsFromRole(Map<String, String> config) throws JSONException {
+        APICaller.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"));
+    }
+
 }
 
-/*
-
-
-insertRole
-updateRole
-deleteRole
-
-
-
-
-authorize	setup	getRoles
-        authorize	setup	getLogicalRoles
-        authorize	setup	insertRole
-        authorize	setup	updateRole
-        authorize	setup	deleteRole
-        authorize	setup	getRights
-        authorize	setup	getRoleUsers
-        authorize	setup	getUserRoles
-        authorize	setup	getUsers
-        authorize	setup	addRightsToRole
-        authorize	setup	removeRightsFromRole
-        authorize	setup	addUsersToRole
-        authorize	setup	removeUsersFromRole
-        authorize	setup	insertUserStatus
-        authorize	setup	updateUserStatus
-        authorize	setup	deleteUserStatus
-        authorize	setup	getUserStatus
-        authorize	setup	getStatusRequestUsers
-        authorize	setup	addStatusRequest
-        authorize	setup	removeStatusRequest*/

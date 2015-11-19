@@ -27,4 +27,9 @@ public class Default {
         Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
     }
 
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
+    public void getAuthenticatedUserLogout(Map<String, String> config) throws JSONException {
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+    }
+
 }

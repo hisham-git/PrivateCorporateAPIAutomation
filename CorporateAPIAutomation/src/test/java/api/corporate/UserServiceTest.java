@@ -2,7 +2,7 @@ package api.corporate;
 
 import org.json.JSONException;
 import org.testng.annotations.Test;
-import utilities.APICaller;
+import utilities.Util;
 import utilities.dataProvider.ExcelFileReaderConfig;
 
 import java.util.Date;
@@ -22,12 +22,12 @@ public class UserServiceTest {
         String body3="{\"Header\":{},\"Params\":{\"UserName\":\"sazzad"+(new Date().getTime())+"@gmail.com\"," +
                 "\"Password\":\"12345678\",\"FirstName\":\"abc\",\"LastName\":\"bcd\"" +
                 ",\"EmailAddress\":\"sazzad"+(new Date().getTime())+"@gmail.com\",\"oca\":2}}";
-        APICaller.callApi(config.get("URL"), body, config.get("SchemaPath"));
+        Util.callApi(config.get("URL"), body, config.get("SchemaPath"), null);
     }
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void updateUser(Map<String, String> config) throws JSONException {
-        //APICaller.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"));
+        //Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"));
         //api error do later
     }
 

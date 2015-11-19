@@ -2,8 +2,7 @@ package api.authentication;
 
 import org.json.JSONException;
 import org.testng.annotations.Test;
-import utilities.APICaller;
-import utilities.AppConstant;
+import utilities.Util;
 import utilities.dataProvider.ExcelFileReaderConfig;
 
 import java.util.Map;
@@ -11,19 +10,21 @@ import java.util.Map;
 
 public class Default {
 
-    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
-    public void login(Map<String, String> config) throws JSONException {
-        APICaller.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"));
-    }
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
-    public void logout(Map<String, String> config) throws JSONException {
-        APICaller.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"));
+    public void login(Map<String, String> config) throws JSONException {
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
     }
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void getAuthenticatedUser(Map<String, String> config) throws JSONException {
-        APICaller.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"));
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), Util.getCookie());
+    }
+
+
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
+    public void logout(Map<String, String> config) throws JSONException {
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
     }
 
 }

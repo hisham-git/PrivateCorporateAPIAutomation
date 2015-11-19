@@ -23,12 +23,7 @@
     "Params": {
       "id": "/Params",
       "type": "object",
-      "properties": {
-        "UserName": {
-          "id": "/Params/UserName",
-          "type": "string"
-        }
-      }
+      "properties": {}
     },
     "Reasons": {
       "id": "/Reasons",
@@ -72,12 +67,7 @@
               "Param": {
                 "id": "/Reasons/0/Context/Param",
                 "type": "object",
-                "properties": {
-                  "UserName": {
-                    "id": "/Reasons/0/Context/Param/UserName",
-                    "type": "string"
-                  }
-                }
+                "properties": {}
               }
             }
           }

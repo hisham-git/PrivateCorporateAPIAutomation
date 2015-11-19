@@ -9,12 +9,6 @@ import java.util.Map;
 
 public class CheckServiceTest {
 
-    //@Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
-    public void getRoleUsers(Map<String, String> config) throws JSONException {
-        //Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"));
-        //API not ready
-    }
-
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void getRoleActions(Map<String, String> config) throws JSONException {
         Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);

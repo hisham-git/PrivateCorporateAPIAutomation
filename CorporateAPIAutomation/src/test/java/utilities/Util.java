@@ -1,5 +1,6 @@
 package utilities;
 
+import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.builder.RequestSpecBuilder;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.specification.RequestSpecification;
@@ -10,7 +11,8 @@ import static com.jayway.restassured.module.jsv.JsonSchemaValidator.matchesJsonS
 public class Util {
     static RequestSpecBuilder builder;
     public static void callApi(String url, String body, String jsonSchemaValidatorPath, String JSESSIONID){
-        builder = new RequestSpecBuilder();
+    	RestAssured.useRelaxedHTTPSValidation();
+    	builder = new RequestSpecBuilder();
         builder.setBody(body);
         builder.setContentType("application/json; charset=UTF-8");
         if (null !=JSESSIONID) {
@@ -27,6 +29,7 @@ public class Util {
     }
 
     public static String getCookie(){
+    	RestAssured.useRelaxedHTTPSValidation();
         RequestSpecBuilder builder = new RequestSpecBuilder();
         builder.setBody("{\"Header\":{},\"Params\":{\"UserName\":\"ntm\",\"Password\":\"12345678\"}}");
         builder.setContentType("application/json; charset=UTF-8");

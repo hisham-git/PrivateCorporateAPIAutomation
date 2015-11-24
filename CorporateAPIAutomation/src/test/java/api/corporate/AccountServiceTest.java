@@ -1,5 +1,6 @@
 package api.corporate;
 
+import org.testng.annotations.Test;
 import org.json.JSONException;
 import org.testng.annotations.Test;
 import utilities.Util;
@@ -17,9 +18,14 @@ public class AccountServiceTest {
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void insertAccounts(Map<String, String> config) throws JSONException {
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+    }
+    
+    /*@Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
+    public void insertAccounts(Map<String, String> config) throws JSONException {
         String insertParam = "{\"Header\":{},\"Params\":{\"Accounts\":[{\"Name\":\"test"+(new Date().getTime())+"\",\"AccountTypeID\":1}]}}";
         Util.callApi(config.get("URL"), insertParam, config.get("SchemaPath"), null);
-    }
+    }*/
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void updateAccounts(Map<String, String> config) throws JSONException {

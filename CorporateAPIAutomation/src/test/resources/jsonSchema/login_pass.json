@@ -1,57 +1,57 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "http://localhost:8080/web-corporate/authentication/login",
+  "id": "http://10.0.0.111:8080/web-corporate/authentication/login",
   "type": "object",
   "properties": {
     "Module": {
-      "id": "http://localhost:8080/web-corporate/authentication/login/Module",
+      "id": "http://10.0.0.111:8080/web-corporate/authentication/login/Module",
       "type": "string",
       "default": "authentication"
     },
     "Service": {
-      "id": "http://localhost:8080/web-corporate/authentication/login/Service",
+      "id": "http://10.0.0.111:8080/web-corporate/authentication/login/Service",
       "type": "string",
       "default": "authentication"
     },
     "Action": {
-      "id": "http://localhost:8080/web-corporate/authentication/login/Action",
+      "id": "http://10.0.0.111:8080/web-corporate/authentication/login/Action",
       "type": "string",
       "default": "login"
     },
     "Header": {
-      "id": "http://localhost:8080/web-corporate/authentication/login/Header",
+      "id": "http://10.0.0.111:8080/web-corporate/authentication/login/Header",
       "type": "null",
       "default": null
     },
     "Params": {
-      "id": "http://localhost:8080/web-corporate/authentication/login/Params",
+      "id": "http://10.0.0.111:8080/web-corporate/authentication/login/Params",
       "type": "object",
       "properties": {
         "UserName": {
-          "id": "http://localhost:8080/web-corporate/authentication/login/Params/UserName",
+          "id": "http://10.0.0.111:8080/web-corporate/authentication/login/Params/UserName",
           "type": "string"
         },
         "Password": {
-          "id": "http://localhost:8080/web-corporate/authentication/login/Params/Password",
+          "id": "http://10.0.0.111:8080/web-corporate/authentication/login/Params/Password",
           "type": "string"
         }
       },
       "additionalProperties": false
     },
     "Data": {
-      "id": "http://localhost:8080/web-corporate/authentication/login/Data",
+      "id": "http://10.0.0.111:8080/web-corporate/authentication/login/Data",
       "type": "object",
       "properties": {
         "UserName": {
-          "id": "http://localhost:8080/web-corporate/authentication/login/Data/UserName",
+          "id": "http://10.0.0.111:8080/web-corporate/authentication/login/Data/UserName",
           "type": "string"
         },
         "LastName": {
-          "id": "http://localhost:8080/web-corporate/authentication/login/Data/LastName",
+          "id": "http://10.0.0.111:8080/web-corporate/authentication/login/Data/LastName",
           "type": "string"
         },
         "FirstName": {
-          "id": "http://localhost:8080/web-corporate/authentication/login/Data/FirstName",
+          "id": "http://10.0.0.111:8080/web-corporate/authentication/login/Data/FirstName",
           "type": "string"
         }
       },

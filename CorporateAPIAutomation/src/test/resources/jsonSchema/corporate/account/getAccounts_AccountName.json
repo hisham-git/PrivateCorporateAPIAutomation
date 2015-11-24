@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {
+        "PageSize": {
+          "id": "/Header/PageSize",
+          "type": "integer"
+        },
+        "Sort": {
+          "id": "/Header/Sort",
+          "type": "array",
+          "items": {
+            "id": "/Header/Sort/0",
+            "type": "object",
+            "properties": {
+              "By": {
+                "id": "/Header/Sort/0/By",
+                "type": "string"
+              },
+              "Dir": {
+                "id": "/Header/Sort/0/Dir",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "StartPosition": {
+          "id": "/Header/StartPosition",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "AccountName": {
+          "id": "/Params/AccountName",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "array",
+      "items": {
+        "id": "/Data/0",
+        "type": "object",
+        "properties": {
+          "AccountID": {
+            "id": "/Data/0/AccountID",
+            "type": "integer"
+          },
+          "Name": {
+            "id": "/Data/0/Name",
+            "type": "string"
+          },
+          "Description": {
+            "id": "/Data/0/Description",
+            "type": "string"
+          },
+          "AccountTypeID": {
+            "id": "/Data/0/AccountTypeID",
+            "type": "integer"
+          },
+          "PaymentTerm": {
+            "id": "/Data/0/PaymentTerm",
+            "type": "string"
+          },
+          "FEID": {
+            "id": "/Data/0/FEID",
+            "type": "string"
+          },
+          "EmployeeCount": {
+            "id": "/Data/0/EmployeeCount",
+            "type": "integer"
+          },
+          "AccountType": {
+            "id": "/Data/0/AccountType",
+            "type": "string"
+          },
+          "oca": {
+            "id": "/Data/0/oca",
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

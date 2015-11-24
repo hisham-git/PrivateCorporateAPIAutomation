@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string",
+      "default": "corporate"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string",
+      "default": "account"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string",
+      "default": "insertAccounts"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "Reasons": {
+      "id": "/Reasons",
+      "type": "array",
+      "items": {
+        "id": "/Reasons/0",
+        "type": "object",
+        "properties": {
+          "ReasonCode": {
+            "id": "/Reasons/0/ReasonCode",
+            "type": "string",
+            "default": "core00008"
+          },
+          "Description": {
+            "id": "/Reasons/0/Description",
+            "type": "string",
+            "default": "required"
+          },
+          "Level": {
+            "id": "/Reasons/0/Level",
+            "type": "string",
+            "default": "SEVERE"
+          },
+          "Type": {
+            "id": "/Reasons/0/Type",
+            "type": "string",
+            "default": "BIZ_RULE"
+          },
+          "Class": {
+            "id": "/Reasons/0/Class",
+            "type": "string",
+            "default": "com.campus.corporate.util.ServiceUtil"
+          },
+          "Method": {
+            "id": "/Reasons/0/Method",
+            "type": "string",
+            "default": "resolveBulkItems"
+          },
+          "Context": {
+            "id": "/Reasons/0/Context",
+            "type": "object",
+            "properties": {
+              "ERROR_MSG": {
+                "id": "/Reasons/0/Context/ERROR_MSG",
+                "type": "string",
+                "default": "Accounts is required."
+              },
+              "Param": {
+                "id": "/Reasons/0/Context/Param",
+                "type": "object",
+                "properties": {},
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "null",
+      "default": null
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Reasons",
+    "Data"
+  ]
+}

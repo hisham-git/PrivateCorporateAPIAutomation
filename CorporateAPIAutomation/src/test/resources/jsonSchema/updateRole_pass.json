@@ -1,49 +1,49 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole",
+  "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole",
   "type": "object",
   "properties": {
     "Module": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Module",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Module",
       "type": "string",
       "default": "authorize"
     },
     "Service": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Service",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Service",
       "type": "string",
       "default": "setup"
     },
     "Action": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Action",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Action",
       "type": "string",
       "default": "updateRole"
     },
     "Header": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Header",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Header",
       "type": "object",
       "properties": {}
     },
     "Params": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Params",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Params",
       "type": "object",
       "properties": {
         "Name": {
-          "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Params/Name",
+          "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Params/Name",
           "type": "string"
         },
         "ID": {
-          "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Params/ID",
+          "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Params/ID",
           "type": "integer"
         },
         "oca": {
-          "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Params/oca",
+          "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Params/oca",
           "type": "integer"
         },
         "LogicalRoles": {
-          "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Params/LogicalRoles",
+          "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Params/LogicalRoles",
           "type": ["array", "null"],
           "items": {
-            "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Params/LogicalRoles/3",
+            "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Params/LogicalRoles/3",
             "type": "integer"
           }
         },
@@ -54,39 +54,39 @@
 		]
     },
     "Data": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Data",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Data",
       "type": "object",
       "properties": {
         "ID": {
-          "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Data/ID",
+          "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Data/ID",
           "type": "integer",
           "default": 16
         },
         "Name": {
-          "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Data/Name",
+          "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Data/Name",
           "type": "string",
           "default": "Co-ordinator2"
         },
         "SystemID": {
-          "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Data/SystemID",
+          "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Data/SystemID",
           "type": "integer",
           "default": 14
         },
         "Description": {
-          "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Data/Description",
+          "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Data/Description",
           "type": "string",
           "default": "Test Description"
         },
         "oca": {
-          "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Data/oca",
+          "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Data/oca",
           "type": "integer",
           "default": 1
         },
         "LogicalRoleIDs": {
-          "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Data/LogicalRoleIDs",
+          "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Data/LogicalRoleIDs",
           "type": "array",
           "items": {
-            "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/updateRole/Data/LogicalRoleIDs/3",
+            "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/updateRole/Data/LogicalRoleIDs/3",
             "type": "integer",
             "default": 4
           }

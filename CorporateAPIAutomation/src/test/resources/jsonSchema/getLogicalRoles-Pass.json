@@ -1,52 +1,52 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles",
+  "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles",
   "type": "object",
   "properties": {
     "Module": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Module",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Module",
       "type": "string",
       "default": "authorize"
     },
     "Service": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Service",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Service",
       "type": "string",
       "default": "setup"
     },
     "Action": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Action",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Action",
       "type": "string",
       "default": "getLogicalRoles"
     },
     "Header": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Header",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Header",
       "type": "object",
       "properties": {},
       "additionalProperties": false
     },
     "Params": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Params",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Params",
       "type": "object",
       "properties": {},
       "additionalProperties": false
     },
     "Data": {
-      "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Data",
+      "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Data",
       "type": "array",
       "items": {
-        "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Data/3",
+        "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Data/3",
         "type": "object",
         "properties": {
           "ID": {
-            "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Data/3/ID",
+            "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Data/3/ID",
             "type": "integer"
           },
           "Name": {
-            "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Data/3/Name",
+            "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Data/3/Name",
             "type": "string"
           },
           "Description": {
-            "id": "http://localhost:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Data/3/Description",
+            "id": "http://10.0.0.111:8080/web-corporate/api/submit/authorize/setup/getLogicalRoles/Data/3/Description",
             "type": "string"
           }
         },

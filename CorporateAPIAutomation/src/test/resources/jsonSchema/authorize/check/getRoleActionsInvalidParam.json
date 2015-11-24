@@ -60,6 +60,10 @@
             "id": "/Reasons/0/Context",
             "type": "object",
             "properties": {
+              "ERROR_KEY": {
+                "id": "/Reasons/0/Context/ERROR_KEY",
+                "type": "string"
+              },
               "ERROR_MSG": {
                 "id": "/Reasons/0/Context/ERROR_MSG",
                 "type": "string"

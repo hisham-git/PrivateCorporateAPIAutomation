@@ -7,7 +7,15 @@
     <class name="api.corporate.ContactServiceTest"/>
       
       <methods>
-        <include name="getContacts" />
+      	<exclude name="insertContact" />
+        <exclude name="updateContact" />
+        <exclude name="getContact" />
+        <exclude name="deleteContact" />
+        
+        <include name="insertContacts" />
+        <exclude name="updateContacts" />
+        <exclude name="getContacts" />
+        <exclude name="deleteContacts" />
       </methods>
            
     </classes>

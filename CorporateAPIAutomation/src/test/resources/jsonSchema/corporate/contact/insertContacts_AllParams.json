@@ -177,8 +177,7 @@
                 "id": "/Params/Contacts/0/ContactID",
                 "type": "integer"
               }
-            },
-            "additionalProperties": false
+            }
           }
         }
       },
@@ -211,7 +210,10 @@
           },
           "OtherName": {
             "id": "/Data/0/OtherName",
-            "type": "string"
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
           },
           "EmailContent": {
             "id": "/Data/0/EmailContent",
@@ -282,8 +284,8 @@
                 "AddressLine2": {
                   "id": "/Data/0/Addresses/0/AddressLine2",
                   "anyOf": [
-					{ "type": "string" },
-					{ "type": "null" }
+						{ "type": "string" },
+						{ "type": "null" }
 					]
                 },
                 "AddressTypeID": {

@@ -56,8 +56,7 @@
                 "id": "/Params/Contacts/1/ContactID",
                 "type": "integer"
               }
-            },
-            "additionalProperties": false
+            }
           }
         }
       },
@@ -90,7 +89,10 @@
           },
           "OtherName": {
             "id": "/Data/0/OtherName",
-            "type": "string"
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
           },
           "EmailContent": {
             "id": "/Data/0/EmailContent",

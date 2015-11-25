@@ -1,0 +1,178 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {
+        "PageSize": {
+          "id": "/Header/PageSize",
+          "type": "integer"
+        },
+        "Sort": {
+          "id": "/Header/Sort",
+          "type": "array",
+          "items": {
+            "id": "/Header/Sort/0",
+            "type": "object",
+            "properties": {
+              "By": {
+                "id": "/Header/Sort/0/By",
+                "type": "string"
+              },
+              "Dir": {
+                "id": "/Header/Sort/0/Dir",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "StartPosition": {
+          "id": "/Header/StartPosition",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "OrderBy": {
+          "id": "/Params/OrderBy",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "array",
+      "items": {
+        "id": "/Data/1",
+        "type": "object",
+        "properties": {
+          "ContactID": {
+            "id": "/Data/1/ContactID",
+            "type": "integer"
+          },
+          "FirstName": {
+            "id": "/Data/1/FirstName",
+            "type": "string"
+          },
+          "LastName": {
+            "id": "/Data/1/LastName",
+            "type": "string"
+          },
+          "MiddleName": {
+            "id": "/Data/1/MiddleName",
+			"anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "OtherName": {
+            "id": "/Data/1/OtherName",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "Prefix": {
+            "id": "/Data/1/Prefix",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "Suffix": {
+            "id": "/Data/1/Suffix",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "Title": {
+            "id": "/Data/1/Title",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "GenderTypeID": {
+            "id": "/Data/1/GenderTypeID",
+            "type": "integer"
+          },
+          "GenderType": {
+            "id": "/Data/1/GenderType",
+            "type": "string"
+          },
+          "EmailAddresses": {
+            "id": "/Data/1/EmailAddresses",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "Telephones": {
+            "id": "/Data/1/Telephones",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "AdditionalInformation": {
+            "id": "/Data/1/AdditionalInformation",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "CEUCredits": {
+            "id": "/Data/1/CEUCredits",
+            "anyOf": [
+				{ "type": "number" },
+				{ "type": "null" }
+			]
+          },
+          "UserName": {
+            "id": "/Data/1/UserName",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "oca": {
+            "id": "/Data/1/oca",
+            "type": "integer"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

@@ -3,13 +3,14 @@
 <suite name="Suite" parallel="none">
   <test name="Unit Test">
     <classes>
-      <class name="api.corporate.AccountServiceTest"/>
+  
+    <class name="api.corporate.ContactServiceTest"/>
+      
       <methods>
-      	<exclude name="insertAccounts" />
-        <exclude name="updateAccounts" />
-        <exclude name="getAccounts" />
-        <include name="deleteAccounts" />
+        <include name="getContacts" />
       </methods>
+           
     </classes>
+    
   </test> <!-- Test -->
 </suite> <!-- Suite -->

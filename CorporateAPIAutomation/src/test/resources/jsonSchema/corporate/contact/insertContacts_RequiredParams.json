@@ -1,0 +1,259 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+	"Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "Contacts": {
+          "id": "/Params/Contacts",
+          "type": "array",
+          "items": {
+            "id": "/Params/Contacts/1",
+            "type": "object",
+            "properties": {
+              "FirstName": {
+                "id": "/Params/Contacts/1/FirstName",
+                "type": "string"
+              },
+              "LastName": {
+                "id": "/Params/Contacts/1/LastName",
+                "type": "string"
+              },
+              "GenderTypeID": {
+                "id": "/Params/Contacts/1/GenderTypeID",
+                "type": "string"
+              },
+              "OrganizationID": {
+                "id": "/Params/Contacts/1/OrganizationID",
+                "type": "string"
+              },
+              "SystemID": {
+                "id": "/Params/Contacts/1/SystemID",
+                "type": "integer"
+              },
+              "ContactID": {
+                "id": "/Params/Contacts/1/ContactID",
+                "type": "integer"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "array",
+      "items": {
+        "id": "/Data/0",
+        "type": "object",
+        "properties": {
+          "AdditionalInformation": {
+            "id": "/Data/0/AdditionalInformation",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "UserName": {
+            "id": "/Data/0/UserName",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "FirstName": {
+            "id": "/Data/0/FirstName",
+            "type": "string"
+          },
+          "OtherName": {
+            "id": "/Data/0/OtherName",
+            "type": "string"
+          },
+          "EmailContent": {
+            "id": "/Data/0/EmailContent",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "SystemID": {
+            "id": "/Data/0/SystemID",
+            "type": "integer"
+          },
+          "Title": {
+            "id": "/Data/0/Title",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "ContactID": {
+            "id": "/Data/0/ContactID",
+            "type": "integer"
+          },
+          "Prefix": {
+            "id": "/Data/0/Prefix",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "OrganizationID": {
+            "id": "/Data/0/OrganizationID",
+            "type": "integer"
+          },
+          "MiddleName": {
+            "id": "/Data/0/MiddleName",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "oca": {
+            "id": "/Data/0/oca",
+            "type": "integer"
+          },
+          "GenderTypeID": {
+            "id": "/Data/0/GenderTypeID",
+            "type": "integer"
+          },
+          "Addresses": {
+            "id": "/Data/0/Addresses",
+            "type": "array",
+            "items": {
+              "id": "/Data/0/Addresses/0",
+              "type": "object",
+              "properties": {
+                "AddressLine3": {
+                  "id": "/Data/0/Addresses/0/AddressLine3",
+					"anyOf": [
+						{ "type": "string" },
+						{ "type": "null" }
+					]
+                },
+                "CountryCodeID": {
+                  "id": "/Data/0/Addresses/0/CountryCodeID",
+                  "type": "integer"
+                },
+                "AddressLine2": {
+                  "id": "/Data/0/Addresses/0/AddressLine2",
+                  "anyOf": [
+					{ "type": "string" },
+					{ "type": "null" }
+					]
+                },
+                "AddressTypeID": {
+                  "id": "/Data/0/Addresses/0/AddressTypeID",
+                  "type": "integer"
+                },
+                "AddressLine1": {
+                  "id": "/Data/0/Addresses/0/AddressLine1",
+                  "anyOf": [
+					{ "type": "string" },
+					{ "type": "null" }
+					]
+                },
+                "RegionCodeID": {
+                  "id": "/Data/0/Addresses/0/RegionCodeID",
+                  "anyOf": [
+					{ "type": "integer" },
+					{ "type": "null" }
+					]
+                },
+                "Locality": {
+                  "id": "/Data/0/Addresses/0/Locality",
+                  "anyOf": [
+					{ "type": "string" },
+					{ "type": "null" }
+					]
+                },
+                "ContactAddressID": {
+                  "id": "/Data/0/Addresses/0/ContactAddressID",
+                  "type": "integer"
+                },
+                "PostalCode": {
+                  "id": "/Data/0/Addresses/0/PostalCode",
+                  "anyOf": [
+					{ "type": "string" },
+					{ "type": "null" }
+					]
+                },
+                "ContactID": {
+                  "id": "/Data/0/Addresses/0/ContactID",
+                  "type": "integer"
+                },
+                "oca": {
+                  "id": "/Data/0/Addresses/0/oca",
+                  "type": "integer"
+                },
+                "IsConfidential": {
+                  "id": "/Data/0/Addresses/0/IsConfidential",
+                  "type": "boolean"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "CEUCredits": {
+            "id": "/Data/0/CEUCredits",
+            "anyOf": [
+				{ "type": "number" },
+				{ "type": "null" }
+			]
+          },
+          "Suffix": {
+            "id": "/Data/0/Suffix",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "PhoneContent": {
+            "id": "/Data/0/PhoneContent",
+            "anyOf": [
+				{ "type": "string" },
+				{ "type": "null" }
+			]
+          },
+          "LastName": {
+            "id": "/Data/0/LastName",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "AdditionalInformation": {
+          "id": "/Params/AdditionalInformation",
+          "type": "string"
+        },
+        "FirstName": {
+          "id": "/Params/FirstName",
+          "type": "string"
+        },
+        "OtherName": {
+          "id": "/Params/OtherName",
+          "type": "string"
+        },
+        "Title": {
+          "id": "/Params/Title",
+          "type": "string"
+        },
+        "ContactID": {
+          "id": "/Params/ContactID",
+          "type": "integer"
+        },
+        "Prefix": {
+          "id": "/Params/Prefix",
+          "type": "string"
+        },
+        "MiddleName": {
+          "id": "/Params/MiddleName",
+          "type": "string"
+        },
+        "oca": {
+          "id": "/Params/oca",
+          "type": "integer"
+        },
+        "GenderTypeID": {
+          "id": "/Params/GenderTypeID",
+          "type": "integer"
+        },
+        "CEUCredits": {
+          "id": "/Params/CEUCredits",
+          "type": "number"
+        },
+        "Suffix": {
+          "id": "/Params/Suffix",
+          "type": "string"
+        },
+        "Telephones": {
+          "id": "/Params/Telephones",
+          "type": "array",
+          "items": {
+            "id": "/Params/Telephones/0",
+            "type": "object",
+            "properties": {
+              "Type": {
+                "id": "/Params/Telephones/0/Type",
+                "type": "string"
+              },
+              "Phone": {
+                "id": "/Params/Telephones/0/Phone",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "EmailAddresses": {
+          "id": "/Params/EmailAddresses",
+          "type": "array",
+          "items": {
+            "id": "/Params/EmailAddresses/0",
+            "type": "object",
+            "properties": {
+              "Type": {
+                "id": "/Params/EmailAddresses/0/Type",
+                "type": "string"
+              },
+              "Email": {
+                "id": "/Params/EmailAddresses/0/Email",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "LastName": {
+          "id": "/Params/LastName",
+          "type": "string"
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "object",
+      "properties": {
+        "AdditionalInformation": {
+          "id": "/Data/AdditionalInformation",
+          "type": "string"
+        },
+        "UserName": {
+          "id": "/Data/UserName",
+          "type": "null"
+        },
+        "FirstName": {
+          "id": "/Data/FirstName",
+          "type": "string"
+        },
+        "OtherName": {
+          "id": "/Data/OtherName",
+          "type": "string"
+        },
+        "EmailContent": {
+          "id": "/Data/EmailContent",
+          "type": "null"
+        },
+        "SystemID": {
+          "id": "/Data/SystemID",
+          "type": "integer"
+        },
+        "Title": {
+          "id": "/Data/Title",
+          "type": "string"
+        },
+        "ContactID": {
+          "id": "/Data/ContactID",
+          "type": "integer"
+        },
+        "Prefix": {
+          "id": "/Data/Prefix",
+          "type": "string"
+        },
+        "OrganizationID": {
+          "id": "/Data/OrganizationID",
+          "type": "integer"
+        },
+        "MiddleName": {
+          "id": "/Data/MiddleName",
+          "type": "string"
+        },
+        "oca": {
+          "id": "/Data/oca",
+          "type": "integer"
+        },
+        "GenderTypeID": {
+          "id": "/Data/GenderTypeID",
+          "type": "integer"
+        },
+        "CEUCredits": {
+          "id": "/Data/CEUCredits",
+          "type": "number"
+        },
+        "Suffix": {
+          "id": "/Data/Suffix",
+          "type": "string"
+        },
+        "PhoneContent": {
+          "id": "/Data/PhoneContent",
+          "type": "null"
+        },
+        "LastName": {
+          "id": "/Data/LastName",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

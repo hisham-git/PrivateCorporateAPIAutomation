@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string",
+      "default": "corporate"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string",
+      "default": "contact"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string",
+      "default": "deleteContact"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {}
+    },
+    "Reasons": {
+      "id": "/Reasons",
+      "type": "array",
+      "items": {
+        "id": "/Reasons/0",
+        "type": "object",
+        "properties": {
+          "ReasonCode": {
+            "id": "/Reasons/0/ReasonCode",
+            "type": "string",
+            "default": "core00002"
+          },
+          "Description": {
+            "id": "/Reasons/0/Description",
+            "type": "string",
+            "default": "not found"
+          },
+          "Level": {
+            "id": "/Reasons/0/Level",
+            "type": "string",
+            "default": "SEVERE"
+          },
+          "Type": {
+            "id": "/Reasons/0/Type",
+            "type": "string",
+            "default": "AVAILABILITY"
+          },
+          "Class": {
+            "id": "/Reasons/0/Class",
+            "type": "string",
+            "default": "com.campus.corporate.service.ContactService"
+          },
+          "Method": {
+            "id": "/Reasons/0/Method",
+            "type": "string",
+            "default": "deleteContact"
+          },
+          "Context": {
+            "id": "/Reasons/0/Context",
+            "type": "object",
+            "properties": {
+              "ERROR_MSG": {
+                "id": "/Reasons/0/Context/ERROR_MSG",
+                "type": "string",
+                "default": "Contacts not found"
+              },
+              "Param": {
+                "id": "/Reasons/0/Context/Param",
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "null",
+      "default": null
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Reasons",
+    "Data"
+  ]
+}

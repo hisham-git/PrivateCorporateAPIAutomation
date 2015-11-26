@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "Contacts": {
+          "id": "/Params/Contacts",
+          "type": "array",
+          "items": {
+            "id": "/Params/Contacts/0",
+            "type": "object",
+            "properties": {
+              "ContactID": {
+                "id": "/Params/Contacts/0/ContactID",
+                "type": "integer"
+              },
+              "oca": {
+                "id": "/Params/Contacts/0/oca",
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "array",
+      "items": {
+        "id": "/Data/0",
+        "type": "object",
+        "properties": {
+          "AdditionalInformation": {
+            "id": "/Data/0/AdditionalInformation",
+            "type": "string"
+          },
+          "UserName": {
+            "id": "/Data/0/UserName",
+            "type": "null"
+          },
+          "FirstName": {
+            "id": "/Data/0/FirstName",
+            "type": "string"
+          },
+          "OtherName": {
+            "id": "/Data/0/OtherName",
+            "type": "string"
+          },
+          "EmailContent": {
+            "id": "/Data/0/EmailContent",
+            "type": "null"
+          },
+          "SystemID": {
+            "id": "/Data/0/SystemID",
+            "type": "integer"
+          },
+          "Title": {
+            "id": "/Data/0/Title",
+            "type": "string"
+          },
+          "ContactID": {
+            "id": "/Data/0/ContactID",
+            "type": "integer"
+          },
+          "Prefix": {
+            "id": "/Data/0/Prefix",
+            "type": "string"
+          },
+          "OrganizationID": {
+            "id": "/Data/0/OrganizationID",
+            "type": "integer"
+          },
+          "MiddleName": {
+            "id": "/Data/0/MiddleName",
+            "type": "string"
+          },
+          "oca": {
+            "id": "/Data/0/oca",
+            "type": "integer"
+          },
+          "GenderTypeID": {
+            "id": "/Data/0/GenderTypeID",
+            "type": "integer"
+          },
+          "CEUCredits": {
+            "id": "/Data/0/CEUCredits",
+            "type": "number"
+          },
+          "Suffix": {
+            "id": "/Data/0/Suffix",
+            "type": "string"
+          },
+          "PhoneContent": {
+            "id": "/Data/0/PhoneContent",
+            "type": "null"
+          },
+          "LastName": {
+            "id": "/Data/0/LastName",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "AccountTypeID": {
+          "id": "/Params/AccountTypeID",
+          "type": "integer"
+        },
+        "Description": {
+          "id": "/Params/Description",
+          "type": "string"
+        },
+        "AccountID": {
+          "id": "/Params/AccountID",
+          "type": "integer"
+        },
+        "FEID": {
+          "id": "/Params/FEID",
+          "type": "string"
+        },
+        "EmployeeCount": {
+          "id": "/Params/EmployeeCount",
+          "type": "integer"
+        },
+        "PaymentTerm": {
+          "id": "/Params/PaymentTerm",
+          "type": "string"
+        },
+        "Name": {
+          "id": "/Params/Name",
+          "type": "string"
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "object",
+      "properties": {
+        "AccountID": {
+          "id": "/Data/AccountID",
+          "type": "integer"
+        },
+        "Name": {
+          "id": "/Data/Name",
+          "type": "string"
+        },
+        "Description": {
+          "id": "/Data/Description",
+          "type": "string"
+        },
+        "AccountTypeID": {
+          "id": "/Data/AccountTypeID",
+          "type": "integer"
+        },
+        "PaymentTerm": {
+          "id": "/Data/PaymentTerm",
+          "type": "string"
+        },
+        "FEID": {
+          "id": "/Data/FEID",
+          "type": "string"
+        },
+        "EmployeeCount": {
+          "id": "/Data/EmployeeCount",
+          "type": "integer"
+        },
+        "AccountType": {
+          "id": "/Data/AccountType",
+          "type": "string"
+        },
+        "oca": {
+          "id": "/Data/oca",
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

@@ -18,23 +18,12 @@
     "Header": {
       "id": "/Header",
       "type": "object",
-      "properties": {},
-      "additionalProperties": false
+      "properties": {}
     },
     "Params": {
       "id": "/Params",
       "type": "object",
-      "properties": {
-        "AccountIDs": {
-          "id": "/Params/AccountIDs",
-          "type": "array",
-          "items": {
-            "id": "/Params/AccountIDs/1",
-            "type": "integer"
-          }
-        }
-      },
-      "additionalProperties": false
+      "properties": {}
     },
     "Reasons": {
       "id": "/Reasons",
@@ -71,20 +60,33 @@
             "id": "/Reasons/0/Context",
             "type": "object",
             "properties": {
-              "ERROR_MSG": {
-                "id": "/Reasons/0/Context/ERROR_MSG",
-                "type": "string",
-				"default": "Account not found for given AccountID"
+              "name": {
+                "id": "/Reasons/0/Context/name",
+                "type": "string"
               },
-              "AccountID": {
-                "id": "/Reasons/0/Context/AccountID",
-                "type": "integer"
+              "header": {
+                "id": "/Reasons/0/Context/header",
+                "type": "object",
+                "properties": {
+                  "ThrowNotFoundException": {
+                    "id": "/Reasons/0/Context/header/ThrowNotFoundException",
+                    "type": "boolean"
+                  }
+                }
+              },
+              "params": {
+                "id": "/Reasons/0/Context/params",
+                "type": "object",
+                "properties": {
+                  "AccountID": {
+                    "id": "/Reasons/0/Context/params/AccountID",
+                    "type": "null"
+                  }
+                }
               }
-            },
-            "additionalProperties": false
+            }
           }
-        },
-        "additionalProperties": false
+        }
       }
     },
     "Data": {
@@ -92,7 +94,6 @@
       "type": "null"
     }
   },
-  "additionalProperties": false,
   "required": [
     "Module",
     "Service",

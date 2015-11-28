@@ -1,0 +1,272 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "Contacts": {
+          "id": "/Params/Contacts",
+          "type": "array",
+          "items": {
+            "id": "/Params/Contacts/0",
+            "type": "object",
+            "properties": {
+              "ContactID": {
+                "id": "/Params/Contacts/0/ContactID",
+                "type": "integer"
+              },
+              "FirstName": {
+                "id": "/Params/Contacts/0/FirstName",
+                "type": "string"
+              },
+              "LastName": {
+                "id": "/Params/Contacts/0/LastName",
+                "type": "string"
+              },
+              "MiddleName": {
+                "id": "/Params/Contacts/0/MiddleName",
+                "type": "string"
+              },
+              "OtherName": {
+                "id": "/Params/Contacts/0/OtherName",
+                "type": "string"
+              },
+              "Prefix": {
+                "id": "/Params/Contacts/0/Prefix",
+                "type": "string"
+              },
+              "Suffix": {
+                "id": "/Params/Contacts/0/Suffix",
+                "type": "string"
+              },
+              "Title": {
+                "id": "/Params/Contacts/0/Title",
+                "type": "string"
+              },
+              "GenderTypeID": {
+                "id": "/Params/Contacts/0/GenderTypeID",
+                "type": "integer"
+              },
+              "EmailAddresses": {
+                "id": "/Params/Contacts/0/EmailAddresses",
+                "type": "array",
+                "items": {
+                  "id": "/Params/Contacts/0/EmailAddresses/0",
+                  "type": "object",
+                  "properties": {
+                    "Type": {
+                      "id": "/Params/Contacts/0/EmailAddresses/0/Type",
+                      "type": "string"
+                    },
+                    "Email": {
+                      "id": "/Params/Contacts/0/EmailAddresses/0/Email",
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "Telephones": {
+                "id": "/Params/Contacts/0/Telephones",
+                "type": "array",
+                "items": {
+                  "id": "/Params/Contacts/0/Telephones/0",
+                  "type": "object",
+                  "properties": {
+                    "Type": {
+                      "id": "/Params/Contacts/0/Telephones/0/Type",
+                      "type": "string"
+                    },
+                    "Phone": {
+                      "id": "/Params/Contacts/0/Telephones/0/Phone",
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "AdditionalInformation": {
+                "id": "/Params/Contacts/0/AdditionalInformation",
+                "type": "string"
+              },
+              "CEUCredits": {
+                "id": "/Params/Contacts/0/CEUCredits",
+                "type": "number"
+              },
+              "oca": {
+                "id": "/Params/Contacts/0/oca",
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Reasons": {
+      "id": "/Reasons",
+      "type": "array",
+      "items": {
+        "id": "/Reasons/0",
+        "type": "object",
+        "properties": {
+          "ReasonCode": {
+            "id": "/Reasons/0/ReasonCode",
+            "type": "string"
+          },
+          "Description": {
+            "id": "/Reasons/0/Description",
+            "type": "string"
+          },
+          "Level": {
+            "id": "/Reasons/0/Level",
+            "type": "string"
+          },
+          "Type": {
+            "id": "/Reasons/0/Type",
+            "type": "string"
+          },
+          "Class": {
+            "id": "/Reasons/0/Class",
+            "type": "string"
+          },
+          "Method": {
+            "id": "/Reasons/0/Method",
+            "type": "string"
+          },
+          "Context": {
+            "id": "/Reasons/0/Context",
+            "type": "object",
+            "properties": {
+              "ERROR_MSG": {
+                "id": "/Reasons/0/Context/ERROR_MSG",
+                "type": "string",
+				"default": "Duplicate Contact record found"
+              },
+              "Param": {
+                "id": "/Reasons/0/Context/Param",
+                "type": "object",
+                "properties": {
+                  "ContactID": {
+                    "id": "/Reasons/0/Context/Param/ContactID",
+                    "type": "integer"
+                  },
+                  "FirstName": {
+                    "id": "/Reasons/0/Context/Param/FirstName",
+                    "type": "string"
+                  },
+                  "LastName": {
+                    "id": "/Reasons/0/Context/Param/LastName",
+                    "type": "string"
+                  },
+                  "MiddleName": {
+                    "id": "/Reasons/0/Context/Param/MiddleName",
+                    "type": "string"
+                  },
+                  "OtherName": {
+                    "id": "/Reasons/0/Context/Param/OtherName",
+                    "type": "string"
+                  },
+                  "Prefix": {
+                    "id": "/Reasons/0/Context/Param/Prefix",
+                    "type": "string"
+                  },
+                  "Suffix": {
+                    "id": "/Reasons/0/Context/Param/Suffix",
+                    "type": "string"
+                  },
+                  "Title": {
+                    "id": "/Reasons/0/Context/Param/Title",
+                    "type": "string"
+                  },
+                  "GenderTypeID": {
+                    "id": "/Reasons/0/Context/Param/GenderTypeID",
+                    "type": "integer"
+                  },
+                  "EmailAddresses": {
+                    "id": "/Reasons/0/Context/Param/EmailAddresses",
+                    "type": "array",
+                    "items": {
+                      "id": "/Reasons/0/Context/Param/EmailAddresses/0",
+                      "type": "object",
+                      "properties": {
+                        "Type": {
+                          "id": "/Reasons/0/Context/Param/EmailAddresses/0/Type",
+                          "type": "string"
+                        },
+                        "Email": {
+                          "id": "/Reasons/0/Context/Param/EmailAddresses/0/Email",
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "Telephones": {
+                    "id": "/Reasons/0/Context/Param/Telephones",
+                    "type": "array",
+                    "items": {
+                      "id": "/Reasons/0/Context/Param/Telephones/0",
+                      "type": "object",
+                      "properties": {
+                        "Type": {
+                          "id": "/Reasons/0/Context/Param/Telephones/0/Type",
+                          "type": "string"
+                        },
+                        "Phone": {
+                          "id": "/Reasons/0/Context/Param/Telephones/0/Phone",
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "AdditionalInformation": {
+                    "id": "/Reasons/0/Context/Param/AdditionalInformation",
+                    "type": "string"
+                  },
+                  "CEUCredits": {
+                    "id": "/Reasons/0/Context/Param/CEUCredits",
+                    "type": "number"
+                  },
+                  "oca": {
+                    "id": "/Reasons/0/Context/Param/oca",
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "null"
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Reasons",
+    "Data"
+  ]
+}

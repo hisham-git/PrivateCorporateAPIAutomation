@@ -1,0 +1,213 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string",
+      "default": "corporate"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string",
+      "default": "contact"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string",
+      "default": "updateContact"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "ContactID": {
+          "id": "/Params/ContactID",
+          "type": "integer",
+          "default": 26
+        },
+        "FirstName": {
+          "id": "/Params/FirstName",
+          "type": "string",
+          "default": "Test"
+        },
+        "LastName": {
+          "id": "/Params/LastName",
+          "type": "string",
+          "default": "Contact_01a_UPDContact_01a_UPDContact_01a_UPDContact_01a_UPD"
+        },
+        "MiddleName": {
+          "id": "/Params/MiddleName",
+          "type": "string",
+          "default": "M"
+        },
+        "OtherName": {
+          "id": "/Params/OtherName",
+          "type": "string",
+          "default": "nickname"
+        },
+        "Prefix": {
+          "id": "/Params/Prefix",
+          "type": "string",
+          "default": "Dr."
+        },
+        "Suffix": {
+          "id": "/Params/Suffix",
+          "type": "string",
+          "default": "Phd."
+        },
+        "Title": {
+          "id": "/Params/Title",
+          "type": "string",
+          "default": "Mr."
+        },
+        "GenderTypeID": {
+          "id": "/Params/GenderTypeID",
+          "type": "integer",
+          "default": 1
+        },
+        "EmailAddresses": {
+          "id": "/Params/EmailAddresses",
+          "type": "array",
+          "items": {
+            "id": "/Params/EmailAddresses/0",
+            "type": "object",
+            "properties": {
+              "Type": {
+                "id": "/Params/EmailAddresses/0/Type",
+                "type": "string",
+                "default": "personal"
+              },
+              "Email": {
+                "id": "/Params/EmailAddresses/0/Email",
+                "type": "string",
+                "default": "jcarter.dsi@gmail.com"
+              }
+            }
+          }
+        },
+        "Telephones": {
+          "id": "/Params/Telephones",
+          "type": "array",
+          "items": {
+            "id": "/Params/Telephones/0",
+            "type": "object",
+            "properties": {
+              "Type": {
+                "id": "/Params/Telephones/0/Type",
+                "type": "string",
+                "default": "personal"
+              },
+              "Phone": {
+                "id": "/Params/Telephones/0/Phone",
+                "type": "string",
+                "default": "777-857-2589"
+              }
+            }
+          }
+        },
+        "AdditionalInformation": {
+          "id": "/Params/AdditionalInformation",
+          "type": "string",
+          "default": "Addiltional"
+        },
+        "CEUCredits": {
+          "id": "/Params/CEUCredits",
+          "type": "number",
+          "default": 25.5
+        },
+        "oca": {
+          "id": "/Params/oca",
+          "type": "integer",
+          "default": 1
+        }
+      }
+    },
+    "Reasons": {
+      "id": "/Reasons",
+      "type": "array",
+      "items": {
+        "id": "/Reasons/0",
+        "type": "object",
+        "properties": {
+          "ReasonCode": {
+            "id": "/Reasons/0/ReasonCode",
+            "type": "string",
+            "default": "core00007"
+          },
+          "Description": {
+            "id": "/Reasons/0/Description",
+            "type": "string",
+            "default": "validation"
+          },
+          "Level": {
+            "id": "/Reasons/0/Level",
+            "type": "string",
+            "default": "SEVERE"
+          },
+          "Type": {
+            "id": "/Reasons/0/Type",
+            "type": "string",
+            "default": "BIZ_RULE"
+          },
+          "Class": {
+            "id": "/Reasons/0/Class",
+            "type": "string",
+            "default": "com.campus.data.BasicProperty"
+          },
+          "Method": {
+            "id": "/Reasons/0/Method",
+            "type": "string",
+            "default": "validate"
+          },
+          "Context": {
+            "id": "/Reasons/0/Context",
+            "type": "object",
+            "properties": {
+              "value": {
+                "id": "/Reasons/0/Context/value",
+                "type": "string",
+                "default": "Contact_01a_UPDContact_01a_UPDContact_01a_UPDContact_01a_UPD"
+              },
+              "size": {
+                "id": "/Reasons/0/Context/size",
+                "type": "integer",
+                "default": 50
+              },
+              "length": {
+                "id": "/Reasons/0/Context/length",
+                "type": "integer",
+                "default": 60
+              },
+              "name": {
+                "id": "/Reasons/0/Context/name",
+                "type": "string",
+                "default": "LastName"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "null",
+      "default": null
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Reasons",
+    "Data"
+  ]
+}

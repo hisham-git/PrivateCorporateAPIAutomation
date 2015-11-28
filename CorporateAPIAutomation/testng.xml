@@ -3,19 +3,37 @@
 <suite name="Suite" parallel="none">
   <test name="Unit Test">
     <classes>
-  
+ 
+ <!--   
     <class name="api.corporate.ContactServiceTest"/>
-      
+    
       <methods>
       	<exclude name="insertContact" />
         <exclude name="updateContact" />
         <exclude name="getContact" />
         <exclude name="deleteContact" />
         
-        <include name="insertContacts" />
+        <exclude name="insertContacts" />
         <exclude name="updateContacts" />
         <exclude name="getContacts" />
         <exclude name="deleteContacts" />
+      </methods>
+-->           
+
+    
+    <class name="api.corporate.AccountServiceTest"/>
+      
+      <methods>
+      	<exclude name="insertAccount" />
+        <exclude name="updateAccount" />
+        <include name="readAccount" />
+        <include name="getAccounts" />
+        <include name="deleteAccount" />
+        
+        <exclude name="insertAccounts" />
+        <exclude name="updateAccounts" />
+        
+        
       </methods>
            
     </classes>

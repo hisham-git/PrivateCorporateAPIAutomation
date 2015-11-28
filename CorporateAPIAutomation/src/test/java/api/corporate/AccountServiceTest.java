@@ -15,9 +15,19 @@ public class AccountServiceTest {
     public void getAccounts(Map<String, String> config) throws JSONException {
         Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
     }
+    
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
+    public void readAccount(Map<String, String> config) throws JSONException {
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+    }
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void insertAccounts(Map<String, String> config) throws JSONException {
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+    }
+    
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
+    public void insertAccount(Map<String, String> config) throws JSONException {
         Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
     }
     
@@ -31,9 +41,14 @@ public class AccountServiceTest {
     public void updateAccounts(Map<String, String> config) throws JSONException {
         Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
     }
+    
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
+    public void updateAccount(Map<String, String> config) throws JSONException {
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+    }
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
-    public void deleteAccounts(Map<String, String> config) throws JSONException {
+    public void deleteAccount(Map<String, String> config) throws JSONException {
         Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
     }
 

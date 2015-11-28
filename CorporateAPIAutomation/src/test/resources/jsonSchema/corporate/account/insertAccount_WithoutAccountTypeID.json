@@ -18,14 +18,33 @@
     "Header": {
       "id": "/Header",
       "type": "object",
-      "properties": {},
-      "additionalProperties": false
+      "properties": {}
     },
     "Params": {
       "id": "/Params",
       "type": "object",
-      "properties": {},
-      "additionalProperties": false
+      "properties": {
+        "Name": {
+          "id": "/Params/Name",
+          "type": "string"
+        },
+        "Description": {
+          "id": "/Params/Description",
+          "type": "string"
+        },
+        "PaymentTerm": {
+          "id": "/Params/PaymentTerm",
+          "type": "string"
+        },
+        "FEID": {
+          "id": "/Params/FEID",
+          "type": "string"
+        },
+        "EmployeeCount": {
+          "id": "/Params/EmployeeCount",
+          "type": "integer"
+        }
+      }
     },
     "Reasons": {
       "id": "/Reasons",
@@ -65,19 +84,37 @@
               "ERROR_MSG": {
                 "id": "/Reasons/0/Context/ERROR_MSG",
                 "type": "string",
-				"default": "AccountIDs is required."
+				"default": "AccountTypeID is required"
               },
               "Param": {
                 "id": "/Reasons/0/Context/Param",
                 "type": "object",
-                "properties": {},
-                "additionalProperties": false
+                "properties": {
+                  "Description": {
+                    "id": "/Reasons/0/Context/Param/Description",
+                    "type": "string"
+                  },
+                  "FEID": {
+                    "id": "/Reasons/0/Context/Param/FEID",
+                    "type": "string"
+                  },
+                  "EmployeeCount": {
+                    "id": "/Reasons/0/Context/Param/EmployeeCount",
+                    "type": "integer"
+                  },
+                  "PaymentTerm": {
+                    "id": "/Reasons/0/Context/Param/PaymentTerm",
+                    "type": "string"
+                  },
+                  "Name": {
+                    "id": "/Reasons/0/Context/Param/Name",
+                    "type": "string"
+                  }
+                }
               }
-            },
-            "additionalProperties": false
+            }
           }
-        },
-        "additionalProperties": false
+        }
       }
     },
     "Data": {
@@ -85,7 +122,6 @@
       "type": "null"
     }
   },
-  "additionalProperties": false,
   "required": [
     "Module",
     "Service",

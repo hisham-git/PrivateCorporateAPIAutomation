@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "AccountID": {
+          "id": "/Params/AccountID",
+          "type": "integer"
+        },
+        "oca": {
+          "id": "/Params/oca",
+          "type": "integer"
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "object",
+      "properties": {
+        "AccountID": {
+          "id": "/Data/AccountID",
+          "type": "integer"
+        },
+        "Name": {
+          "id": "/Data/Name",
+          "type": "string"
+        },
+        "Description": {
+          "id": "/Data/Description",
+          "type": "string"
+        },
+        "AccountTypeID": {
+          "id": "/Data/AccountTypeID",
+          "type": "integer"
+        },
+        "PaymentTerm": {
+          "id": "/Data/PaymentTerm",
+          "type": "string"
+        },
+        "FEID": {
+          "id": "/Data/FEID",
+          "type": "string"
+        },
+        "EmployeeCount": {
+          "id": "/Data/EmployeeCount",
+          "type": "integer"
+        },
+        "AccountType": {
+          "id": "/Data/AccountType",
+          "type": "string"
+        },
+        "oca": {
+          "id": "/Data/oca",
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

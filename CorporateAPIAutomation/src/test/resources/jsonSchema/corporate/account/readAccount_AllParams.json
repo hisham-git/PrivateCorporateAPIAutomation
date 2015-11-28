@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {
+        "ThrowNotFoundException": {
+          "id": "/Header/ThrowNotFoundException",
+          "type": "boolean"
+        }
+      }
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "AccountID": {
+          "id": "/Params/AccountID",
+          "type": "integer"
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "object",
+      "properties": {
+        "AccountTypeID": {
+          "id": "/Data/AccountTypeID",
+          "type": "integer"
+        },
+        "AccountID": {
+          "id": "/Data/AccountID",
+          "type": "integer"
+        },
+        "Description": {
+          "id": "/Data/Description",
+          "type": "string"
+        },
+        "FEID": {
+          "id": "/Data/FEID",
+          "type": "string"
+        },
+        "EmployeeCount": {
+          "id": "/Data/EmployeeCount",
+          "type": "integer"
+        },
+        "PaymentTerm": {
+          "id": "/Data/PaymentTerm",
+          "type": "string"
+        },
+        "oca": {
+          "id": "/Data/oca",
+          "type": "integer"
+        },
+        "Name": {
+          "id": "/Data/Name",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

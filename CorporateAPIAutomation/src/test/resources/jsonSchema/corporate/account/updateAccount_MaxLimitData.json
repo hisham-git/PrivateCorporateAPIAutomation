@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "AccountID": {
+          "id": "/Params/AccountID",
+          "type": "integer"
+        },
+        "oca": {
+          "id": "/Params/oca",
+          "type": "integer"
+        },
+        "Name": {
+          "id": "/Params/Name",
+          "type": "string"
+        },
+        "Description": {
+          "id": "/Params/Description",
+          "type": "string"
+        },
+        "AccountTypeID": {
+          "id": "/Params/AccountTypeID",
+          "type": "integer"
+        },
+        "PaymentTerm": {
+          "id": "/Params/PaymentTerm",
+          "type": "string"
+        },
+        "FEID": {
+          "id": "/Params/FEID",
+          "type": "string"
+        },
+        "EmployeeCount": {
+          "id": "/Params/EmployeeCount",
+          "type": "integer"
+        }
+      }
+    },
+    "Reasons": {
+      "id": "/Reasons",
+      "type": "array",
+      "items": {
+        "id": "/Reasons/0",
+        "type": "object",
+        "properties": {
+          "ReasonCode": {
+            "id": "/Reasons/0/ReasonCode",
+            "type": "string"
+          },
+          "Description": {
+            "id": "/Reasons/0/Description",
+            "type": "string"
+          },
+          "Level": {
+            "id": "/Reasons/0/Level",
+            "type": "string"
+          },
+          "Type": {
+            "id": "/Reasons/0/Type",
+            "type": "string"
+          },
+          "Class": {
+            "id": "/Reasons/0/Class",
+            "type": "string"
+          },
+          "Method": {
+            "id": "/Reasons/0/Method",
+            "type": "string"
+          },
+          "Context": {
+            "id": "/Reasons/0/Context",
+            "type": "object",
+            "properties": {
+              "value": {
+                "id": "/Reasons/0/Context/value",
+                "type": "string"
+              },
+              "size": {
+                "id": "/Reasons/0/Context/size",
+                "type": "integer"
+              },
+              "length": {
+                "id": "/Reasons/0/Context/length",
+                "type": "integer"
+              },
+              "name": {
+                "id": "/Reasons/0/Context/name",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "null"
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Reasons",
+    "Data"
+  ]
+}

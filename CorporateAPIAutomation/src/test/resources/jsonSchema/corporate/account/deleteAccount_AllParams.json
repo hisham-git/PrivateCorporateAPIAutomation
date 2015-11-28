@@ -18,30 +18,31 @@
     "Header": {
       "id": "/Header",
       "type": "object",
-      "properties": {},
-      "additionalProperties": false
+      "properties": {}
     },
     "Params": {
       "id": "/Params",
       "type": "object",
       "properties": {
+        "AccountID": {
+          "id": "/Params/AccountID",
+          "type": "integer"
+        },
         "AccountIDs": {
           "id": "/Params/AccountIDs",
           "type": "array",
           "items": {
-            "id": "/Params/AccountIDs/1",
+            "id": "/Params/AccountIDs/0",
             "type": "integer"
           }
         }
-      },
-      "additionalProperties": false
+      }
     },
     "Data": {
       "id": "/Data",
       "type": "null"
     }
   },
-  "additionalProperties": false,
   "required": [
     "Module",
     "Service",

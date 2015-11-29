@@ -28,7 +28,7 @@
         <exclude name="updateAccount" />
         <include name="readAccount" />
         <include name="getAccounts" />
-        <include name="deleteAccount" />
+        <exclude name="deleteAccount" />
         
         <exclude name="insertAccounts" />
         <exclude name="updateAccounts" />

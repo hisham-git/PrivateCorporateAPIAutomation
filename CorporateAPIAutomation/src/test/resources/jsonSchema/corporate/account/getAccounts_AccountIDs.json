@@ -81,7 +81,7 @@
           },
           "Description": {
             "id": "/Data/1/Description",
-            "type": "string"
+            "type": ["null", "string"]
           },
           "AccountTypeID": {
             "id": "/Data/1/AccountTypeID",
@@ -89,15 +89,15 @@
           },
           "PaymentTerm": {
             "id": "/Data/1/PaymentTerm",
-            "type": "string"
+            "type": ["null", "string"]
           },
           "FEID": {
             "id": "/Data/1/FEID",
-            "type": "string"
+            "type": ["null", "string"]
           },
           "EmployeeCount": {
             "id": "/Data/1/EmployeeCount",
-            "type": "integer"
+            "type": ["null", "integer"]
           },
           "AccountType": {
             "id": "/Data/1/AccountType",

@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {}
+    },
+    "Reasons": {
+      "id": "/Reasons",
+      "type": "array",
+      "items": {
+        "id": "/Reasons/5",
+        "type": "object",
+        "properties": {
+          "ReasonCode": {
+            "id": "/Reasons/5/ReasonCode",
+            "type": "string"
+          },
+          "Description": {
+            "id": "/Reasons/5/Description",
+            "type": "string"
+          },
+          "Level": {
+            "id": "/Reasons/5/Level",
+            "type": "string"
+          },
+          "Type": {
+            "id": "/Reasons/5/Type",
+            "type": "string"
+          },
+          "Class": {
+            "id": "/Reasons/5/Class",
+            "type": "string"
+          },
+          "Method": {
+            "id": "/Reasons/5/Method",
+            "type": "string"
+          },
+          "Context": {
+            "id": "/Reasons/5/Context",
+            "type": "object",
+            "properties": {
+              "ERROR_MSG": {
+                "id": "/Reasons/5/Context/ERROR_MSG",
+                "type": "string",
+				"enum": [
+                  "AccountIDs array is required",
+                  "AccountIDs is expected as Array",
+				  "ContactIDs array is required",
+				  "ContactIDs is expected as Array",
+				  "AffiliationTypeIDs array is required",
+				  "AffiliationTypeIDs is expected as Array"
+                ]
+              },
+              "Param": {
+                "id": "/Reasons/5/Context/Param",
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "null"
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Reasons",
+    "Data"
+  ]
+}

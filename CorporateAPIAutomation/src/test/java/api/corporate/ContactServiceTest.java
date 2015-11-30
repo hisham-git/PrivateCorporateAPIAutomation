@@ -10,7 +10,7 @@ import java.util.Map;
 public class ContactServiceTest {
 
 	@Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
-    public void getContact(Map<String, String> config) throws JSONException {
+    public void readContact(Map<String, String> config) throws JSONException {
         Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
     }
 	

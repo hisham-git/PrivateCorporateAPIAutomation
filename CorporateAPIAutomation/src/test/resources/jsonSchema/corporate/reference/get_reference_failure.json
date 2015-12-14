@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+	"Module": {
+      "id": "/Module",
+      "type": "string",
+	  "enum": [
+        "corporate"
+      ]
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string",
+	  "enum": [
+        "reference"
+      ]
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string",
+	  "enum": [ 
+        "getCollection"
+      ]
+    },
+	"Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "Description": {
+          "id": "/Params/Description",
+          "type": "string"
+        },
+        "IDs": {
+          "id": "/Params/IDs",
+          "type": "array",
+          "items": {
+            "id": "/Params/IDs/0",
+            "type": "integer"
+          }
+        },
+        "Name": {
+          "id": "/Params/Name",
+          "type": "string"
+        }
+      }
+    },
+    "Reasons": {
+      "id": "/Reasons",
+      "type": "array",
+      "items": {
+        "id": "/Reasons/0",
+        "type": "object",
+        "properties": {
+          "ReasonCode": {
+            "id": "/Reasons/0/ReasonCode",
+            "type": "string",
+			"enum": [
+              "core00002"
+            ]
+          },
+          "Description": {
+            "id": "/Reasons/0/Description",
+            "type": "string",
+			"enum": [
+              "not found"
+            ]
+          },
+          "Level": {
+            "id": "/Reasons/0/Level",
+            "type": "string",
+			"enum": [
+              "SEVERE"
+            ]
+          },
+          "Type": {
+            "id": "/Reasons/0/Type",
+            "type": "string",
+			"enum": [
+              "AVAILABILITY"
+            ]
+          },
+          "Class": {
+            "id": "/Reasons/0/Class",
+            "type": "string",
+			"enum": [
+              "com.campus.corporate.service.ReferenceService"
+            ]
+          },
+          "Method": {
+            "id": "/Reasons/0/Method",
+            "type": "string",
+			"enum": [
+              "runMethod"
+            ]
+          },
+          "Context": {
+            "id": "/Reasons/0/Context",
+            "type": "object",
+            "properties": {
+              "ERROR_MSG": {
+                "id": "/Reasons/0/Context/ERROR_MSG",
+                "type": "string",
+				"enum": [
+                  "Reference type not found"
+                ]
+              },
+              "Header": {
+                "id": "/Reasons/0/Context/Header",
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "null"
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Reasons",
+    "Data"
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string",
+	  "enum": [
+        "corporate"
+      ]
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string",
+	  "enum": [
+        "reference"
+      ]
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string",
+	  "enum": [ 
+        "getCollection"
+      ]
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {
+        "ReferenceType": {
+          "id": "/Header/ReferenceType",
+          "type": "string",
+		  "enum": [           
+            "PaymentType"
+          ]
+        }
+      }
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "Description": {
+          "id": "/Params/Description",
+          "type": "string"
+        },
+        "IDs": {
+          "id": "/Params/IDs",
+          "type": "array",
+          "items": {
+            "id": "/Params/IDs/0",
+            "type": "integer"
+          }
+        },
+        "Name": {
+          "id": "/Params/Name",
+          "type": "string"
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "array",
+      "items": {
+        "id": "/Data/1",
+        "type": "object",
+        "properties": {
+          "ID": {
+            "id": "/Data/1/ID",
+            "type": "integer"
+          },
+          "Name": {
+            "id": "/Data/1/Name",
+            "type": "string"
+          },
+          "Description": {
+            "id": "/Data/1/Description",
+            "type": ["null", "string"]
+          },
+          "SortPosition": {
+            "id": "/Data/1/SortPosition",
+            "type": ["null", "integer"]
+          },
+          "IsActive": {
+            "id": "/Data/1/IsActive",
+            "type": "boolean"
+          },
+          "oca": {
+            "id": "/Data/1/oca",
+            "type": "integer"
+          }
+        },
+		"required": [
+			"ID",
+			"Name",
+			"Description",
+			"SortPosition",
+			"IsActive",
+			"oca"
+		]
+      }
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

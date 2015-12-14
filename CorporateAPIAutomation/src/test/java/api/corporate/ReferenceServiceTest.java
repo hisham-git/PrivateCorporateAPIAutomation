@@ -8,7 +8,19 @@ import utilities.dataProvider.ExcelFileReaderConfig;
 import java.util.Map;
 
 public class ReferenceServiceTest {
-    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
+    
+	@Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
+    public void getCollection_reference(Map<String, String> config) throws JSONException {
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+    }
+	
+	@Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
+    public void get_reference(Map<String, String> config) throws JSONException {
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+    }
+	
+/*	
+	@Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void getAccountTypes(Map<String, String> config) throws JSONException {
         Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
     }
@@ -37,4 +49,6 @@ public class ReferenceServiceTest {
     public void getAccountAffiliationTypes(Map<String, String> config) throws JSONException {
         Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
     }
+    
+*/
 }

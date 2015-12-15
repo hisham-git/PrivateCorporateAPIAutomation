@@ -21,7 +21,7 @@
       "id": "/Action",
       "type": "string",
 	  "enum": [ 
-        "getCollection"
+        "get"
       ]
     },
     "Header": {
@@ -41,30 +41,15 @@
       "id": "/Params",
       "type": "object",
       "properties": {
-        "Description": {
-          "id": "/Params/Description",
-          "type": "string"
-        },
-        "IDs": {
-          "id": "/Params/IDs",
-          "type": "array",
-          "items": {
-            "id": "/Params/IDs/0",
-            "type": "integer"
-          }
-        },
-        "Name": {
-          "id": "/Params/Name",
-          "type": "string"
+		"ID": {
+          "id": "/Params/ID",
+          "type": "integer"
         }
       }
     },
     "Data": {
       "id": "/Data",
-      "type": "array",
-      "items": {
-        "id": "/Data/1",
-        "type": "object",
+      "type": ["null", "object"],
         "properties": {
           "ID": {
             "id": "/Data/1/ID",
@@ -104,7 +89,6 @@
 			"IsActive",
 			"oca"
 		]
-      }
     }
   },
   "required": [

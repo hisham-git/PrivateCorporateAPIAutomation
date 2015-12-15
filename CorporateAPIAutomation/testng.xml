@@ -3,10 +3,16 @@
 <suite name="Suite" parallel="none" junit="false" guice-stage="DEVELOPMENT" configfailurepolicy="skip" thread-count="5" skipfailedinvocationcounts="false" data-provider-thread-count="10" group-by-instances="false" preserve-order="true" allow-return-values="false">
    <test name="Unit Test" junit="false" skipfailedinvocationcounts="false" preserve-order="true" group-by-instances="false" allow-return-values="false">
       <classes>
+      	<class name="api.corporate.AccountServiceTest" />
+         <methods>
+            <exclude name="getCollection_account" />
+            <exclude name="get_account" />
+         </methods>
+      
          <class name="api.corporate.ReferenceServiceTest" />
          <methods>
-            <include name="getCollection" />
-            <exclude name="get" />
+            <include name="getCollection_reference" />
+            <include name="get_reference" />
          </methods>
       </classes>
    </test>

@@ -5,44 +5,35 @@
   "properties": {
     "Module": {
       "id": "/Module",
-      "type": "string"
+      "type": "string",
+	  "enum": [
+        "corporate"
+      ]
     },
     "Service": {
       "id": "/Service",
-      "type": "string"
+      "type": "string",
+	  "enum": [
+        "account"
+      ]
     },
     "Action": {
       "id": "/Action",
-      "type": "string"
+      "type": "string",
+	  "enum": [
+        "getCollection"
+      ]
     },
-    "Header": {
+	"Header": {
       "id": "/Header",
       "type": "object",
       "properties": {
-        "Sort": {
-          "id": "/Header/Sort",
-          "type": "array",
-          "items": {
-            "id": "/Header/Sort/0",
-            "type": "object",
-            "properties": {
-              "By": {
-                "id": "/Header/Sort/0/By",
-                "type": "string"
-              },
-              "Dir": {
-                "id": "/Header/Sort/0/Dir",
-                "type": "string"
-              }
-            }
-          }
+        "PageSize": {
+          "id": "/Header/PageSize",
+          "type": "integer"
         },
         "StartPosition": {
           "id": "/Header/StartPosition",
-          "type": "integer"
-        },
-        "PageSize": {
-          "id": "/Header/PageSize",
           "type": "integer"
         }
       }
@@ -52,53 +43,83 @@
       "type": "object",
       "properties": {}
     },
-    "Data": {
+	"Data": {
       "id": "/Data",
-      "type": "array",
+      "type": ["null", "array"]
       "items": {
-        "id": "/Data/1",
+        "id": "/Data/0",
         "type": "object",
         "properties": {
           "AccountID": {
-            "id": "/Data/1/AccountID",
+            "id": "/Data/0/AccountID",
             "type": "integer"
           },
           "Name": {
-            "id": "/Data/1/Name",
+            "id": "/Data/0/Name",
             "type": "string"
           },
           "Description": {
-            "id": "/Data/1/Description",
+            "id": "/Data/0/Description",
             "type": ["null", "string"]
           },
           "AccountTypeID": {
-            "id": "/Data/1/AccountTypeID",
+            "id": "/Data/0/AccountTypeID",
             "type": "integer"
           },
           "PaymentTerm": {
-            "id": "/Data/1/PaymentTerm",
+            "id": "/Data/0/PaymentTerm",
+            "type": ["null", "string"]
+          },
+		  "PaymentTypeID": {
+            "id": "/Data/0/PaymentTypeID",
+            "type": ["null", "integer"]
+          },
+          "PaymentType": {
+            "id": "/Data/0/PaymentType",
             "type": ["null", "string"]
           },
           "FEID": {
-            "id": "/Data/1/FEID",
+            "id": "/Data/0/FEID",
             "type": ["null", "string"]
           },
           "EmployeeCount": {
-            "id": "/Data/1/EmployeeCount",
+            "id": "/Data/0/EmployeeCount",
+            "type": ["null", "integer"]
+          },
+		  "Website": {
+            "id": "/Data/0/Website",
             "type": ["null", "string"]
           },
+          "IsActive": {
+            "id": "/Data/0/IsActive",
+            "type": "boolean"
+          },
           "AccountType": {
-            "id": "/Data/1/AccountType",
+            "id": "/Data/0/AccountType",
             "type": "string"
           },
           "oca": {
-            "id": "/Data/1/oca",
+            "id": "/Data/0/oca",
             "type": "integer"
           }
         },
-        "additionalProperties": false
+		"required": [
+			"AccountID",
+			"Name",
+			"Description",
+			"AccountTypeID",
+			"PaymentTerm",
+			"PaymentTypeID",
+			"PaymentType",
+			"FEID",
+			"EmployeeCount",
+			"Website",
+			"IsActive",
+			"AccountType",
+			"oca"
+		]
       }
-    }
+    }	
   },
   "required": [
     "Module",

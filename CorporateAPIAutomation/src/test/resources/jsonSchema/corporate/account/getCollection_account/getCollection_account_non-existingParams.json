@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string",
+	  "enum": [
+        "corporate"
+      ]
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string",
+	  "enum": [
+        "account"
+      ]
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string",
+	  "enum": [
+        "getCollection"
+      ]
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {
+        "PageSize": {
+          "id": "/Header/PageSize",
+          "type": "integer"
+        },
+        "StartPosition": {
+          "id": "/Header/StartPosition",
+          "type": "integer"
+        }
+      }
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+		"AccountIDs": {
+          "id": "/Params/AccountIDs",
+          "type": "array",
+          "items": {
+            "id": "/Params/AccountIDs/0",
+            "type": "integer"
+          }
+        },
+        "IsActive": {
+          "id": "/Params/IsActive",
+          "type": "boolean"
+        },
+        "AccountTypeIDs": {
+          "id": "/Params/AccountTypeIDs",
+          "type": "array",
+          "items": {
+            "id": "/Params/AccountTypeIDs/0",
+            "type": "integer"
+          }
+        },
+        "AccountTypeName": {
+          "id": "/Params/AccountTypeName",
+          "type": "string"
+        },
+        "PaymentTerm": {
+          "id": "/Params/PaymentTerm",
+          "type": "string"
+        },
+        "Name": {
+          "id": "/Params/Name",
+          "type": "string"
+        }
+      }
+    },
+	"Data": {
+      "id": "/Data",
+      "type": "array",
+      "items": {}
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

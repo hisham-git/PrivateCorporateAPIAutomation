@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string",
+	  "enum": [
+        "corporate"
+      ]
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string",
+	  "enum": [
+        "account"
+      ]
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string",
+	  "enum": [
+        "get"
+      ]
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "AccountID": {
+          "id": "/Params/AccountID",
+          "type": "integer"
+        }
+      }
+    },
+	"Data": {
+      "id": "/Data",
+      "type": "null"
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

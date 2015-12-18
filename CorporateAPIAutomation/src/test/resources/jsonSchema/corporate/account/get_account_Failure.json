@@ -14,7 +14,7 @@
       "id": "/Service",
       "type": "string",
 	  "enum": [
-        "reference"
+        "account"
       ]
     },
     "Action": {
@@ -29,15 +29,10 @@
       "type": "object",
       "properties": {}
     },
-	"Params": {
+    "Params": {
       "id": "/Params",
       "type": "object",
-      "properties": {
-        "ID": {
-          "id": "/Params/ID",
-          "type": "integer"
-        }
-      }
+      "properties": {}
     },
     "Reasons": {
       "id": "/Reasons",
@@ -50,14 +45,14 @@
             "id": "/Reasons/0/ReasonCode",
             "type": "string",
 			"enum": [
-              "core00002"
+              "core00008"
             ]
           },
           "Description": {
             "id": "/Reasons/0/Description",
             "type": "string",
 			"enum": [
-              "not found"
+              "required"
             ]
           },
           "Level": {
@@ -71,21 +66,21 @@
             "id": "/Reasons/0/Type",
             "type": "string",
 			"enum": [
-              "AVAILABILITY"
+              "BIZ_RULE"
             ]
           },
           "Class": {
             "id": "/Reasons/0/Class",
             "type": "string",
 			"enum": [
-              "com.campus.corporate.service.ReferenceService"
+              "com.campus.corporate.util.AbstractQHandler"
             ]
           },
           "Method": {
             "id": "/Reasons/0/Method",
             "type": "string",
 			"enum": [
-              "runMethod"
+              "requireParams"
             ]
           },
           "Context": {
@@ -96,11 +91,11 @@
                 "id": "/Reasons/0/Context/ERROR_MSG",
                 "type": "string",
 				"enum": [
-                  "Reference type not found"
+                  "AccountID is required"
                 ]
               },
-              "Header": {
-                "id": "/Reasons/0/Context/Header",
+              "Param": {
+                "id": "/Reasons/0/Context/Param",
                 "type": "object",
                 "properties": {}
               }

@@ -78,7 +78,7 @@
     },
     "Data": {
       "id": "/Data",
-      "type": ["null", "array"]
+      "type": ["null", "array"],
       "items": {
         "id": "/Data/0",
         "type": "object",

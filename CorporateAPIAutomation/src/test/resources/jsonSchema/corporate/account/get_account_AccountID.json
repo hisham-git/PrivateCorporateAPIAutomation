@@ -1,0 +1,124 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string",
+	  "enum": [
+        "corporate"
+      ]
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string",
+	  "enum": [
+        "account"
+      ]
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string",
+	  "enum": [
+        "get"
+      ]
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "AccountID": {
+          "id": "/Params/AccountID",
+          "type": "integer"
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": ["null", "object"],
+      "properties": {
+        "AccountID": {
+            "id": "/Data/0/AccountID",
+            "type": "integer"
+          },
+          "Name": {
+            "id": "/Data/0/Name",
+            "type": "string"
+          },
+          "Description": {
+            "id": "/Data/0/Description",
+            "type": ["null", "string"]
+          },
+          "AccountTypeID": {
+            "id": "/Data/0/AccountTypeID",
+            "type": "integer"
+          },
+          "PaymentTerm": {
+            "id": "/Data/0/PaymentTerm",
+            "type": ["null", "string"]
+          },
+		  "PaymentTypeID": {
+            "id": "/Data/0/PaymentTypeID",
+            "type": ["null", "integer"]
+          },
+          "PaymentType": {
+            "id": "/Data/0/PaymentType",
+            "type": ["null", "string"]
+          },
+          "FEID": {
+            "id": "/Data/0/FEID",
+            "type": ["null", "string"]
+          },
+          "EmployeeCount": {
+            "id": "/Data/0/EmployeeCount",
+            "type": ["null", "integer"]
+          },
+		  "Website": {
+            "id": "/Data/0/Website",
+            "type": ["null", "string"]
+          },
+          "IsActive": {
+            "id": "/Data/0/IsActive",
+            "type": "boolean"
+          },
+          "AccountType": {
+            "id": "/Data/0/AccountType",
+            "type": "string"
+          },
+          "oca": {
+            "id": "/Data/0/oca",
+            "type": "integer"
+          }
+      },
+	  "required": [
+			"AccountID",
+			"Name",
+			"Description",
+			"AccountTypeID",
+			"PaymentTerm",
+			"PaymentTypeID",
+			"PaymentType",
+			"FEID",
+			"EmployeeCount",
+			"Website",
+			"IsActive",
+			"AccountType",
+			"oca"
+		]
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

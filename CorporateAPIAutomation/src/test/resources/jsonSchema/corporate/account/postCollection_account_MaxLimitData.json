@@ -1,0 +1,209 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "Accounts": {
+          "id": "/Params/Accounts",
+          "type": "array",
+          "items": {
+            "id": "/Params/Accounts/0",
+            "type": "object",
+            "properties": {
+              "Name": {
+                "id": "/Params/Accounts/0/Name",
+                "type": "string"
+              },
+              "Description": {
+                "id": "/Params/Accounts/0/Description",
+                "type": "string"
+              },
+              "AccountTypeID": {
+                "id": "/Params/Accounts/0/AccountTypeID",
+                "type": "integer"
+              },
+              "PaymentTerm": {
+                "id": "/Params/Accounts/0/PaymentTerm",
+                "type": "string"
+              },
+              "PaymentTypeID": {
+                "id": "/Params/Accounts/0/PaymentTypeID",
+                "type": "integer"
+              },
+              "FEID": {
+                "id": "/Params/Accounts/0/FEID",
+                "type": "string"
+              },
+              "EmployeeCount": {
+                "id": "/Params/Accounts/0/EmployeeCount",
+                "type": "integer"
+              },
+              "Website": {
+                "id": "/Params/Accounts/0/Website",
+                "type": "string"
+              },
+              "Addresses": {
+                "id": "/Params/Accounts/0/Addresses",
+                "type": "array",
+                "items": {
+                  "id": "/Params/Accounts/0/Addresses/0",
+                  "type": "object",
+                  "properties": {
+                    "AddressTypeID": {
+                      "id": "/Params/Accounts/0/Addresses/0/AddressTypeID",
+                      "type": "integer"
+                    },
+                    "Locality": {
+                      "id": "/Params/Accounts/0/Addresses/0/Locality",
+                      "type": "string"
+                    },
+                    "RegionCodeID": {
+                      "id": "/Params/Accounts/0/Addresses/0/RegionCodeID",
+                      "type": "integer"
+                    },
+                    "PostalCode": {
+                      "id": "/Params/Accounts/0/Addresses/0/PostalCode",
+                      "type": "string"
+                    },
+                    "CountryCodeID": {
+                      "id": "/Params/Accounts/0/Addresses/0/CountryCodeID",
+                      "type": "integer"
+                    },
+                    "IsConfidential": {
+                      "id": "/Params/Accounts/0/Addresses/0/IsConfidential",
+                      "type": "boolean"
+                    },
+                    "IsPrefered": {
+                      "id": "/Params/Accounts/0/Addresses/0/IsPrefered",
+                      "type": "boolean"
+                    },
+                    "AddressLine1": {
+                      "id": "/Params/Accounts/0/Addresses/0/AddressLine1",
+                      "type": "string"
+                    },
+                    "AddressLine2": {
+                      "id": "/Params/Accounts/0/Addresses/0/AddressLine2",
+                      "type": "string"
+                    },
+                    "AddressLine3": {
+                      "id": "/Params/Accounts/0/Addresses/0/AddressLine3",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Reasons": {
+      "id": "/Reasons",
+      "type": "array",
+      "items": {
+        "id": "/Reasons/0",
+        "type": "object",
+        "properties": {
+          "ReasonCode": {
+            "id": "/Reasons/0/ReasonCode",
+            "type": "string",
+            "enum": [
+              "core00007"
+            ]
+          },
+          "Description": {
+            "id": "/Reasons/0/Description",
+            "type": "string",
+            "enum": [
+              "validation"
+            ]
+          },
+          "Level": {
+            "id": "/Reasons/0/Level",
+            "type": "string",
+			"enum": [
+              "SEVERE"
+            ]
+          },
+          "Type": {
+            "id": "/Reasons/0/Type",
+            "type": "string",
+			"enum": [
+              "BIZ_RULE"
+            ]
+          },
+          "Class": {
+            "id": "/Reasons/0/Class",
+            "type": "string",
+			"enum": [
+              "com.campus.data.BasicProperty"
+            ]
+          },
+          "Method": {
+            "id": "/Reasons/0/Method",
+            "type": "string",
+			"enum": [
+              "validate"
+            ]
+          },
+          "Context": {
+            "id": "/Reasons/0/Context",
+            "type": "object",
+            "properties": {
+              "value": {
+                "id": "/Reasons/0/Context/value",
+                "type": "string"
+              },
+              "size": {
+                "id": "/Reasons/0/Context/size",
+                "type": "integer"
+              },
+              "length": {
+                "id": "/Reasons/0/Context/length",
+                "type": "integer"
+              },
+              "name": {
+                "id": "/Reasons/0/Context/name",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "null"
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Reasons",
+    "Data"
+  ]
+}

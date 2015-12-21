@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string",
+	  "enum": [
+        "corporate"
+      ]
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string",
+      "enum": [
+        "account"
+      ]
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string",
+	  "enum": [
+        "postCollection"
+      ]
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "Accounts": {
+          "id": "/Params/Accounts",
+          "type": "array",
+          "items": {
+            "id": "/Params/Accounts/1",
+            "type": "object",
+            "properties": {
+              "Name": {
+                "id": "/Params/Accounts/1/Name",
+                "type": "string"
+              },
+              "AccountTypeID": {
+                "id": "/Params/Accounts/1/AccountTypeID",
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "array",
+      "items": {
+        "id": "/Data/1",
+        "type": "object",
+        "properties": {
+		  "AccountID": {
+            "id": "/Data/0/AccountID",
+            "type": "integer"
+          },
+          "Description": {
+            "id": "/Data/0/Description",
+            "type": ["null", "string"]
+          },
+          "IsActive": {
+            "id": "/Data/0/IsActive",
+            "type": "boolean"
+          },
+          "PreferredAddressID": {
+            "id": "/Data/0/PreferredAddressID",
+            "type": ["null", "integer"]
+          },
+          "Website": {
+            "id": "/Data/0/Website",
+            "type": ["null", "string"]
+          },
+          "EmployeeCount": {
+            "id": "/Data/0/EmployeeCount",
+            "type": ["null", "integer"]
+          },
+          "PaymentTerm": {
+            "id": "/Data/0/PaymentTerm",
+            "type": ["null", "string"]
+          },
+          "oca": {
+            "id": "/Data/0/oca",
+            "type": "integer"
+          },
+          "Name": {
+            "id": "/Data/0/Name",
+            "type": "string"
+          },
+		  "AccountTypeID": {
+            "id": "/Data/0/AccountTypeID",
+            "type": "integer"
+          },
+          "FEID": {
+            "id": "/Data/0/FEID",
+            "type": ["null", "string"]
+          },
+          "PaymentTypeID": {
+            "id": "/Data/0/PaymentTypeID",
+            "type": ["null", "integer"]
+          }
+        },
+		"required": [
+			"AccountTypeID",
+			"AccountID",
+			"Description",
+			"IsActive",
+			"PreferredAddressID",
+			"Website",
+			"FEID",
+			"EmployeeCount",
+			"PaymentTerm",
+			"PaymentTypeID",
+			"oca",
+			"Name"
+		]
+      }
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

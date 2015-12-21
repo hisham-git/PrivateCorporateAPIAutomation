@@ -5,14 +5,15 @@
       <classes>
       	<class name="api.corporate.AccountServiceTest" />
          <methods>
-            <include name="getCollection_account" />
-            <include name="get_account" />
+         	<include name="postCollection_account" />
+            <exclude name="getCollection_account" />
+            <exclude name="get_account" />
          </methods>
       
          <class name="api.corporate.ReferenceServiceTest" />
          <methods>
-            <include name="getCollection_reference" />
-            <include name="get_reference" />
+            <exclude name="getCollection_reference" />
+            <exclude name="get_reference" />
          </methods>
       </classes>
    </test>

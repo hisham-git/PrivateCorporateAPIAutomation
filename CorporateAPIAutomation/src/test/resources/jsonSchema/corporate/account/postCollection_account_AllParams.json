@@ -1,0 +1,281 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string",
+	  "enum": [
+        "corporate"
+      ]
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string",
+      "enum": [
+        "account"
+      ]
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string",
+	  "enum": [
+        "postCollection"
+      ]
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "Accounts": {
+          "id": "/Params/Accounts",
+          "type": "array",
+          "items": {
+            "id": "/Params/Accounts/0",
+            "type": "object",
+            "properties": {
+              "Name": {
+                "id": "/Params/Accounts/0/Name",
+                "type": "string"
+              },
+              "Description": {
+                "id": "/Params/Accounts/0/Description",
+                "type": "string"
+              },
+              "AccountTypeID": {
+                "id": "/Params/Accounts/0/AccountTypeID",
+                "type": "integer"
+              },
+              "PaymentTerm": {
+                "id": "/Params/Accounts/0/PaymentTerm",
+                "type": "string"
+              },
+              "PaymentTypeID": {
+                "id": "/Params/Accounts/0/PaymentTypeID",
+                "type": "integer"
+              },
+              "FEID": {
+                "id": "/Params/Accounts/0/FEID",
+                "type": "string"
+              },
+              "EmployeeCount": {
+                "id": "/Params/Accounts/0/EmployeeCount",
+                "type": "integer"
+              },
+              "Website": {
+                "id": "/Params/Accounts/0/Website",
+                "type": "string"
+              },
+              "Addresses": {
+                "id": "/Params/Accounts/0/Addresses",
+                "type": "array",
+                "items": {
+                  "id": "/Params/Accounts/0/Addresses/0",
+                  "type": "object",
+                  "properties": {
+                    "AddressTypeID": {
+                      "id": "/Params/Accounts/0/Addresses/0/AddressTypeID",
+                      "type": "integer"
+                    },
+                    "Locality": {
+                      "id": "/Params/Accounts/0/Addresses/0/Locality",
+                      "type": "string"
+                    },
+                    "RegionCodeID": {
+                      "id": "/Params/Accounts/0/Addresses/0/RegionCodeID",
+                      "type": "integer"
+                    },
+                    "PostalCode": {
+                      "id": "/Params/Accounts/0/Addresses/0/PostalCode",
+                      "type": "string"
+                    },
+                    "CountryCodeID": {
+                      "id": "/Params/Accounts/0/Addresses/0/CountryCodeID",
+                      "type": "integer"
+                    },
+                    "IsConfidential": {
+                      "id": "/Params/Accounts/0/Addresses/0/IsConfidential",
+                      "type": "boolean"
+                    },
+                    "IsPrefered": {
+                      "id": "/Params/Accounts/0/Addresses/0/IsPrefered",
+                      "type": "boolean"
+                    },
+                    "AddressLine1": {
+                      "id": "/Params/Accounts/0/Addresses/0/AddressLine1",
+                      "type": "string"
+                    },
+                    "AddressLine2": {
+                      "id": "/Params/Accounts/0/Addresses/0/AddressLine2",
+                      "type": "string"
+                    },
+                    "AddressLine3": {
+                      "id": "/Params/Accounts/0/Addresses/0/AddressLine3",
+                      "type": "string"
+                    },
+                    "AccountID": {
+                      "id": "/Params/Accounts/0/Addresses/0/AccountID",
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "array",
+      "items": {
+        "id": "/Data/0",
+        "type": "object",
+        "properties": {
+          "AccountID": {
+            "id": "/Data/0/AccountID",
+            "type": "integer"
+          },
+          "Description": {
+            "id": "/Data/0/Description",
+            "type": ["null", "string"]
+          },
+          "IsActive": {
+            "id": "/Data/0/IsActive",
+            "type": "boolean"
+          },
+          "PreferredAddressID": {
+            "id": "/Data/0/PreferredAddressID",
+            "type": ["null", "integer"]
+          },
+          "Website": {
+            "id": "/Data/0/Website",
+            "type": ["null", "string"]
+          },
+          "EmployeeCount": {
+            "id": "/Data/0/EmployeeCount",
+            "type": ["null", "integer"]
+          },
+          "PaymentTerm": {
+            "id": "/Data/0/PaymentTerm",
+            "type": ["null", "string"]
+          },
+          "oca": {
+            "id": "/Data/0/oca",
+            "type": "integer"
+          },
+          "Name": {
+            "id": "/Data/0/Name",
+            "type": "string"
+          },
+          "Addresses": {
+            "id": "/Data/0/Addresses",
+            "type": "array",
+            "items": {
+              "id": "/Data/0/Addresses/0",
+              "type": "object",
+              "properties": {
+                "CountryCodeID": {
+                  "id": "/Data/0/Addresses/0/CountryCodeID",
+                  "type": ["null", "integer"]
+                },
+                "Locality": {
+                  "id": "/Data/0/Addresses/0/Locality",
+                  "type": ["null", "string"]
+                },
+                "PostalCode": {
+                  "id": "/Data/0/Addresses/0/PostalCode",
+                  "type": ["null", "string"]
+                },
+                "oca": {
+                  "id": "/Data/0/Addresses/0/oca",
+                  "type": "integer"
+                },
+                "IsConfidential": {
+                  "id": "/Data/0/Addresses/0/IsConfidential",
+                  "type": ["null", "boolean"]
+                },
+                "AddressLine3": {
+                  "id": "/Data/0/Addresses/0/AddressLine3",
+                  "type": ["null", "string"]
+                },
+                "AddressLine2": {
+                  "id": "/Data/0/Addresses/0/AddressLine2",
+                  "type": ["null", "string"]
+                },
+                "AddressTypeID": {
+                  "id": "/Data/0/Addresses/0/AddressTypeID",
+                  "type": "integer"
+                },
+                "AddressLine1": {
+                  "id": "/Data/0/Addresses/0/AddressLine1",
+                  "type": "string"
+                },
+                "RegionCodeID": {
+                  "id": "/Data/0/Addresses/0/RegionCodeID",
+                  "type": ["null", "integer"]
+                },
+                "ForeignType": {
+                  "id": "/Data/0/Addresses/0/ForeignType",
+                  "type": "string"
+                },
+                "AddressID": {
+                  "id": "/Data/0/Addresses/0/AddressID",
+                  "type": "integer"
+                },
+                "ForeignID": {
+                  "id": "/Data/0/Addresses/0/ForeignID",
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "AccountTypeID": {
+            "id": "/Data/0/AccountTypeID",
+            "type": "integer"
+          },
+          "PaymentType": {
+            "id": "/Data/0/PaymentType",
+            "type": ["null", "string"]
+          },
+          "FEID": {
+            "id": "/Data/0/FEID",
+            "type": ["null", "string"]
+          },
+          "PaymentTypeID": {
+            "id": "/Data/0/PaymentTypeID",
+            "type": ["null", "integer"]
+          }
+        },
+		"required": [
+			"AccountTypeID",
+			"AccountID",
+			"Description",
+			"IsActive",
+			"PreferredAddressID",
+			"Website",
+			"FEID",
+			"EmployeeCount",
+			"PaymentTerm",
+			"PaymentTypeID",
+			"oca",
+			"Name"
+		]
+      }
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

@@ -5,21 +5,29 @@
   "properties": {
     "Module": {
       "id": "/Module",
-      "type": "string"
+      "type": "string",
+	  "enum": [
+        "corporate"
+      ]
     },
     "Service": {
       "id": "/Service",
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "account"
+      ]
     },
     "Action": {
       "id": "/Action",
-      "type": "string"
+      "type": "string",
+	  "enum": [
+        "postCollection"
+      ]
     },
     "Header": {
       "id": "/Header",
       "type": "object",
-      "properties": {},
-      "additionalProperties": false
+      "properties": {}
     },
     "Params": {
       "id": "/Params",
@@ -29,39 +37,17 @@
           "id": "/Params/Accounts",
           "type": "array",
           "items": {
-            "id": "/Params/Accounts/1",
+            "id": "/Params/Accounts/0",
             "type": "object",
             "properties": {
               "Name": {
-                "id": "/Params/Accounts/1/Name",
+                "id": "/Params/Accounts/0/Name",
                 "type": "string"
-              },
-              "Description": {
-                "id": "/Params/Accounts/1/Description",
-                "type": "string"
-              },
-              "AccountTypeID": {
-                "id": "/Params/Accounts/1/AccountTypeID",
-                "type": "integer"
-              },
-              "PaymentTerm": {
-                "id": "/Params/Accounts/1/PaymentTerm",
-                "type": "string"
-              },
-              "FEID": {
-                "id": "/Params/Accounts/1/FEID",
-                "type": "string"
-              },
-              "EmployeeCount": {
-                "id": "/Params/Accounts/1/EmployeeCount",
-                "type": "integer"
               }
-            },
-            "additionalProperties": false
+            }
           }
         }
-      },
-      "additionalProperties": false
+      }
     },
     "Reasons": {
       "id": "/Reasons",
@@ -100,44 +86,28 @@
             "properties": {
               "ERROR_MSG": {
                 "id": "/Reasons/0/Context/ERROR_MSG",
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "AccountTypeID is required"
+                ]
               },
               "Param": {
                 "id": "/Reasons/0/Context/Param",
                 "type": "object",
                 "properties": {
+                  "IsActive": {
+                    "id": "/Reasons/0/Context/Param/IsActive",
+                    "type": "boolean"
+                  },
                   "Name": {
                     "id": "/Reasons/0/Context/Param/Name",
                     "type": "string"
-                  },
-                  "Description": {
-                    "id": "/Reasons/0/Context/Param/Description",
-                    "type": "string"
-                  },
-                  "AccountTypeID": {
-                    "id": "/Reasons/0/Context/Param/AccountTypeID",
-                    "type": "integer"
-                  },
-                  "PaymentTerm": {
-                    "id": "/Reasons/0/Context/Param/PaymentTerm",
-                    "type": "string"
-                  },
-                  "FEID": {
-                    "id": "/Reasons/0/Context/Param/FEID",
-                    "type": "string"
-                  },
-                  "EmployeeCount": {
-                    "id": "/Reasons/0/Context/Param/EmployeeCount",
-                    "type": "integer"
                   }
-                },
-                "additionalProperties": false
+                }
               }
-            },
-            "additionalProperties": false
+            }
           }
-        },
-        "additionalProperties": false
+        }
       }
     },
     "Data": {
@@ -145,7 +115,6 @@
       "type": "null"
     }
   },
-  "additionalProperties": false,
   "required": [
     "Module",
     "Service",

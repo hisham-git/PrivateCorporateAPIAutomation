@@ -58,6 +58,20 @@ public class AccountServiceTest {
         	System.out.println(">>>>>>>>>>>>>>>>>>>>>");
         }
     }
+    
+    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
+    public void postCollection_account(Map<String, String> config) throws JSONException {
+    	try {
+        	Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+        	System.out.println( "Passed => | " + config.get("Test Case ID") + " | " + config.get("Test Case Description") );
+        } catch (AssertionError e) {
+        	System.out.println(">>>>>>>>>>>>>>>>>>>>>");
+        	System.out.println( "Failed => | " + config.get("Test Case ID") + " | " + config.get("Test Case Description") );
+        	System.out.println(e.getMessage());
+        	System.out.println(">>>>>>>>>>>>>>>>>>>>>");
+        }
+    }
+    
 /*
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void insertAccounts(Map<String, String> config) throws JSONException {

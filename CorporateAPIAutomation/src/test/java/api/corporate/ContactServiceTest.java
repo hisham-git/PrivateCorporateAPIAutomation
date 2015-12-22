@@ -11,37 +11,37 @@ public class ContactServiceTest {
 
 	@Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void readContact(Map<String, String> config) throws JSONException {
-        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null, null);
     }
 	
 	@Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void getContacts(Map<String, String> config) throws JSONException {
-        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null, null);
     }
 	
 	@Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void insertContact(Map<String, String> config) throws JSONException {
-        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null, null);
     }
     
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void insertContacts(Map<String, String> config) throws JSONException {
-        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null, null);
     }
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void updateContact(Map<String, String> config) throws JSONException {
-        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null, null);
     }
     
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void updateContacts(Map<String, String> config) throws JSONException {
-        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null, null);
     }
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void deleteContact(Map<String, String> config) throws JSONException {
-        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null, null);
     }
     
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)

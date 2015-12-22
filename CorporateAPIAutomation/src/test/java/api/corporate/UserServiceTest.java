@@ -12,7 +12,7 @@ public class UserServiceTest {
 
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void insertUser(Map<String, String> config) throws JSONException {
-        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null, null);
     }
 
     //@Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)

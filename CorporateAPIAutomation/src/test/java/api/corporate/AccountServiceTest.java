@@ -35,7 +35,7 @@ public class AccountServiceTest {
     public void getCollection_account(Map<String, String> config) throws JSONException {
     	
     	try {
-        	Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+        	Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null, null);
         	System.out.println( "Passed => | " + config.get("Test Case ID") + " | " + config.get("Test Case Description") );
         } catch (AssertionError e) {
         	System.out.println(">>>>>>>>>>>>>>>>>>>>>");
@@ -49,7 +49,7 @@ public class AccountServiceTest {
     public void get_account(Map<String, String> config) throws JSONException {
     	
     	try {
-        	Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+        	Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null, null);
         	System.out.println( "Passed => | " + config.get("Test Case ID") + " | " + config.get("Test Case Description") );
         } catch (AssertionError e) {
         	System.out.println(">>>>>>>>>>>>>>>>>>>>>");
@@ -62,8 +62,9 @@ public class AccountServiceTest {
     @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void postCollection_account(Map<String, String> config) throws JSONException {
     	try {
-        	Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+    		Response responseAPI = Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), config.get("StatusCode"), null);
         	System.out.println( "Passed => | " + config.get("Test Case ID") + " | " + config.get("Test Case Description") );
+        	System.out.println(responseAPI.toString());
         } catch (AssertionError e) {
         	System.out.println(">>>>>>>>>>>>>>>>>>>>>");
         	System.out.println( "Failed => | " + config.get("Test Case ID") + " | " + config.get("Test Case Description") );

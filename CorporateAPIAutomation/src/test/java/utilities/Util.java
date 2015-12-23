@@ -44,13 +44,15 @@ public class Util {
             builder.addCookie("JSESSIONID", JSESSIONID);
         }
         
+   //     System.out.println((int) Double.parseDouble(status));
+        
         Response responseAPI = 
         		given()
                 	.spec(builder.build())
                 .when()
                 	.post()
                 .then()
-                	.statusCode(Integer.parseInt(status))
+                	.statusCode((int) Double.parseDouble(status))
                 	.body(matchesJsonSchemaInClasspath(jsonSchemaValidatorPath))
                 	.extract().response();
         

@@ -44,12 +44,9 @@ public class ContactServiceTest {
         Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null, null);
     }
     
-    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
-    public void deleteContacts(Map<String, String> config) throws JSONException {
-        Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
-    }
+
 	
-    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
+/*    @Test(dataProvider = "getAPIConfig", dataProviderClass = ExcelFileReaderConfig.class)
     public void getContactAddresses(Map<String, String> config) throws JSONException {
         Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
     }
@@ -88,5 +85,6 @@ public class ContactServiceTest {
     public void addUserToContact(Map<String, String> config) throws JSONException {
         Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
     }
+*/    
 
 }

@@ -35,7 +35,7 @@ public class AccountServiceTest {
     public void getCollection_account(Map<String, String> config) throws JSONException {
     	
     	try {
-        	Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null, null);
+        	Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), config.get("StatusCode"), null);
         	System.out.println( "Passed => | " + config.get("Test Case ID") + " | " + config.get("Test Case Description") );
         } catch (AssertionError e) {
         	System.out.println(">>>>>>>>>>>>>>>>>>>>>");
@@ -49,7 +49,7 @@ public class AccountServiceTest {
     public void get_account(Map<String, String> config) throws JSONException {
     	
     	try {
-        	Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null, null);
+        	Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), config.get("StatusCode"), null);
         	System.out.println( "Passed => | " + config.get("Test Case ID") + " | " + config.get("Test Case Description") );
         } catch (AssertionError e) {
         	System.out.println(">>>>>>>>>>>>>>>>>>>>>");

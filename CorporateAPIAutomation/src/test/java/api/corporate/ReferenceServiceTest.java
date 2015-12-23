@@ -30,7 +30,7 @@ public class ReferenceServiceTest {
     public void getCollection_reference(Map<String, String> config) throws JSONException {
 		
         try {
-        	Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+        	Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), config.get("StatusCode"), null);
         	System.out.println( "Passed => | " + config.get("Test Case ID") + " | " + config.get("Test Case Description") );
         } catch (AssertionError e) {
         	System.out.println(">>>>>>>>>>>>>>>>>>>>>");
@@ -44,7 +44,7 @@ public class ReferenceServiceTest {
     public void get_reference(Map<String, String> config) throws JSONException {
 		
 		try {
-        	Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), null);
+        	Util.callApi(config.get("URL"), config.get("Param"), config.get("SchemaPath"), config.get("StatusCode"), null);
         	System.out.println( "Passed => | " + config.get("Test Case ID") + " | " + config.get("Test Case Description") );
         } catch (AssertionError e) {
         	System.out.println(">>>>>>>>>>>>>>>>>>>>>");

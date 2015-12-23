@@ -1,0 +1,151 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string",
+	  "enum": [
+        "corporate"
+      ]
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string",
+	  "enum": [
+        "contact"
+      ]
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string",
+	  "enum": [
+        "getCollection"
+      ]
+    },
+	"Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {
+        "PageSize": {
+          "id": "/Header/PageSize",
+          "type": "integer",
+		  "enum": [3]
+        },
+        "StartPosition": {
+          "id": "/Header/StartPosition",
+          "type": "integer",
+		  "enum": [1]
+        }
+      }
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {}
+    },
+	"Data": {
+      "id": "/Data",
+      "type": "array",
+	  "minItems": 2,
+	  "maxItems": 2,
+      "items": {
+        "id": "/Data/0",
+        "type": "object",
+        "properties": {
+          "ContactID": {
+            "id": "/Data/0/ContactID",
+            "type": "integer"
+          },
+          "FirstName": {
+            "id": "/Data/0/FirstName",
+            "type": "string"
+          },
+          "LastName": {
+            "id": "/Data/0/LastName",
+            "type": "string"
+          },
+		  "MiddleName": {
+            "id": "/Data/0/MiddleName",
+            "type": ["null", "string"]
+          },
+		  "OtherName": {
+            "id": "/Data/0/OtherName",
+            "type": ["null", "string"]
+          },
+		  "UserName": {
+            "id": "/Data/0/UserName",
+            "type": ["null", "string"]
+          },
+		  "Prefix": {
+            "id": "/Data/0/Prefix",
+            "type": ["null", "string"]
+          },
+		  "Suffix": {
+            "id": "/Data/0/Suffix",
+            "type": ["null", "string"]
+          },
+		  "Title": {
+            "id": "/Data/0/Title",
+            "type": ["null", "string"]
+          },
+          "GenderTypeID": {
+            "id": "/Data/0/GenderTypeID",
+            "type": "integer"
+          },
+          "GenderType": {
+            "id": "/Data/0/GenderType",
+            "type": ["null", "string"]
+          },
+		  "EmailAddresses": {
+            "id": "/Data/0/EmailAddresses",
+            "type": ["null", "string"]
+          },
+		  "Telephones": {
+            "id": "/Data/0/Telephones",
+            "type": ["null", "string"]
+          },
+		  "AdditionalInformation": {
+            "id": "/Data/0/AdditionalInformation",
+            "type": ["null", "string"]
+          },
+		  "CEUCredits": {
+            "id": "/Data/0/CEUCredits",
+            "type": ["null", "number"]
+          },
+          "oca": {
+            "id": "/Data/0/oca",
+            "type": "integer"
+          }
+        },
+		"required": [
+			"ContactID",
+			"FirstName",
+			"LastName",
+			"MiddleName",
+			"OtherName",
+			"UserName",
+			"Prefix",
+			"Suffix",
+			"Title",
+			"GenderTypeID",
+			"GenderType",
+			"EmailAddresses",
+			"Telephones",
+			"AdditionalInformation",
+			"CEUCredits",
+			"oca"
+		]
+      }
+    }	
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

@@ -41,11 +41,11 @@ public class ExcelFileReaderConfig {
                 }
             } else {
                 for ( Iterator<Cell> cellsIT = row.cellIterator(); cellsIT.hasNext(); ){
-                    Map<String, Object> JcellObj = new HashMap<>();
+                    Map<String, String> JcellObj = new HashMap<>();
                     for (String getKey : configKeys) {
                         if (cellsIT.hasNext()){
                             Cell cell = cellsIT.next();
-                            JcellObj.put( getKey, getCellValue(cell).toString() );
+                            JcellObj.put( getKey, String.valueOf(getCellValue(cell)) );
                         }
                     }
                     jParamObj.add(new Object[] {JcellObj});

@@ -44,8 +44,6 @@ public class Util {
             builder.addCookie("JSESSIONID", JSESSIONID);
         }
         
-   //     System.out.println((int) Double.parseDouble(status));
-        
         Response responseAPI = 
         		given()
                 	.spec(builder.build())

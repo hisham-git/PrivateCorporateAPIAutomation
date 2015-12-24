@@ -3,6 +3,18 @@
 <suite name="Suite" parallel="none" junit="false" guice-stage="DEVELOPMENT" configfailurepolicy="skip" thread-count="5" skipfailedinvocationcounts="false" data-provider-thread-count="10" group-by-instances="false" preserve-order="true" allow-return-values="false">
    <test name="Unit Test" junit="false" skipfailedinvocationcounts="false" preserve-order="true" group-by-instances="false" allow-return-values="false">
       <classes>
+      	
+      	<class name="api.corporate.ContactServiceTest" />
+         <methods>
+         	<exclude name="postCollection_contact" />
+         	<exclude name="post_contact" />
+         	<exclude name="patchCollection_contact" />
+         	<exclude name="patch_contact" />
+            <include name="getCollection_contact" />
+            <include name="get_contact" />
+            <exclude name="delete_contact" />
+         </methods>
+      	
       	<class name="api.corporate.AccountServiceTest" />
          <methods>
          	<exclude name="postCollection_account" />

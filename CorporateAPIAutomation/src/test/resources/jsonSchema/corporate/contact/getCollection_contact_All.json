@@ -96,11 +96,39 @@
           },
 		  "EmailAddresses": {
             "id": "/Data/0/EmailAddresses",
-            "type": ["null", "string"]
+            "type": ["null", "array"],
+            "items": {
+              "id": "/Data/0/EmailAddresses/0",
+              "type": "object",
+              "properties": {
+                "Type": {
+                  "id": "/Data/0/EmailAddresses/0/Type",
+                  "type": "string"
+                },
+                "Email": {
+                  "id": "/Data/0/EmailAddresses/0/Email",
+                  "type": "string"
+                }
+              }
+            }
           },
-		  "Telephones": {
+          "Telephones": {
             "id": "/Data/0/Telephones",
-            "type": ["null", "string"]
+            "type": ["null", "array"],
+            "items": {
+              "id": "/Data/0/Telephones/0",
+              "type": "object",
+              "properties": {
+                "Type": {
+                  "id": "/Data/0/Telephones/0/Type",
+                  "type": "string"
+                },
+                "Phone": {
+                  "id": "/Data/0/Telephones/0/Phone",
+                  "type": "string"
+                }
+              }
+            }
           },
 		  "AdditionalInformation": {
             "id": "/Data/0/AdditionalInformation",

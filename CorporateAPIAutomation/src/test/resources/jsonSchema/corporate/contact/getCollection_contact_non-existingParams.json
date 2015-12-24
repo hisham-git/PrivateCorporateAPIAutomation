@@ -14,7 +14,7 @@
       "id": "/Service",
       "type": "string",
 	  "enum": [
-        "account"
+        "contact"
       ]
     },
     "Action": {
@@ -42,39 +42,23 @@
       "id": "/Params",
       "type": "object",
       "properties": {
-		"AccountIDs": {
-          "id": "/Params/AccountIDs",
+		"FirstName": {
+          "id": "/Params/FirstName",
+          "type": "string"
+        },
+        "LastName": {
+          "id": "/Params/LastName",
+          "type": "string"
+        },
+        "ContactIDs": {
+          "id": "/Params/ContactIDs",
           "type": "array",
           "items": {
-            "id": "/Params/AccountIDs/0",
+            "id": "/Params/ContactIDs/0",
             "type": "integer"
           }
-        },
-        "IsActive": {
-          "id": "/Params/IsActive",
-          "type": "boolean"
-        },
-        "AccountTypeIDs": {
-          "id": "/Params/AccountTypeIDs",
-          "type": "array",
-          "items": {
-            "id": "/Params/AccountTypeIDs/0",
-            "type": "integer"
-          }
-        },
-        "AccountTypeName": {
-          "id": "/Params/AccountTypeName",
-          "type": "string"
-        },
-        "PaymentTerm": {
-          "id": "/Params/PaymentTerm",
-          "type": "string"
-        },
-        "Name": {
-          "id": "/Params/Name",
-          "type": "string"
         }
-      }
+	  }
     },
 	"Data": {
       "id": "/Data",

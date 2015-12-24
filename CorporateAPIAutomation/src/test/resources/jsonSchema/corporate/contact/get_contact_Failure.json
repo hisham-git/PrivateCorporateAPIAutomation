@@ -3,25 +3,36 @@
   "id": "",
   "type": "object",
   "properties": {
-    "Module": {
+	"Module": {
       "id": "/Module",
-      "type": "string"
+      "type": "string",
+	  "enum": [
+        "corporate"
+      ]
     },
     "Service": {
       "id": "/Service",
-      "type": "string"
+      "type": "string",
+	  "enum": [
+        "contact"
+      ]
     },
     "Action": {
       "id": "/Action",
-      "type": "string"
+      "type": "string",
+	  "enum": [ 
+        "get"
+      ]
     },
-    "Header": {
+	"Header": {
       "id": "/Header",
-      "type": "null"
+      "type": "object",
+      "properties": {}
     },
     "Params": {
       "id": "/Params",
-      "type": "null"
+      "type": "object",
+      "properties": {}
     },
     "Reasons": {
       "id": "/Reasons",
@@ -32,42 +43,65 @@
         "properties": {
           "ReasonCode": {
             "id": "/Reasons/0/ReasonCode",
-            "type": "string"
+            "type": "string",
+			"enum": [
+              "core00008"
+            ]
           },
           "Description": {
             "id": "/Reasons/0/Description",
-            "type": "string"
+            "type": "string",
+			"enum": [
+              "required"
+            ]
           },
           "Level": {
             "id": "/Reasons/0/Level",
-            "type": "string"
+            "type": "string",
+			"enum": [
+              "SEVERE"
+            ]
           },
           "Type": {
             "id": "/Reasons/0/Type",
-            "type": "string"
+            "type": "string",
+			"enum": [
+              "BIZ_RULE"
+            ]
           },
           "Class": {
             "id": "/Reasons/0/Class",
-            "type": "string"
+            "type": "string",
+			"enum": [
+              "com.campus.corporate.util.AbstractQHandler"
+            ]
           },
           "Method": {
             "id": "/Reasons/0/Method",
-            "type": "string"
+            "type": "string",
+			"enum": [
+              "requireParams"
+            ]
           },
           "Context": {
             "id": "/Reasons/0/Context",
             "type": "object",
             "properties": {
-              "ErrorMessage": {
-                "id": "/Reasons/0/Context/ErrorMessage",
+              "ERROR_MSG": {
+                "id": "/Reasons/0/Context/ERROR_MSG",
                 "type": "string",
-				"default": "Invalid HTTP Request Body for Service Header and Parameters"
+				"enum": [
+                  "ContactID is required"
+                ]
+              },
+              "Param": {
+                "id": "/Reasons/0/Context/Param",
+                "type": "object",
+                "properties": {}
               }
-            },
-            "additionalProperties": false
+            }
           }
-        },
-        "additionalProperties": false
+        }
       }
     },
     "Data": {
@@ -75,7 +109,6 @@
       "type": "null"
     }
   },
-  "additionalProperties": false,
   "required": [
     "Module",
     "Service",

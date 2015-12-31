@@ -1,0 +1,177 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {
+        "PageSize": {
+          "id": "/Header/PageSize",
+          "type": "integer"
+        },
+        "StartPosition": {
+          "id": "/Header/StartPosition",
+          "type": "integer"
+        },
+        "SortBy": {
+          "id": "/Header/SortBy",
+          "type": "string"
+        },
+        "SortDir": {
+          "id": "/Header/SortDir",
+          "type": "string"
+        }
+      }
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "AddressTypeIDs": {
+          "id": "/Params/AddressTypeIDs",
+          "type": "array",
+          "items": {
+            "id": "/Params/AddressTypeIDs/0",
+            "type": "integer"
+          }
+        },
+        "AddressType": {
+          "id": "/Params/AddressType",
+          "type": "string"
+        },
+        "Locality": {
+          "id": "/Params/Locality",
+          "type": "string"
+        },
+        "PostalCode": {
+          "id": "/Params/PostalCode",
+          "type": "string"
+        },
+        "RegionCode": {
+          "id": "/Params/RegionCode",
+          "type": "string"
+        },
+        "CountryCode": {
+          "id": "/Params/CountryCode",
+          "type": "string"
+        },
+        "AddressLine": {
+          "id": "/Params/AddressLine",
+          "type": "string"
+        }
+      }
+    },
+    "Reasons": {
+      "id": "/Reasons",
+      "type": "array",
+      "items": {
+        "id": "/Reasons/0",
+        "type": "object",
+        "properties": {
+          "ReasonCode": {
+            "id": "/Reasons/0/ReasonCode",
+            "type": "string"
+          },
+          "Description": {
+            "id": "/Reasons/0/Description",
+            "type": "string"
+          },
+          "Level": {
+            "id": "/Reasons/0/Level",
+            "type": "string"
+          },
+          "Type": {
+            "id": "/Reasons/0/Type",
+            "type": "string"
+          },
+          "Class": {
+            "id": "/Reasons/0/Class",
+            "type": "string"
+          },
+          "Method": {
+            "id": "/Reasons/0/Method",
+            "type": "string"
+          },
+          "Context": {
+            "id": "/Reasons/0/Context",
+            "type": "object",
+            "properties": {
+              "ERROR_MSG": {
+                "id": "/Reasons/0/Context/ERROR_MSG",
+                "type": "string",
+				"enum": [
+                  "At least one param of [AccountID, ContactID] is required"
+                ]
+              },
+              "Param": {
+                "id": "/Reasons/0/Context/Param",
+                "type": "object",
+                "properties": {
+                  "AddressTypeIDs": {
+                    "id": "/Reasons/0/Context/Param/AddressTypeIDs",
+                    "type": "array",
+                    "items": {
+                      "id": "/Reasons/0/Context/Param/AddressTypeIDs/0",
+                      "type": "integer"
+                    }
+                  },
+                  "RegionCode": {
+                    "id": "/Reasons/0/Context/Param/RegionCode",
+                    "type": "string"
+                  },
+                  "Locality": {
+                    "id": "/Reasons/0/Context/Param/Locality",
+                    "type": "string"
+                  },
+                  "AddressLine": {
+                    "id": "/Reasons/0/Context/Param/AddressLine",
+                    "type": "string"
+                  },
+                  "PostalCode": {
+                    "id": "/Reasons/0/Context/Param/PostalCode",
+                    "type": "string"
+                  },
+                  "AddressType": {
+                    "id": "/Reasons/0/Context/Param/AddressType",
+                    "type": "string"
+                  },
+                  "CountryCode": {
+                    "id": "/Reasons/0/Context/Param/CountryCode",
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "null"
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Reasons",
+    "Data"
+  ]
+}

@@ -24,87 +24,88 @@
       "id": "/Params",
       "type": "object",
       "properties": {
-        "ContactID": {
-          "id": "/Params/ContactID",
+        "AccountID": {
+          "id": "/Params/AccountID",
+          "type": "integer"
+        },
+        "AddressID": {
+          "id": "/Params/AddressID",
           "type": "integer"
         }
       }
     },
     "Data": {
       "id": "/Data",
-      "type": "array",
-      "items": {
-        "id": "/Data/3",
-        "type": "object",
-        "properties": {
+      "type": "object",
+		"properties": {
           "AddressID": {
-            "id": "/Data/3/AddressID",
+            "id": "/Data/AddressID",
             "type": "integer"
           },
           "oca": {
-            "id": "/Data/3/oca",
+            "id": "/Data/oca",
             "type": "integer"
           },
           "IsPreferred": {
-            "id": "/Data/3/IsPreferred",
+            "id": "/Data/IsPreferred",
             "type": "boolean"
           },
           "AddressTypeID": {
-            "id": "/Data/3/AddressTypeID",
+            "id": "/Data/AddressTypeID",
             "type": "integer"
           },
-          "ContactID": {
-            "id": "/Data/3/ContactID",
+          "AccountID": {
+            "id": "/Data/AccountID",
             "type": "integer"
           },
           "Locality": {
-            "id": "/Data/3/Locality",
+            "id": "/Data/Locality",
             "type": ["null", "string"]
           },
           "RegionCodeID": {
-            "id": "/Data/3/RegionCodeID",
+            "id": "/Data/RegionCodeID",
             "type": "integer"
           },
           "PostalCode": {
-            "id": "/Data/3/PostalCode",
+            "id": "/Data/PostalCode",
             "type": ["null", "string"]
           },
           "CountryCodeID": {
-            "id": "/Data/3/CountryCodeID",
+            "id": "/Data/CountryCodeID",
             "type": "integer"
           },
           "IsConfidential": {
-            "id": "/Data/3/IsConfidential",
+            "id": "/Data/IsConfidential",
             "type": "boolean"
           },
           "AddressLine1": {
-            "id": "/Data/3/AddressLine1",
+            "id": "/Data/AddressLine1",
             "type": ["null", "string"]
           },
           "AddressLine2": {
-            "id": "/Data/3/AddressLine2",
+            "id": "/Data/AddressLine2",
             "type": ["null", "string"]
           },
           "AddressLine3": {
-            "id": "/Data/3/AddressLine3",
+            "id": "/Data/AddressLine3",
             "type": ["null", "string"]
           },
           "AddressType": {
-            "id": "/Data/3/AddressType",
+            "id": "/Data/AddressType",
             "type": "string"
           },
           "RegionCode": {
-            "id": "/Data/3/RegionCode",
+            "id": "/Data/RegionCode",
             "type": ["null", "string"]
           },
           "CountryCode": {
-            "id": "/Data/3/CountryCode",
+            "id": "/Data/CountryCode",
             "type": "string"
           }
         },
 		"required": [
-			 "AddressID",
-              "ContactID",
+			"AddressID",
+              "AccountID",
               "AddressTypeID",
               "AddressType",
               "Locality",
@@ -120,7 +121,6 @@
               "AddressLine3",
               "oca"
 		]
-      }
     }
   },
   "required": [

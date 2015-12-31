@@ -114,7 +114,7 @@
               "CountryCodeID",
               "CountryCode",
               "IsConfidential",
-              "IsPrefered",
+              "IsPreferred",
               "AddressLine1",
               "AddressLine2",
               "AddressLine3",

@@ -12,8 +12,8 @@
          	<exclude name="post_address" />
          	<exclude name="patchCollection_address" />
          	<exclude name="patch_address" />
-            <exclude name="getCollection_address" />
-            <exclude name="get_address" />
+            <include name="getCollection_address" />
+            <include name="get_address" />
             <exclude name="delete_address" />
          </methods>
            	
@@ -32,7 +32,7 @@
          <methods>
          	<exclude name="postCollection_account" />
             <exclude name="getCollection_account" />
-            <include name="get_account" />
+            <exclude name="get_account" />
          </methods>
       
          <class name="api.corporate.ReferenceServiceTest" />

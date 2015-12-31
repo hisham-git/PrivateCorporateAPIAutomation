@@ -18,7 +18,18 @@
     "Header": {
       "id": "/Header",
       "type": "object",
-      "properties": {}
+      "properties": {
+        "PageSize": {
+          "id": "/Header/PageSize",
+          "type": "integer",
+		  "enum": [3]
+        },
+        "StartPosition": {
+          "id": "/Header/StartPosition",
+          "type": "integer",
+		  "enum": [1]
+        }
+      }
     },
     "Params": {
       "id": "/Params",
@@ -33,6 +44,8 @@
     "Data": {
       "id": "/Data",
       "type": "array",
+	  "minItems": 2,
+	  "maxItems": 2,
       "items": {
         "id": "/Data/3",
         "type": "object",

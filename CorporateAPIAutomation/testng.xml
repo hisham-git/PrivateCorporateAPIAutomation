@@ -8,12 +8,12 @@
       	
       	<class name="api.corporate.AddressServiceTest" />
          <methods>
-         	<exclude name="postCollection_address" />
+         	<include name="postCollection_address" />
          	<exclude name="post_address" />
          	<exclude name="patchCollection_address" />
          	<exclude name="patch_address" />
             <include name="getCollection_address" />
-            <include name="get_address" />
+            <exclude name="get_address" />
             <exclude name="delete_address" />
          </methods>
            	

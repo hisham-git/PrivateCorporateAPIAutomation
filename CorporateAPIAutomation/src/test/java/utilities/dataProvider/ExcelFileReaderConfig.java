@@ -45,7 +45,12 @@ public class ExcelFileReaderConfig {
                     for (String getKey : configKeys) {
                         if (cellsIT.hasNext()){
                             Cell cell = cellsIT.next();
-                            JcellObj.put( getKey, String.valueOf(getCellValue(cell)) );
+                            if (String.valueOf(getCellValue(cell)).equalsIgnoreCase("TRUE")){
+                            	JcellObj.put( getKey, String.valueOf(getCellValue(cell)) );
+                            } else {
+                            	continue;
+                            }
+                            
                         }
                     }
                     jParamObj.add(new Object[] {JcellObj});

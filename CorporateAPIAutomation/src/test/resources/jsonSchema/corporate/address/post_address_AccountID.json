@@ -1,0 +1,170 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "",
+  "type": "object",
+  "properties": {
+    "Module": {
+      "id": "/Module",
+      "type": "string"
+    },
+    "Service": {
+      "id": "/Service",
+      "type": "string"
+    },
+    "Action": {
+      "id": "/Action",
+      "type": "string"
+    },
+    "Header": {
+      "id": "/Header",
+      "type": "object",
+      "properties": {}
+    },
+    "Params": {
+      "id": "/Params",
+      "type": "object",
+      "properties": {
+        "AddressLine3": {
+          "id": "/Params/AddressLine3",
+          "type": "string"
+        },
+        "CountryCodeID": {
+          "id": "/Params/CountryCodeID",
+          "type": "integer"
+        },
+        "AddressLine2": {
+          "id": "/Params/AddressLine2",
+          "type": "string"
+        },
+        "AddressTypeID": {
+          "id": "/Params/AddressTypeID",
+          "type": "integer"
+        },
+        "IsPreferred": {
+          "id": "/Params/IsPreferred",
+          "type": "boolean"
+        },
+        "AddressLine1": {
+          "id": "/Params/AddressLine1",
+          "type": "string"
+        },
+        "RegionCodeID": {
+          "id": "/Params/RegionCodeID",
+          "type": "integer"
+        },
+        "Locality": {
+          "id": "/Params/Locality",
+          "type": "string"
+        },
+        "PostalCode": {
+          "id": "/Params/PostalCode",
+          "type": "string"
+        },
+        "AccountID": {
+          "id": "/Params/AccountID",
+          "type": "integer"
+        },
+        "IsConfidential": {
+          "id": "/Params/IsConfidential",
+          "type": "boolean"
+        }
+      }
+    },
+    "Data": {
+      "id": "/Data",
+      "type": "object",
+      "properties": {
+        "AddressID": {
+          "id": "/Data/AddressID",
+          "type": "integer"
+        },
+        "oca": {
+          "id": "/Data/oca",
+          "type": "integer"
+        },
+        "IsPreferred": {
+          "id": "/Data/IsPreferred",
+          "type": "boolean"
+        },
+        "AddressTypeID": {
+          "id": "/Data/AddressTypeID",
+          "type": "integer"
+        },
+        "AccountID": {
+          "id": "/Data/AccountID",
+          "type": "integer"
+        },
+        "Locality": {
+          "id": "/Data/Locality",
+          "type": ["null", "string"]
+        },
+        "RegionCodeID": {
+          "id": "/Data/RegionCodeID",
+          "type": "integer"
+        },
+        "PostalCode": {
+          "id": "/Data/PostalCode",
+          "type": ["null", "string"]
+        },
+        "CountryCodeID": {
+          "id": "/Data/CountryCodeID",
+          "type": "integer"
+        },
+        "IsConfidential": {
+          "id": "/Data/IsConfidential",
+          "type": "boolean"
+        },
+        "AddressLine1": {
+          "id": "/Data/AddressLine1",
+          "type": ["null", "string"]
+        },
+        "AddressLine2": {
+          "id": "/Data/AddressLine2",
+          "type": ["null", "string"]
+        },
+        "AddressLine3": {
+          "id": "/Data/AddressLine3",
+          "type": ["null", "string"]
+        },
+        "AddressType": {
+          "id": "/Data/AddressType",
+          "type": "string"
+        },
+        "RegionCode": {
+          "id": "/Data/RegionCode",
+          "type": ["null", "string"]
+        },
+        "CountryCode": {
+          "id": "/Data/CountryCode",
+          "type": "string"
+        }
+      },
+	  "required": [
+			 "AddressID",
+              "AccountID",
+              "AddressTypeID",
+              "AddressType",
+              "Locality",
+              "RegionCodeID",
+              "RegionCode",
+              "PostalCode",
+              "CountryCodeID",
+              "CountryCode",
+              "IsConfidential",
+              "IsPreferred",
+              "AddressLine1",
+              "AddressLine2",
+              "AddressLine3",
+              "oca"
+		]
+    }
+  },
+  "required": [
+    "Module",
+    "Service",
+    "Action",
+    "Header",
+    "Params",
+    "Data"
+  ]
+}

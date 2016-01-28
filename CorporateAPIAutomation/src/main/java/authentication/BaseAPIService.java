@@ -47,8 +47,6 @@ public abstract class BaseAPIService {
 			builder.setContentType("application/json; charset=UTF-8");
 
 			RequestSpecification requestSpec = builder.build();
-			
-		//	System.out.println(requestSpec.toString());
 
 			if ( requestMethod.equalsIgnoreCase("GET") ) {
 
